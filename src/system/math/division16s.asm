@@ -1,6 +1,6 @@
 
 ;A = int16 divisor, Y = int16 dividend
-DIVISION16S:
+DIVISION16S: ;$C0914B
 	.A16
 	PHA
 	TYA

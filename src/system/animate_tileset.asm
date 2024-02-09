@@ -1,18 +1,14 @@
 
-ANIMATE_TILESET:
-	BEGIN_C_FUNCTION_FAR
-	STACK_RESERVE_VARS
-	STACK_RESERVE_INT32
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	END_STACK_VARS
+;void AnimateTileset(void)
+ANIMATE_TILESET: ;$C00172
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE_CLOBBER 24
 	LDA #.LOWORD(OVERWORLD_TILESET_ANIM)
-	STA @LOCAL03
-	STZ @LOCAL02
+	STA $16
+	STZ $14
 	JMP @UNKNOWN4
 @UNKNOWN0:
-	LDA @LOCAL03
+	LDA $16
 	CLC
 	ADC #overworld_tileset_anim::frames_until_update
 	TAX
@@ -21,65 +17,72 @@ ANIMATE_TILESET:
 	STA __BSS_START__,X
 	BNEL @UNKNOWN3
 	LDY #overworld_tileset_anim::frame_delay
-	LDA (@LOCAL03),Y
+	LDA ($16),Y
 	STA __BSS_START__,X
-	LDA @LOCAL03
+	LDA $16
 	CLC
 	ADC #overworld_tileset_anim::destination_address2
 	TAX
 	LDA __BSS_START__,X
-	CMP (@LOCAL03) ;overworld_tileset_anim::unknown0
+	CMP ($16) ;overworld_tileset_anim::unknown0
 	BNE @UNKNOWN2
-	LDA #0
+	LDA #$0000
 	STA __BSS_START__,X
 	LDY #overworld_tileset_anim::source_offset
-	LDA (@LOCAL03),Y
+	LDA ($16),Y
 	LDY #overworld_tileset_anim::source_offset2
-	STA (@LOCAL03),Y
+	STA ($16),Y
 @UNKNOWN2:
-	LDA @LOCAL03
-	STA @VIRTUAL04
-	INC @VIRTUAL04
-	INC @VIRTUAL04
-	INC @VIRTUAL04
-	INC @VIRTUAL04
-	LDA @LOCAL03 ;overworld_tileset_anim::copy_size
+	LDA $16
+	STA $04
+	INC $04
+	INC $04
+	INC $04
+	INC $04
+	LDA $16 ;overworld_tileset_anim::copy_size
 	CLC
 	ADC #overworld_tileset_anim::source_offset2
+<<<<<<< HEAD
 	STA @VIRTUAL02
 	STA @LOCAL01
 	LOADPTR ANIMATED_TILESET_BUFFER, @VIRTUAL06
 	LDX @VIRTUAL02
+=======
+	STA $02
+	STA $12
+	LOADPTR UNKNOWN_7EC000, $06
+	LDX $02
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDA __BSS_START__,X
 	CLC
-	ADC @VIRTUAL06
-	STA @VIRTUAL06
-	STA @LOCAL00
-	LDA @VIRTUAL06+2
-	STA @LOCAL00+2
+	ADC $06
+	STA $06
+	STA $0E
+	LDA $08
+	STA $10
 	LDY #overworld_tileset_anim::destination_address
-	LDA (@LOCAL03),Y
+	LDA ($16),Y
 	TAY
-	LDX @VIRTUAL04
+	LDX $04
 	LDA __BSS_START__,X
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	LDA #0
+	LDA #$0000
 	JSL PREPARE_VRAM_COPY
 	.A16
-	LDX @VIRTUAL04
+	LDX $04
 	LDA __BSS_START__,X
 	PHA
-	LDX @VIRTUAL02
+	LDX $02
 	LDA __BSS_START__,X
 	PLY
-	STY @VIRTUAL02
+	STY $02
 	CLC
-	ADC @VIRTUAL02
-	LDX @LOCAL01
-	STX @VIRTUAL02
+	ADC $02
+	LDX $12
+	STX $02
 	STA __BSS_START__,X
-	LDA @LOCAL03
+	LDA $16
 	CLC
 	ADC #overworld_tileset_anim::destination_address2
 	TAX
@@ -87,13 +90,14 @@ ANIMATE_TILESET:
 	INC
 	STA __BSS_START__,X
 @UNKNOWN3:
-	LDA @LOCAL03
+	LDA $16
 	CLC
 	ADC #.SIZEOF(overworld_tileset_anim)
-	STA @LOCAL03
-	INC @LOCAL02
+	STA $16
+	INC $14
 @UNKNOWN4:
 	LDA LOADED_ANIMATED_TILE_COUNT
-	CMP @LOCAL02
+	CMP $14
 	BGTL @UNKNOWN0
-	END_C_FUNCTION
+	PLD
+	RTL

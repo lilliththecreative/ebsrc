@@ -4,174 +4,174 @@
 .INCLUDE "symbols/battle_sprites.inc.asm"
 .INCLUDE "symbols/misc.inc.asm"
 
-BATTLE_SPRITE_82:
+BATTLE_SPRITE_82: ;$CE0000
 	BINARY "battle_sprites/82.gfx.lzhal"
 
-BATTLE_SPRITE_6:
+BATTLE_SPRITE_6: ;$CE0305
 	BINARY "battle_sprites/6.gfx.lzhal"
 
-BATTLE_SPRITE_31:
+BATTLE_SPRITE_31: ;$CE0601
 	BINARY "battle_sprites/31.gfx.lzhal"
 
-BATTLE_SPRITE_50:
+BATTLE_SPRITE_50: ;$CE08F3
 	BINARY "battle_sprites/50.gfx.lzhal"
 
-BATTLE_SPRITE_109:
+BATTLE_SPRITE_109: ;$CE0BD6
 	BINARY "battle_sprites/109.gfx.lzhal"
 
-BATTLE_SPRITE_53:
+BATTLE_SPRITE_53: ;$CE0EB3
 	BINARY "battle_sprites/53.gfx.lzhal"
 
-BATTLE_SPRITE_103:
+BATTLE_SPRITE_103: ;$CE118D
 	BINARY "battle_sprites/103.gfx.lzhal"
 
-BATTLE_SPRITE_98:
+BATTLE_SPRITE_98: ;$CE1461
 	BINARY "battle_sprites/98.gfx.lzhal"
 
-BATTLE_SPRITE_68:
+BATTLE_SPRITE_68: ;$CE170A
 	BINARY "battle_sprites/68.gfx.lzhal"
 
-BATTLE_SPRITE_52:
+BATTLE_SPRITE_52: ;$CE19A9
 	BINARY "battle_sprites/52.gfx.lzhal"
 
-BATTLE_SPRITE_8:
+BATTLE_SPRITE_8: ;$CE1C2E
 	BINARY "battle_sprites/8.gfx.lzhal"
 
-BATTLE_SPRITE_21:
+BATTLE_SPRITE_21: ;$CE1EB1
 	BINARY "battle_sprites/21.gfx.lzhal"
 
-BATTLE_SPRITE_43:
+BATTLE_SPRITE_43: ;$CE2133
 	BINARY "battle_sprites/43.gfx.lzhal"
 
-BATTLE_SPRITE_7:
+BATTLE_SPRITE_7: ;$CE239C
 	BINARY "battle_sprites/7.gfx.lzhal"
 
-BATTLE_SPRITE_5:
+BATTLE_SPRITE_5: ;$CE25E6
 	BINARY "battle_sprites/5.gfx.lzhal"
 
-BATTLE_SPRITE_26:
+BATTLE_SPRITE_26: ;$CE2830
 	BINARY "battle_sprites/26.gfx.lzhal"
 
-BATTLE_SPRITE_61:
+BATTLE_SPRITE_61: ;$CE2A5E
 	BINARY "battle_sprites/61.gfx.lzhal"
 
-BATTLE_SPRITE_24:
+BATTLE_SPRITE_24: ;$CE2C7E
 	BINARY "battle_sprites/24.gfx.lzhal"
 
-BATTLE_SPRITE_92:
+BATTLE_SPRITE_92: ;$CE2E9B
 	BINARY "battle_sprites/92.gfx.lzhal"
 
-BATTLE_SPRITE_33:
+BATTLE_SPRITE_33: ;$CE30B7
 	BINARY "battle_sprites/33.gfx.lzhal"
 
-BATTLE_SPRITE_29:
+BATTLE_SPRITE_29: ;$CE32C9
 	BINARY "battle_sprites/29.gfx.lzhal"
 
-BATTLE_SPRITE_69:
+BATTLE_SPRITE_69: ;$CE34C5
 	BINARY "battle_sprites/69.gfx.lzhal"
 
-BATTLE_SPRITE_49:
+BATTLE_SPRITE_49: ;$CE36B1
 	BINARY "battle_sprites/49.gfx.lzhal"
 
-BATTLE_SPRITE_80:
+BATTLE_SPRITE_80: ;$CE3897
 	BINARY "battle_sprites/80.gfx.lzhal"
 
-BATTLE_SPRITE_3:
+BATTLE_SPRITE_3: ;$CE3A60
 	BINARY "battle_sprites/3.gfx.lzhal"
 
-BATTLE_SPRITE_45:
+BATTLE_SPRITE_45: ;$CE3C0F
 	BINARY "battle_sprites/45.gfx.lzhal"
 
-BATTLE_SPRITE_20:
+BATTLE_SPRITE_20: ;$CE3DB9
 	BINARY "battle_sprites/20.gfx.lzhal"
 
-BATTLE_SPRITE_91:
+BATTLE_SPRITE_91: ;$CE3F63
 	BINARY "battle_sprites/91.gfx.lzhal"
 
-BATTLE_SPRITE_19:
+BATTLE_SPRITE_19: ;$CE4104
 	BINARY "battle_sprites/19.gfx.lzhal"
 
-BATTLE_SPRITE_2:
+BATTLE_SPRITE_2: ;$CE429C
 	BINARY "battle_sprites/2.gfx.lzhal"
 
-BATTLE_SPRITE_25:
+BATTLE_SPRITE_25: ;$CE4432
 	BINARY "battle_sprites/25.gfx.lzhal"
 
-BATTLE_SPRITE_17:
+BATTLE_SPRITE_17: ;$CE45BF
 	BINARY "battle_sprites/17.gfx.lzhal"
 
-BATTLE_SPRITE_76:
+BATTLE_SPRITE_76: ;$CE4745
 	BINARY "battle_sprites/76.gfx.lzhal"
 
-BATTLE_SPRITE_15:
+BATTLE_SPRITE_15: ;$CE48C8
 	BINARY "battle_sprites/15.gfx.lzhal"
 
-BATTLE_SPRITE_48:
+BATTLE_SPRITE_48: ;$CE4A4A
 	BINARY "battle_sprites/48.gfx.lzhal"
 
-BATTLE_SPRITE_70:
+BATTLE_SPRITE_70: ;$CE4BAE
 	BINARY "battle_sprites/70.gfx.lzhal"
 
-BATTLE_SPRITE_57:
+BATTLE_SPRITE_57: ;$CE4D0E
 	BINARY "battle_sprites/57.gfx.lzhal"
 
-BATTLE_SPRITE_1:
+BATTLE_SPRITE_1: ;$CE4E6D
 	BINARY "battle_sprites/1.gfx.lzhal"
 
-BATTLE_SPRITE_47:
+BATTLE_SPRITE_47: ;$CE4FCC
 	BINARY "battle_sprites/47.gfx.lzhal"
 
-BATTLE_SPRITE_46:
+BATTLE_SPRITE_46: ;$CE5128
 	BINARY "battle_sprites/46.gfx.lzhal"
 
-BATTLE_SPRITE_4:
+BATTLE_SPRITE_4: ;$CE5283
 	BINARY "battle_sprites/4.gfx.lzhal"
 
-BATTLE_SPRITE_77:
+BATTLE_SPRITE_77: ;$CE53DB
 	BINARY "battle_sprites/77.gfx.lzhal"
 
-BATTLE_SPRITE_65:
+BATTLE_SPRITE_65: ;$CE5527
 	BINARY "battle_sprites/65.gfx.lzhal"
 
-BATTLE_SPRITE_85:
+BATTLE_SPRITE_85: ;$CE5673
 	BINARY "battle_sprites/85.gfx.lzhal"
 
-BATTLE_SPRITE_44:
+BATTLE_SPRITE_44: ;$CE57BD
 	BINARY "battle_sprites/44.gfx.lzhal"
 
-BATTLE_SPRITE_58:
+BATTLE_SPRITE_58: ;$CE58FD
 	BINARY "battle_sprites/58.gfx.lzhal"
 
-BATTLE_SPRITE_18:
+BATTLE_SPRITE_18: ;$CE5A3B
 	BINARY "battle_sprites/18.gfx.lzhal"
 
-BATTLE_SPRITE_59:
+BATTLE_SPRITE_59: ;$CE5B5F
 	BINARY "battle_sprites/59.gfx.lzhal"
 
-BATTLE_SPRITE_16:
+BATTLE_SPRITE_16: ;$CE5C78
 	BINARY "battle_sprites/16.gfx.lzhal"
 
-BATTLE_SPRITE_66:
+BATTLE_SPRITE_66: ;$CE5D8A
 	BINARY "battle_sprites/66.gfx.lzhal"
 
-BATTLE_SPRITE_90:
+BATTLE_SPRITE_90: ;$CE5E8A
 	BINARY "battle_sprites/90.gfx.lzhal"
 
-BATTLE_SPRITE_88:
+BATTLE_SPRITE_88: ;$CE5F82
 	BINARY "battle_sprites/88.gfx.lzhal"
 
-BATTLE_SPRITE_0:
+BATTLE_SPRITE_0: ;$CE606D
 	BINARY "battle_sprites/0.gfx.lzhal"
 
-BATTLE_SPRITE_42:
+BATTLE_SPRITE_42: ;$CE6158
 	BINARY "battle_sprites/42.gfx.lzhal"
 
-BATTLE_SPRITE_89:
+BATTLE_SPRITE_89: ;$CE6230
 	BINARY "battle_sprites/89.gfx.lzhal"
 
 .INCLUDE "data/battle/battle_sprites_pointers.asm"
 
-BATTLE_SPRITE_PALETTES:
+BATTLE_SPRITE_PALETTES: ;$CE6514
 	BINARY "battle_sprites/palettes/0.pal"
 	BINARY "battle_sprites/palettes/1.pal"
 	BINARY "battle_sprites/palettes/2.pal"
@@ -205,7 +205,7 @@ BATTLE_SPRITE_PALETTES:
 	BINARY "battle_sprites/palettes/30.pal"
 	BINARY "battle_sprites/palettes/31.pal"
 
-SWIRL_DATA:
+SWIRL_DATA: ;$CE6914
 SWIRL_DATA_0:
 	BINARY "swirls/0.swirl"
 SWIRL_DATA_1:
@@ -461,14 +461,14 @@ SWIRL_DATA_125:
 
 .INCLUDE "data/battle/swirl_pointers.asm"
 
-SWIRL_PRIMARY_TABLE:
+SWIRL_PRIMARY_TABLE: ;$CEDD41
 	.BYTE $00, $00, $00, $00, $02, $00, $17, $00, $04, $17, $0F, $00, $03, $26, $16, $00, $04, $3C, $15, $00, $02, $51, $1C, $00, $03, $6D, $11, $00
 
-SOUND_STONE_GFX:
+SOUND_STONE_GFX: ;$CEDD5D
 	BINARY "graphics/sound_stone.gfx.lzhal"
 
-SOUND_STONE_PALETTE:
+SOUND_STONE_PALETTE: ;$CEF806
 	BINARY "sound_stone.pal"
 
-AUDIO_PACK_102:
+AUDIO_PACK_102: ;$CEF8C6
 	AUDIOPACK "audiopacks/102.ebm"

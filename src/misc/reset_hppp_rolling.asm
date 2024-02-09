@@ -1,23 +1,13 @@
 
-RESET_HPPP_ROLLING:
-	BEGIN_C_FUNCTION_FAR
-	STACK_RESERVE_VARS
-	STACK_RESERVE_INT16
-	END_STACK_VARS
-	LDA #0
-	STA @VIRTUAL02
+RESET_HPPP_ROLLING: ;$C20F9A
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE_CLOBBER 16
+	LDA #$0000
+	STA $02
 	BRA @UNKNOWN4
 @UNKNOWN0:
-.IF .DEFINED(JPN)
-	LDA @VIRTUAL02
-	CLC
-	ADC #.LOWORD(GAME_STATE)
-	TAX
-	LDA a:game_state::party_members,X
-.ELSE
-	LDX @VIRTUAL02
+	LDX $02
 	LDA GAME_STATE + game_state::party_members,X
-.ENDIF
 	AND #$00FF
 	DEC
 	LDY #.SIZEOF(char_struct)
@@ -27,53 +17,59 @@ RESET_HPPP_ROLLING:
 	TAY
 	LDA a:char_struct::afflictions,Y
 	AND #$00FF
-	CMP #1
+	CMP #$0001
 	BEQ @UNKNOWN1
 	LDA a:char_struct::current_hp,Y
 	BNE @UNKNOWN1
-	LDA #1
+	LDA #$0001
 	STA a:char_struct::current_hp_target,Y
 @UNKNOWN1:
 	LDA a:char_struct::current_hp_fraction,Y
 	BEQ @UNKNOWN2
 	LDA a:char_struct::current_hp,Y
-	STA @LOCAL00
+	STA $0E
 	TYA
 	CLC
 	ADC #char_struct::current_hp_target
 	TAX
 	LDA __BSS_START__,X
-	STA @VIRTUAL04
-	LDA @LOCAL00
-	CMP @VIRTUAL04
+	STA $04
+	LDA $0E
+	CMP $04
 	BLTEQ @UNKNOWN2
 	STA __BSS_START__,X
 @UNKNOWN2:
 	LDA a:char_struct::current_pp_fraction,Y
 	BEQ @UNKNOWN3
 	LDA a:char_struct::current_pp,Y
-	STA @LOCAL00
+	STA $0E
 	TYA
 	CLC
-	ADC #char_struct::current_pp_target
+	ADC #$004D
 	TAX
 	LDA __BSS_START__,X
-	STA @VIRTUAL04
-	LDA @LOCAL00
-	CMP @VIRTUAL04
+	STA $04
+	LDA $0E
+	CMP $04
 	BLTEQ @UNKNOWN3
 	STA __BSS_START__,X
 @UNKNOWN3:
-	INC @VIRTUAL02
+	INC $02
 @UNKNOWN4:
 	LDA GAME_STATE+game_state::player_controlled_party_count
 	AND #$00FF
-	STA @VIRTUAL04
-	LDA @VIRTUAL02
-	CMP @VIRTUAL04
+	STA $04
+	LDA $02
+	CMP $04
 	BCCL @UNKNOWN0
 	SEP #PROC_FLAGS::ACCUM8
+<<<<<<< HEAD
 	LDA #1
 	STA FASTEST_HPPP_METER_SPEED
+=======
+	LDA #$0001
+	STA UNKNOWN_7E9696
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	REP #PROC_FLAGS::ACCUM8
-	END_C_FUNCTION
+	PLD
+	RTL

@@ -1,5 +1,5 @@
 
-RESET:
+RESET: ;$C08000
 	.A8
 	.I8
 .IF .DEFINED(JPN)

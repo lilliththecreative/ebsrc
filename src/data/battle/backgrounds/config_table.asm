@@ -1,5 +1,5 @@
 
-BG_DATA_TABLE:
+BG_DATA_TABLE: ;$CADCA1
 	.BYTE $00 ;Graphics
 	.BYTE $00 ;Palette
 	.BYTE $02 ;BPP

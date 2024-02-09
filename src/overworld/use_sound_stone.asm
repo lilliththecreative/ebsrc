@@ -1,56 +1,53 @@
 
-USE_SOUND_STONE:
-	BEGIN_C_FUNCTION_FAR
-	STACK_RESERVE_VARS
-	STACK_RESERVE_INT32
-	STACK_RESERVE_INT32
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-	STACK_RESERVE_PARAM_INT16 ;int
-	END_STACK_VARS
-	STA @LOCAL11
+USE_SOUND_STONE: ;$C4ACCE
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE 54
+	STA $34
 	JSL UNKNOWN_C08726
 	JSL STOP_MUSIC
 	JSL LOAD_ENEMY_BATTLE_SPRITES
+<<<<<<< HEAD
 	LOADPTR BUFFER, @VIRTUAL06
 	LOADPTR SOUND_STONE_GFX, @LOCAL00
 	MOVE_INT @VIRTUAL06, @LOCAL01
+=======
+	LOADPTR UNKNOWN_7F0000, $06
+	LOADPTR SOUND_STONE_GFX, $0E
+	MOVE_INT $06, $12
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL DECOMP
-	COPY_TO_VRAM1P @VIRTUAL06, VRAM::SOUND_STONE_GFX, $2C00, 0
+	COPY_TO_VRAM1P $06, $2000, $2C00, $00
 	.A16
+<<<<<<< HEAD
 	LOADPTR SOUND_STONE_PALETTE, @LOCAL00
 	LDX #BPP4PALETTE_SIZE * 6
 	LDA #.LOWORD(PALETTES) + BPP4PALETTE_SIZE * 8
+=======
+	LOADPTR SOUND_STONE_PALETTE, $0E
+	LDX #$00C0
+	LDA #$0300
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL MEMCPY16
 	JSL UNKNOWN_C47F87
-	LDY #4
+	LDY #$0004
 	LDX #BATTLEBG_LAYER::SOUNDSTONE2
 	LDA #BATTLEBG_LAYER::SOUNDSTONE1
 	JSL LOAD_BATTLE_BG
 	SEP #PROC_FLAGS::ACCUM8
-	STZ_BADOPT @LOCAL00
-	LDX #5
+	STZ_BADOPT $0E
+	LDX #$0005
 	REP #PROC_FLAGS::ACCUM8
+<<<<<<< HEAD
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_1)
+=======
+	LDA #.LOWORD(UNKNOWN_7EB3EE) + 0
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL MEMSET16
 	SEP #PROC_FLAGS::ACCUM8
-	STZ_BADOPT @LOCAL00
-	LDX #5
+	STZ_BADOPT $0E
+	LDX #$0005
 	REP #PROC_FLAGS::ACCUM8
+<<<<<<< HEAD
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_2)
 	JSL MEMSET16
 	SEP #PROC_FLAGS::ACCUM8
@@ -64,220 +61,275 @@ USE_SOUND_STONE:
 	STA SOUND_STONE_SPRITEMAP_1 + spritemap::special_flags
 	LDA #$80
 	STA SOUND_STONE_SPRITEMAP_2 + spritemap::special_flags
+=======
+	LDA #.LOWORD(UNKNOWN_7EB3F3) + 0
+	JSL MEMSET16
+	SEP #PROC_FLAGS::ACCUM8
+	LDA #$00F0
+	STA UNKNOWN_7EB3EE + 3
+	STA UNKNOWN_7EB3EE + 0
+	LDA #$00F8
+	STA UNKNOWN_7EB3F3 + 3
+	STA UNKNOWN_7EB3F3 + 0
+	LDA #$0081
+	STA UNKNOWN_7EB3EE + 4
+	LDA #$0080
+	STA UNKNOWN_7EB3F3 + 4
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	REP #PROC_FLAGS::ACCUM8
-	STZ @LOCAL10
-	LDY #0
-	STY @LOCAL0F
+	STZ $32
+	LDY #$0000
+	STY $30
 	BRA @UNKNOWN3
 @UNKNOWN0:
 	TYX
 	LDA f:SOUND_STONE_MELODY_FLAGS,X
 	AND #$00FF
 	JSL GET_EVENT_FLAG
-	CMP #0
+	CMP #$0000
 	BEQ @UNKNOWN1
-	LDY @LOCAL0F
+	LDY $30
 	TYA
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	OPTIMIZED_MULT $04, 14
 	TAX
+<<<<<<< HEAD
 	LDA #1
 	STA SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::state,X
 	INC @LOCAL10
+=======
+	LDA #$0001
+	STA UNKNOWN_7EB37E + 0,X
+	INC $32
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BRA @UNKNOWN2
 @UNKNOWN1:
-	LDY @LOCAL0F
+	LDY $30
 	TYA
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	OPTIMIZED_MULT $04, 14
 	TAX
+<<<<<<< HEAD
 	STZ SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::state,X
+=======
+	STZ UNKNOWN_7EB37E + 0,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 @UNKNOWN2:
 	TYA
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	OPTIMIZED_MULT $04, 14
 	TAX
+<<<<<<< HEAD
 	LDA #1
 	STA SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::unknown2,X
 	STZ SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::orbit_sprite_frame,X
+=======
+	LDA #$0001
+	STA UNKNOWN_7EB37E + 2,X
+	STZ UNKNOWN_7EB37E + 6,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	INY
-	STY @LOCAL0F
+	STY $30
 @UNKNOWN3:
-	CPY #8
+	CPY #$0008
 	BCC @UNKNOWN0
 	JSL UNKNOWN_C08744
-	LDX #1
+	LDX #$0001
 	TXA
 	JSL FADE_IN
-	LDA #15
-	STA @LOCAL0E
-	STZ @LOCAL0F
-	LDA #60
-	STA @LOCAL0D
-	STZ @LOCAL0C
-	STZ @LOCAL0B
-	LDA #0
-	STA @VIRTUAL04
-	STA @LOCAL0A
-	STA @VIRTUAL02
-	STA @LOCAL09
+	LDA #$000F
+	STA $2E
+	STZ $30
+	LDA #$003C
+	STA $2C
+	STZ $2A
+	STZ $28
+	LDA #$0000
+	STA $04
+	STA $26
+	STA $02
+	STA $24
 @UNKNOWN4:
 	JSL WAIT_UNTIL_NEXT_FRAME
 	LDA PAD_PRESS
-	STA @LOCAL08
-	LDA @LOCAL0A
-	STA @VIRTUAL04
+	STA $22
+	LDA $26
+	STA $04
 	BNE @UNKNOWN5
-	DEC @LOCAL0D
-	LDA @LOCAL0D
+	DEC $2C
+	LDA $2C
 	BNE @UNKNOWN5
-	LDA #.LOWORD(-1)
-	STA @VIRTUAL02
-	STA @LOCAL09
-	LDA @VIRTUAL02
-	STA @LOCAL0B
-	LDA #1
-	STA @VIRTUAL04
-	STA @LOCAL0A
+	LDA #$FFFF
+	STA $02
+	STA $24
+	LDA $02
+	STA $28
+	LDA #$0001
+	STA $04
+	STA $26
 @UNKNOWN5:
-	LDA @LOCAL0C
+	LDA $2A
 	BEQ @UNKNOWN7
-	DEC @LOCAL0C
-	LDA @LOCAL0C
+	DEC $2A
+	LDA $2A
 	BEQL @UNKNOWN31
 	JMP @UNKNOWN19
 @UNKNOWN7:
-	LDA @VIRTUAL04
+	LDA $04
 	BEQL @UNKNOWN19
-	LDA @VIRTUAL04
+	LDA $04
 	DEC
-	STA @VIRTUAL04
-	STA @LOCAL0A
-	LDA @VIRTUAL04
+	STA $04
+	STA $26
+	LDA $04
 	BNEL @UNKNOWN18
-	LDA @LOCAL09
-	STA @VIRTUAL02
-	CMP #8
+	LDA $24
+	STA $02
+	CMP #$0008
 	BCS @UNKNOWN10
-	LDA @VIRTUAL02
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	LDA $02
+	OPTIMIZED_MULT $04, 14
 	CLC
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE)
 	TAX
-	LDA a:sound_stone_playback_state::state,X
-	CMP #2
+	LDA __BSS_START__,X
+	CMP #$0002
 	BNE @UNKNOWN10
-	LDA #1
-	STA a:sound_stone_playback_state::state,X
+	LDA #$0001
+	STA __BSS_START__,X
 @UNKNOWN10:
-	LDA @VIRTUAL02
-	CMP #8
+	LDA $02
+	CMP #$0008
 	BNE @UNKNOWN14
-	LDA @LOCAL0B
+	LDA $28
 	INC
-	STA @LOCAL07
+	STA $20
 	BRA @UNKNOWN12
 @UNKNOWN11:
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	OPTIMIZED_MULT $04, 14
 	TAX
+<<<<<<< HEAD
 	LDA SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::state,X
+=======
+	LDA UNKNOWN_7EB37E,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BNE @UNKNOWN13
-	LDA @LOCAL07
+	LDA $20
 	INC
-	STA @LOCAL07
+	STA $20
 @UNKNOWN12:
-	CMP #8
+	CMP #$0008
 	BCC @UNKNOWN11
 @UNKNOWN13:
-	LDA @LOCAL07
-	CMP #8
+	LDA $20
+	CMP #$0008
 	BNE @UNKNOWN14
-	LDA #150
-	STA @LOCAL0C
+	LDA #$0096
+	STA $2A
 @UNKNOWN14:
-	INC @LOCAL0B
-	LDA @LOCAL0B
-	CMP #8
+	INC $28
+	LDA $28
+	CMP #$0008
 	BCS @UNKNOWN17
-	LDA @LOCAL0B
-	STA @VIRTUAL02
-	STA @LOCAL09
-	LDA @VIRTUAL02
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
+	LDA $28
+	STA $02
+	STA $24
+	LDA $02
+	OPTIMIZED_MULT $04, 14
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::state
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E)
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
 	LDA __BSS_START__,X
 	BEQ @UNKNOWN15
-	LDA #2
+	LDA #$0002
 	STA __BSS_START__,X
 	BRA @UNKNOWN16
 @UNKNOWN15:
-	LDA #8
-	STA @VIRTUAL02
-	STA @LOCAL09
+	LDA #$0008
+	STA $02
+	STA $24
 @UNKNOWN16:
-	LDA @VIRTUAL02
+	LDA $02
 	ASL
 	TAX
 	LDA f:SOUND_STONE_UNKNOWN7,X
-	STA @VIRTUAL04
-	STA @LOCAL0A
-	LDX @VIRTUAL02
+	STA $04
+	STA $26
+	LDX $02
 	LDA f:SOUND_STONE_MUSIC,X
 	AND #$00FF
 	JSL CHANGE_MUSIC
 	BRA @UNKNOWN18
 @UNKNOWN17:
-	LDA #150
-	STA @LOCAL0C
+	LDA #$0096
+	STA $2A
 @UNKNOWN18:
-	LDA @LOCAL09
-	STA @VIRTUAL02
-	CMP #8
+	LDA $24
+	STA $02
+	CMP #$0008
 	BCS @UNKNOWN19
-	LDA @VIRTUAL02
+	LDA $02
 	ASL
 	TAX
 	LDA f:SOUND_STONE_UNKNOWN7,X
 	SEC
-	SBC #9
-	STA @VIRTUAL02
-	LDA @LOCAL0A
-	STA @VIRTUAL04
-	CMP @VIRTUAL02
+	SBC #$0009
+	STA $02
+	LDA $26
+	STA $04
+	CMP $02
 	BNE @UNKNOWN19
-	LDA @LOCAL10
+	LDA $32
 	CLC
-	ADC #8
+	ADC #$0008
 	JSL UNKNOWN_C0AC0C
 @UNKNOWN19:
 	JSL OAM_CLEAR
+<<<<<<< HEAD
 	LDA #^SOUND_STONE_SPRITEMAP_1
+=======
+	LDA #$007E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C088A5
-	STZ @LOCAL06
+	STZ $1E
 	JMP @UNKNOWN27
 @UNKNOWN20:
-	LDA @LOCAL06
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
-	STA @LOCAL05
+	LDA $1E
+	OPTIMIZED_MULT $04, 14
+	STA $1C
 	TAX
+<<<<<<< HEAD
 	LDA SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::state,X
 	CMP #1
+=======
+	LDA UNKNOWN_7EB37E + 0,X
+	CMP #$0001
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BEQ @UNKNOWN21
-	CMP #2
+	CMP #$0002
 	BEQ @UNKNOWN22
 	JMP @UNKNOWN26
 @UNKNOWN21:
-	LDX @LOCAL06
+	LDX $1E
 	SEP #PROC_FLAGS::ACCUM8
 	LDA f:SOUND_STONE_UNKNOWN3,X
+<<<<<<< HEAD
 	STA SOUND_STONE_SPRITEMAP_1 + spritemap::tile
 	LDA #$30
 	STA SOUND_STONE_SPRITEMAP_1 + spritemap::flags
 	LDX @LOCAL06
+=======
+	STA UNKNOWN_7EB3EE + 1
+	LDA #$0030
+	STA UNKNOWN_7EB3EE + 2
+	LDX $1E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	REP #PROC_FLAGS::ACCUM8
 	LDA f:SOUND_STONE_UNKNOWN2,X
 	AND #$00FF
 	TAY
-	LDX @LOCAL06
+	LDX $1E
 	LDA f:SOUND_STONE_UNKNOWN,X
 	AND #$00FF
 	TAX
@@ -285,17 +337,25 @@ USE_SOUND_STONE:
 	JSL UNKNOWN_C08CD5
 	JMP @UNKNOWN26
 @UNKNOWN22:
-	LDA @LOCAL05
+	LDA $1C
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::orbit_sprite_position_2
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 10
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
 	LDA __BSS_START__,X
 	CLC
-	ADC #65540 / 20 ;65536/20, but rounded up
+	ADC #$0CCD
 	STA __BSS_START__,X
-	LDA @LOCAL05
+	LDA $1C
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::unknown2
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 2
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
 	LDA __BSS_START__,X
 	TAY
@@ -303,55 +363,69 @@ USE_SOUND_STONE:
 	TYA
 	STA __BSS_START__,X
 	BNE @UNKNOWN23
-	LDA #2
+	LDA #$0002
 	STA __BSS_START__,X
-	LDA @LOCAL05
+	LDA $1C
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::orbit_sprite_frame
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 6
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
-	STX @LOCAL07
-	LDA @LOCAL05
+	STX $20
+	LDA $1C
 	PHA
-	LOADPTR UNKNOWN_C4AC57, @VIRTUAL06
-	LDA @LOCAL06
+	LOADPTR UNKNOWN_C4AC57, $06
+	LDA $1E
 	ASL
 	ASL
 	CLC
-	ADC @VIRTUAL06
-	STA @VIRTUAL06
-	DEREFERENCE_PTR_TO @VIRTUAL06, @VIRTUAL06
+	ADC $06
+	STA $06
+	DEREFERENCE_PTR_TO $06, $06
 	LDA __BSS_START__,X
 	CLC
-	ADC @VIRTUAL06
-	STA @VIRTUAL06
-	LDA [@VIRTUAL06]
+	ADC $06
+	STA $06
+	LDA [$06]
 	AND #$00FF
 	PLX
+<<<<<<< HEAD
 	STA SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::orbit_sprite_position_1,X
 	LDX @LOCAL07
+=======
+	STA UNKNOWN_7EB37E + 8,X
+	LDX $20
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDA __BSS_START__,X
 	INC
 	STA __BSS_START__,X
-	LDA @LOCAL05
+	LDA $1C
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::unknown4
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 4
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
 	LDA __BSS_START__,X
-	STA @VIRTUAL02
-	LDA #2
+	STA $02
+	LDA #$0002
 	SEC
-	SBC @VIRTUAL02
+	SBC $02
 	STA __BSS_START__,X
 @UNKNOWN23:
-	LDA @LOCAL06
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(sound_stone_playback_state)
-	STA @LOCAL07
+	LDA $1E
+	OPTIMIZED_MULT $04, 14
+	STA $20
 	PHA
-	LDX @LOCAL06
+	LDX $1E
 	SEP #PROC_FLAGS::ACCUM8
 	LDA f:SOUND_STONE_UNKNOWN5,X
 	PLX
 	CLC
+<<<<<<< HEAD
 	ADC SOUND_STONE_PLAYBACK_STATE + sound_stone_playback_state::unknown4,X
 	STA SOUND_STONE_SPRITEMAP_2 + spritemap::tile
 	LDX @LOCAL06
@@ -360,91 +434,123 @@ USE_SOUND_STONE:
 	CLC
 	ADC #$31
 	STA SOUND_STONE_SPRITEMAP_2 + spritemap::flags
-	REP #PROC_FLAGS::ACCUM8
-	LDA @LOCAL07
+=======
+	ADC UNKNOWN_7EB37E + 4,X
+	STA UNKNOWN_7EB3F3 + 1
+	LDX $1E
+	LDA f:SOUND_STONE_UNKNOWN6,X
+	ASL
 	CLC
+	ADC #$0031
+	STA UNKNOWN_7EB3F3 + 2
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
+	REP #PROC_FLAGS::ACCUM8
+	LDA $20
+	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::orbit_sprite_position_1
 	STA @LOCAL04
 	LDA (@LOCAL04)
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 8
+	STA $1A
+	LDA ($1A)
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAY
 	BEQL @UNKNOWN25
-	LOADPTR SOUND_STONE_UNKNOWN, @VIRTUAL0A
-	LDA @LOCAL06
+	LOADPTR SOUND_STONE_UNKNOWN, $0A
+	LDA $1E
 	CLC
-	ADC @VIRTUAL0A
-	STA @VIRTUAL0A
-	LDA @LOCAL07
+	ADC $0A
+	STA $0A
+	LDA $20
 	CLC
+<<<<<<< HEAD
 	ADC #.LOWORD(SOUND_STONE_PLAYBACK_STATE) + sound_stone_playback_state::orbit_sprite_position_2
 	STA @LOCAL03
 	LOADPTR SOUND_STONE_UNKNOWN2, @VIRTUAL06
 	LDA @LOCAL06
+=======
+	ADC #.LOWORD(UNKNOWN_7EB37E) + 10
+	STA $18
+	LOADPTR SOUND_STONE_UNKNOWN2, $06
+	LDA $1E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	CLC
-	ADC @VIRTUAL06
-	STA @VIRTUAL06
-	LDA (@LOCAL03)
+	ADC $06
+	STA $06
+	LDA ($18)
 	XBA
 	AND #$00FF
 	TAX
 	TYA
 	JSL COSINE_SINE
-	STA @LOCAL02
-	LDA (@LOCAL03)
+	STA $16
+	LDA ($18)
 	XBA
 	AND #$00FF
 	TAX
-	LDA (@LOCAL04)
+	LDA ($1A)
 	JSL COSINE
-	STA @VIRTUAL02
-	LDA [@VIRTUAL06]
+	STA $02
+	LDA [$06]
 	AND #$00FF
 	CLC
-	ADC @VIRTUAL02
+	ADC $02
 	TAY
-	LDA [@VIRTUAL0A]
+	LDA [$0A]
 	AND #$00FF
 	CLC
-	ADC @LOCAL02
+	ADC $16
 	TAX
+<<<<<<< HEAD
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_2) + spritemap::y_offset
+=======
+	LDA #.LOWORD(UNKNOWN_7EB3F3) + 0
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C08CD5
-	LDA (@LOCAL03)
+	LDA ($18)
 	XBA
 	AND #$00FF
 	CLC
-	ADC #128
+	ADC #$0080
 	AND #$00FF
 	TAX
-	LDA (@LOCAL04)
+	LDA ($1A)
 	JSL COSINE_SINE
-	STA @LOCAL02
-	LDA (@LOCAL03)
+	STA $16
+	LDA ($18)
 	XBA
 	AND #$00FF
 	CLC
-	ADC #128
+	ADC #$0080
 	AND #$00FF
 	TAX
-	LDA (@LOCAL04)
+	LDA ($1A)
 	JSL COSINE
-	STA @VIRTUAL02
-	LDA [@VIRTUAL06]
+	STA $02
+	LDA [$06]
 	AND #$00FF
 	CLC
-	ADC @VIRTUAL02
+	ADC $02
 	TAY
-	LDA [@VIRTUAL0A]
+	LDA [$0A]
 	AND #$00FF
 	CLC
-	ADC @LOCAL02
+	ADC $16
 	TAX
+<<<<<<< HEAD
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_2) + spritemap::y_offset
+=======
+	LDA #.LOWORD(UNKNOWN_7EB3F3) + 0
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C08CD5
 @UNKNOWN25:
-	LDX @LOCAL06
+	LDX $1E
 	SEP #PROC_FLAGS::ACCUM8
 	LDA f:SOUND_STONE_UNKNOWN3,X
 	CLC
+<<<<<<< HEAD
 	ADC #128
 	STA SOUND_STONE_SPRITEMAP_1 + spritemap::tile
 	LDX @LOCAL06
@@ -454,36 +560,52 @@ USE_SOUND_STONE:
 	ADC #$30
 	STA SOUND_STONE_SPRITEMAP_1 + spritemap::flags
 	LDX @LOCAL06
+=======
+	ADC #$0080
+	STA UNKNOWN_7EB3EE + 1
+	LDX $1E
+	LDA f:SOUND_STONE_UNKNOWN4,X
+	ASL
+	CLC
+	ADC #$0030
+	STA UNKNOWN_7EB3EE + 2
+	LDX $1E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	REP #PROC_FLAGS::ACCUM8
 	LDA f:SOUND_STONE_UNKNOWN2,X
 	AND #$00FF
 	TAY
-	LDX @LOCAL06
+	LDX $1E
 	LDA f:SOUND_STONE_UNKNOWN,X
 	AND #$00FF
 	TAX
+<<<<<<< HEAD
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_1)
+=======
+	LDA #.LOWORD(UNKNOWN_7EB3EE) + 0
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C08CD5
 @UNKNOWN26:
-	INC @LOCAL06
+	INC $1E
 @UNKNOWN27:
-	LDA @LOCAL06
-	CMP #8
+	LDA $1E
+	CMP #$0008
 	BCCL @UNKNOWN20
-	DEC @LOCAL0E
-	LDA @LOCAL0E
+	DEC $2E
+	LDA $2E
 	BNE @UNKNOWN29
-	LDA #15
-	STA @LOCAL0E
-	LDA @LOCAL0F
+	LDA #$000F
+	STA $2E
+	LDA $30
 	INC
 	AND #$0003
-	STA @LOCAL0F
+	STA $30
 @UNKNOWN29:
-	LDA @LOCAL0F
+	LDA $30
 	SEP #PROC_FLAGS::ACCUM8
 	ASL
 	CLC
+<<<<<<< HEAD
 	ADC #64
 	STA SOUND_STONE_SPRITEMAP_2 + spritemap::tile
 	LDA #$3B
@@ -492,21 +614,31 @@ USE_SOUND_STONE:
 	LDX #128
 	REP #PROC_FLAGS::ACCUM8
 	LDA #.LOWORD(SOUND_STONE_SPRITEMAP_2)
+=======
+	ADC #$0040
+	STA UNKNOWN_7EB3F3 + 1
+	LDA #$003B
+	STA UNKNOWN_7EB3F3 + 2
+	LDY #$0070
+	LDX #$0080
+	REP #PROC_FLAGS::ACCUM8
+	LDA #.LOWORD(UNKNOWN_7EB3F3) + 0
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C08CD5
 	JSL UPDATE_SCREEN
-	LDX #0
+	LDX #$0000
 	LDA #.LOWORD(LOADED_BG_DATA_LAYER1)
 	JSL GENERATE_BATTLEBG_FRAME
-	LDX #1
+	LDX #$0001
 	LDA #.LOWORD(LOADED_BG_DATA_LAYER2)
 	JSL GENERATE_BATTLEBG_FRAME
-	LDA @LOCAL11
+	LDA $34
 	BEQL @UNKNOWN4
-	LDA @LOCAL08
+	LDA $22
 	AND #$80C0
 	BEQL @UNKNOWN4
 @UNKNOWN31:
-	LDX #1
+	LDX #$0001
 	TXA
 	JSL FADE_OUT
 	BRA @UNKNOWN33
@@ -517,10 +649,11 @@ USE_SOUND_STONE:
 	AND #$00FF
 	BNE @UNKNOWN32
 	JSL UNKNOWN_C08726
-	LDA #1
+	LDA #$0001
 	JSL UNKNOWN_C0AFCD
 	JSL RELOAD_MAP
-	LDX #1
+	LDX #$0001
 	TXA
 	JSL FADE_IN
-	END_C_FUNCTION
+	PLD
+	RTL

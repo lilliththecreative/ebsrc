@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 UNKNOWN_C0A3A4:
 	LDA ENTITY_CURRENT_DISPLAYED_SPRITES,X
+=======
+UNKNOWN_C0A3A4: ;$C0A3A4
+	LDA UNKNOWN_7E341A,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	AND #$0001
 	BEQ @UNKNOWN0
 	LDA ENTITY_SPRITEMAP_SIZES,X

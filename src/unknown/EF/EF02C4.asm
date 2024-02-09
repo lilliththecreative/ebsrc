@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 UNKNOWN_EF02C4:
 	BEGIN_C_FUNCTION
 	STACK_RESERVE_VARS
@@ -16,29 +17,60 @@ UNKNOWN_EF02C4:
 @UNKNOWN0:
 	LDA #2
 	STA BUBBLE_MONKEY_MODE
+=======
+UNKNOWN_EF02C4: ;$EF02C4
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE 18
+	STA $10
+	LDA UNKNOWN_7E9F33
+	CMP #$0003
+	BEQ @UNKNOWN0
+	LDA UNKNOWN_7E9F33
+	CMP #$0001
+	BNE @UNKNOWN1
+@UNKNOWN0:
+	LDA #$0002
+	STA UNKNOWN_7E9F33
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BRA @UNKNOWN3
 @UNKNOWN1:
-	LDA @LOCAL01
+	LDA $10
 	JSL UNKNOWN_C03E9D
-	CMP #40
+	CMP #$0028
 	BLTEQ @UNKNOWN2
+<<<<<<< HEAD
 	LDA #2
 	STA BUBBLE_MONKEY_MODE
+=======
+	LDA #$0002
+	STA UNKNOWN_7E9F33
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BRA @UNKNOWN3
 @UNKNOWN2:
 	JSL RAND
 	AND #$0003
 	TAX
+<<<<<<< HEAD
 	STX @LOCAL00
 	STX BUBBLE_MONKEY_MODE
+=======
+	STX $0E
+	STX UNKNOWN_7E9F33
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 @UNKNOWN3:
-	LDX @LOCAL00
+	LDX $0E
 	TXA
 	AND #$0003
-	OPTIMIZED_MULT @VIRTUAL04, 3
+	OPTIMIZED_MULT $04, 3
 	INC
 	INC
 	INC
 	INC
+<<<<<<< HEAD
 	STA BUBBLE_MONKEY_MOVEMENT_CHANGE_TIMER
 	END_C_FUNCTION
+=======
+	STA UNKNOWN_7E9F35
+	PLD
+	RTS
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

@@ -1,5 +1,5 @@
 
-DMA_TABLE:
+DMA_TABLE: ;$C08FB0
 	.BYTE $01, $18, $80
 	.BYTE $09, $18, $80
 	.BYTE $00, $18, $00

@@ -1,6 +1,6 @@
 
 ; Time to wait between transitions to static when giygas dies. Unit is frames?
-GIYGAS_DEATH_STATIC_TRANSITION_DELAYS:
+GIYGAS_DEATH_STATIC_TRANSITION_DELAYS: ;$C4A331
 	.WORD 8*SECONDS
 	.WORD 3*MILLISECONDS
 	.WORD 4*SECONDS

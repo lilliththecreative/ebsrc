@@ -1,10 +1,17 @@
 
+<<<<<<< HEAD
 UNKNOWN_C2087C:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
 	STACK_RESERVE_INT16
 	END_STACK_VARS
 	LDA RENDER_HPPP_WINDOWS
+=======
+UNKNOWN_C2087C: ;$C2087C
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE_CLOBBER 16
+	LDA UNKNOWN_7E89C9
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	AND #$00FF
 	BEQ @UNKNOWN0
 	JSR UNKNOWN_C2077D
@@ -13,18 +20,24 @@ UNKNOWN_C2087C:
 	CMP #$FFFF
 	BEQ @UNKNOWN2
 	LDY WINDOW_HEAD
-	STY @LOCAL00
+	STY $0E
 @UNKNOWN1:
 	TYA
 	JSL UNKNOWN_C107AF
-	LDY @LOCAL00
+	LDY $0E
 	TYA
 	LDY #.SIZEOF(window_stats)
 	JSL MULT168
 	TAX
+<<<<<<< HEAD
 	LDY WINDOW_STATS+window_stats::next,X
 	STY @LOCAL00
+=======
+	LDY WINDOW_STATS_TABLE+window_stats::next,X
+	STY $0E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	CPY #$FFFF
 	BNE @UNKNOWN1
 @UNKNOWN2:
-	END_C_FUNCTION
+	PLD
+	RTL

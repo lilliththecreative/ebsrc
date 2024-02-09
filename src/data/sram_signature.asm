@@ -1,3 +1,3 @@
 
-SRAM_SIGNATURE:
+SRAM_SIGNATURE: ;$EF0591
 	.ASCIIZ "HAL Laboratory, inc."

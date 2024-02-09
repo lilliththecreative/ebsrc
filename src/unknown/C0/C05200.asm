@@ -1,21 +1,38 @@
 
+<<<<<<< HEAD
 UNKNOWN_C05200:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
 	STACK_RESERVE_INT16
 	END_STACK_VARS
 	LDA BATTLE_MODE
+=======
+UNKNOWN_C05200: ;$C05200
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE_CLOBBER 16
+	LDA BATTLE_DEBUG
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BNEL @UNKNOWN9
 	LDA POSSESSED_PLAYER_COUNT
 	BEQ @UNKNOWN1
+<<<<<<< HEAD
 	LDA MINI_GHOST_ENTITY_ID
 	CMP #.LOWORD(-1)
+=======
+	LDA UNKNOWN_7E9F6B
+	CMP #$FFFF
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BNE @UNKNOWN2
 	JSL UNKNOWN_C07716
 	BRA @UNKNOWN2
 @UNKNOWN1:
+<<<<<<< HEAD
 	LDA MINI_GHOST_ENTITY_ID
 	CMP #.LOWORD(-1)
+=======
+	LDA UNKNOWN_7E9F6B
+	CMP #$FFFF
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BEQ @UNKNOWN2
 	JSL UNKNOWN_C0777A
 @UNKNOWN2:
@@ -35,29 +52,41 @@ UNKNOWN_C05200:
 	LDA GAME_STATE+game_state::leader_x_coord
 	XBA
 	AND #$00FF
-	STA @LOCAL00
+	STA $0E
 	LDA GAME_STATE+game_state::leader_y_coord
 	XBA
 	AND #$00FF
 	TAX
+<<<<<<< HEAD
 	LDA @LOCAL00
 	EOR LAST_SECTOR_X
+=======
+	LDA $0E
+	EOR UNKNOWN_7E5D5C
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BNE @UNKNOWN6
 	TXA
 	EOR LAST_SECTOR_Y
 	BEQ @UNKNOWN7
 @UNKNOWN6:
+<<<<<<< HEAD
 	LDA @LOCAL00
 	STA LAST_SECTOR_X
 	STX LAST_SECTOR_Y
 	LDA ENABLE_AUTO_SECTOR_MUSIC_CHANGES
+=======
+	LDA $0E
+	STA UNKNOWN_7E5D5C
+	STX UNKNOWN_7E5D5E
+	LDA SECTOR_BOUNDARY_BEHAVIOUR_FLAG
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BEQ @UNKNOWN7
 	JSR UNKNOWN_C03C25
 @UNKNOWN7:
 	LDA DAD_PHONE_TIMER
 	BNE @UNKNOWN8
 	LDA GAME_STATE + game_state::unknownB0
-	CMP #2
+	CMP #$0002
 	BEQ @UNKNOWN8
 	JSL LOAD_DAD_PHONE
 @UNKNOWN8:
@@ -69,7 +98,13 @@ UNKNOWN_C05200:
 	STA CURRENT_LEADING_PARTY_MEMBER_ENTITY
 	LDA GAME_STATE + game_state::unknown90
 	BEQ @UNKNOWN9
+<<<<<<< HEAD
 	LDA #1
 	STA PLAYER_HAS_DONE_SOMETHING_THIS_FRAME
+=======
+	LDA #$0001
+	STA UNKNOWN_7E0A34
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 @UNKNOWN9:
-	END_C_FUNCTION
+	PLD
+	RTL

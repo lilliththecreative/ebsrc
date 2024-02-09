@@ -1,61 +1,32 @@
 
-CREATE_WINDOW:
-	BEGIN_C_FUNCTION
-	STACK_RESERVE_VARS
-	STACK_RESERVE_INT16
-	STACK_RESERVE_INT16
-.IF .DEFINED(USA)
-	STACK_RESERVE_INT16 "LOCALEB"
-.ENDIF
-	STACK_RESERVE_INT16 "LOCAL03"
-	STACK_RESERVE_PARAM_INT16 ;int window
-	END_STACK_VARS
-.IF .DEFINED(JPN)
-	@LOCAL02_1 := @LOCAL01
-	@LOCAL02_2 := @VIRTUAL02
-	@LOCAL02_3 := @LOCAL03
-	@TMP00 := @VIRTUAL04
-.ELSEIF .DEFINED(PROTOTYPE19950327)
-	@LOCAL02_1 := @LOCALEB
-	@LOCAL02_2 := @VIRTUAL02
-	@LOCAL02_3 := @VIRTUAL02
-	@TMP00 := @VIRTUAL04
-.ELSE
-	@LOCAL02_1 := @LOCALEB
-	@LOCAL02_2 := @LOCALEB
-	@LOCAL02_3 := @VIRTUAL02
-	@TMP00 := @VIRTUAL02
-.ENDIF
+CREATE_WINDOW: ;$C104EE
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE 22
 	TAY
-	STY @LOCAL03
-.IF .DEFINED(JPN) ||  .DEFINED(PROTOTYPE19950327)
-	JSR GET_ACTIVE_WINDOW_ADDRESS
-	STA @VIRTUAL02
-	LDY @LOCAL03
-.ENDIF
+	STY $14
 	TYA
 	ASL
 	CLC
 	ADC #.LOWORD(OPEN_WINDOW_TABLE)
 	TAX
-	STX @LOCAL02_1
+	STX $12
 	LDA __BSS_START__,X
 	CMP #$FFFF
 	BEQ @UNKNOWN0
 	STY CURRENT_FOCUS_WINDOW
 	JSR UNKNOWN_C11383
-	LDX @LOCAL02_1
+	LDX $12
 	LDA __BSS_START__,X
 	LDY #.SIZEOF(window_stats)
 	JSL MULT168
 	CLC
 	ADC #.LOWORD(WINDOW_STATS)
 	TAX
-	STX @LOCAL01
+	STX $10
 	JMP @UNKNOWN8
 @UNKNOWN0:
-	JSR UNKNOWN_C3E4EF
-	STA @LOCAL00
+	JSL UNKNOWN_C3E4EF
+	STA $0E
 	CMP #$FFFF
 	BEQL @UNKNOWN13
 	LDY #.SIZEOF(window_stats)
@@ -63,16 +34,16 @@ CREATE_WINDOW:
 	CLC
 	ADC #.LOWORD(WINDOW_STATS)
 	TAX
-	STX @LOCAL01
-	LDY @LOCAL03
-	CPY #10
+	STX $10
+	LDY $14
+	CPY #$000A
 	BNE @UNKNOWN4
 	LDA WINDOW_HEAD
 	CMP #$FFFF
 	BNE @UNKNOWN2
 	LDA #$FFFF
 	STA a:window_stats::next,X
-	LDA @LOCAL00
+	LDA $0E
 	STA WINDOW_TAIL
 	BRA @UNKNOWN3
 @UNKNOWN2:
@@ -80,15 +51,20 @@ CREATE_WINDOW:
 	LDY #.SIZEOF(window_stats)
 	JSL MULT168
 	TAX
+<<<<<<< HEAD
 	LDA @LOCAL00
 	STA WINDOW_STATS + window_stats::prev,X
+=======
+	LDA $0E
+	STA WINDOW_STATS_TABLE+window_stats::prev,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDA WINDOW_HEAD
-	LDX @LOCAL01
+	LDX $10
 	STA a:window_stats::next,X
 @UNKNOWN3:
 	LDA #$FFFF
 	STA a:window_stats::prev,X
-	LDA @LOCAL00
+	LDA $0E
 	STA WINDOW_HEAD
 	BRA @UNKNOWN7
 @UNKNOWN4:
@@ -97,7 +73,7 @@ CREATE_WINDOW:
 	BNE @UNKNOWN5
 	LDA #$FFFF
 	STA a:window_stats::prev,X
-	LDA @LOCAL00
+	LDA $0E
 	STA WINDOW_HEAD
 	BRA @UNKNOWN6
 @UNKNOWN5:
@@ -107,194 +83,190 @@ CREATE_WINDOW:
 	LDY #.SIZEOF(window_stats)
 	JSL MULT168
 	TAX
+<<<<<<< HEAD
 	LDA @LOCAL00
 	STA WINDOW_STATS + window_stats::next,X
+=======
+	LDA $0E
+	STA WINDOW_STATS_TABLE+window_stats::next,X
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 @UNKNOWN6:
 	STA WINDOW_TAIL
 	LDA #$FFFF
-	LDX @LOCAL01
+	LDX $10
 	STA a:window_stats::next,X
 @UNKNOWN7:
-	LDY @LOCAL03
+	LDY $14
 	TYA
 	STA a:window_stats::id,X
 	TYA
 	ASL
 	TAX
+<<<<<<< HEAD
 	LDA @LOCAL00
 	STA OPEN_WINDOW_TABLE,X
 	LOADPTR WINDOW_CONFIGURATION_TABLE, @VIRTUAL06
+=======
+	LDA $0E
+	STA WINDOW_EXISTENCE_TABLE,X
+	LOADPTR WINDOW_CONFIGURATION_TABLE, $06
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TYA
 	ASL
 	ASL
 	ASL
-	STA @TMP00
-	MOVE_INTX @VIRTUAL06, @VIRTUAL0A
+	STA $02
+	MOVE_INTX $06, $0A
 	CLC
-	ADC @VIRTUAL0A
-	STA @VIRTUAL0A
-	LDA [@VIRTUAL0A]
-	LDX @LOCAL01
+	ADC $0A
+	STA $0A
+	LDA [$0A]
+	LDX $10
 	STA a:window_stats::window_x,X
-	LDA @TMP00
+	LDA $02
 	INC
 	INC
-	MOVE_INTY @VIRTUAL06, @VIRTUAL0A
+	MOVE_INTY $06, $0A
 	CLC
-	ADC @VIRTUAL0A
-	STA @VIRTUAL0A
-	LDA [@VIRTUAL0A]
+	ADC $0A
+	STA $0A
+	LDA [$0A]
 	STA a:window_stats::window_y,X
-	LDA @TMP00
+	LDA $02
 	INC
 	INC
 	INC
 	INC
-	MOVE_INTY @VIRTUAL06, @VIRTUAL0A
+	MOVE_INTY $06, $0A
 	CLC
-	ADC @VIRTUAL0A
-	STA @VIRTUAL0A
-	LDA [@VIRTUAL0A]
+	ADC $0A
+	STA $0A
+	LDA [$0A]
 	DEC
 	DEC
 	STA a:window_stats::width,X
-	LDA @TMP00
+	LDA $02
 	CLC
-	ADC #6
+	ADC #$0006
 	CLC
-	ADC @VIRTUAL06
-	STA @VIRTUAL06
-	LDA [@VIRTUAL06]
+	ADC $06
+	STA $06
+	LDA [$06]
 	DEC
 	DEC
 	STA a:window_stats::height,X
-	LDY #504 * 2
-	LDA @LOCAL00
+	LDY #$03F0
+	LDA $0E
 	JSL MULT16
 	CLC
 	ADC #.LOWORD(TEXT_TILEMAP_BUFFER)
 	STA a:window_stats::tilemap_address,X
-	LDY @LOCAL03
+	LDY $14
 	STY CURRENT_FOCUS_WINDOW
 @UNKNOWN8:
-.IF .DEFINED(USA) && (!.DEFINED(PROTOTYPE19950327))
 	JSR GET_ACTIVE_WINDOW_ADDRESS
-	STA @LOCAL02_1
-	LDX @LOCAL01
-.ENDIF
+	STA $12
+	LDX $10
 	STZ a:window_stats::text_y,X
 	STZ a:window_stats::text_x,X
 	SEP #PROC_FLAGS::ACCUM8
-	LDA #128
+	LDA #$0080
 	STA a:window_stats::number_padding,X
 	REP #PROC_FLAGS::ACCUM8
 	STZ a:window_stats::curr_tile_attributes,X
 	STZ a:window_stats::font,X
-	LDA @LOCAL02_2
+	LDA $12
 	CLC
 	ADC #window_stats::working_memory
 	TAY
-	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
+	MOVE_INT_YPTRSRC __BSS_START__, $06
 	TXA
 	CLC
 	ADC #window_stats::working_memory
 	TAY
-	MOVE_INT_YPTRDEST @VIRTUAL06, __BSS_START__
-	LDA @LOCAL02_2
+	MOVE_INT_YPTRDEST $06, __BSS_START__
+	LDA $12
 	CLC
 	ADC #window_stats::argument_memory
 	TAY
-	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
+	MOVE_INT_YPTRSRC __BSS_START__, $06
 	TXA
 	CLC
 	ADC #window_stats::argument_memory
 	TAY
-	MOVE_INT_YPTRDEST @VIRTUAL06, __BSS_START__
-	LDA @LOCAL02_2
+	MOVE_INT_YPTRDEST $06, __BSS_START__
+	LDA $12
 	CLC
 	ADC #window_stats::working_memory_storage
 	TAY
-	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
+	MOVE_INT_YPTRSRC __BSS_START__, $06
 	TXA
 	CLC
 	ADC #window_stats::working_memory_storage
 	TAY
-	MOVE_INT_YPTRDEST @VIRTUAL06, __BSS_START__
-	LDA @LOCAL02_2
+	MOVE_INT_YPTRDEST $06, __BSS_START__
+	LDA $12
 	CLC
 	ADC #window_stats::argument_memory_storage
 	TAY
-	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
+	MOVE_INT_YPTRSRC __BSS_START__, $06
 	TXA
 	CLC
 	ADC #window_stats::argument_memory_storage
 	TAY
-	MOVE_INT_YPTRDEST @VIRTUAL06, __BSS_START__
-.IF .DEFINED(JPN) ||  .DEFINED(PROTOTYPE19950327)
-	LDX @LOCAL02_2
-.ELSE
-	LDA @LOCAL02_2
+	MOVE_INT_YPTRDEST $06, __BSS_START__
+	LDA $12
 	TAX
-.ENDIF
 	LDA a:window_stats::secondary_memory,X
-	LDX @LOCAL01
+	LDX $10
 	STA a:window_stats::secondary_memory,X
-.IF .DEFINED(JPN) ||  .DEFINED(PROTOTYPE19950327)
-	LDX @LOCAL02_2
-.ELSE
-	LDA @LOCAL02_2
+	LDA $12
 	TAX
-.ENDIF
 	LDA a:window_stats::secondary_memory_storage,X
-	LDX @LOCAL01
+	LDX $10
 	STA a:window_stats::secondary_memory_storage,X
 	LDA #$FFFF
 	STA a:window_stats::selected_option,X
 	STA a:window_stats::option_count,X
 	STA a:window_stats::current_option,X
-	LDA #1
+	LDA #$0001
 	STA a:window_stats::unknown49,X
 	STA a:window_stats::menu_page_number,X
-	MOVE_INT_CONSTANT NULL, @VIRTUAL06
+	LDA #$0000
+	STA $06
+	LDA #$0000
+	STA $08
 	TXA
 	CLC
 	ADC #window_stats::cursor_move_callback
 	TAY
-	MOVE_INT_YPTRDEST @VIRTUAL06, __BSS_START__
+	MOVE_INT_YPTRDEST $06, __BSS_START__
 	LDY a:window_stats::tilemap_address,X
-	STY @LOCAL00
+	STY $0E
 	LDY a:window_stats::height,X
 	LDA a:window_stats::width,X
 	JSL MULT16
-	STA @LOCAL02_3
+	STA $02
 	BRA @UNKNOWN11
 @UNKNOWN9:
-.IF .DEFINED(USA)
-	LDY @LOCAL00
+	LDY $0E
 	LDA __BSS_START__,Y
 	BEQ @UNKNOWN10
 	JSL FREE_TILE_SAFE
-.ENDIF
 @UNKNOWN10:
-	LDA #64
-	LDY @LOCAL00
+	LDA #$0040
+	LDY $0E
 	STA __BSS_START__,Y
 	INY
 	INY
-	STY @LOCAL00
-	LDA @LOCAL02_3
+	STY $0E
+	LDA $02
 	DEC
-	STA @LOCAL02_3
+	STA $02
 @UNKNOWN11:
-.IF .DEFINED(JPN)
-	CMP #0
-.ELSE
-	LDA @LOCAL02_3
-.ENDIF
+	LDA $02
 	BNE @UNKNOWN9
-.IF .DEFINED(USA)
-	LDX @LOCAL01
-.ENDIF
+	LDX $10
 	LDA a:window_stats::unknown59,X
 	AND #$00FF
 	BEQ @UNKNOWN12
@@ -305,14 +277,20 @@ CREATE_WINDOW:
 	LDA #$FFFF
 	STA TITLED_WINDOWS,X
 @UNKNOWN12:
-	LDX @LOCAL01
+	LDX $10
 	SEP #PROC_FLAGS::ACCUM8
 	STZ a:window_stats::title,X
 	STZ a:window_stats::unknown59,X
 	JSL UNKNOWN_C45E96
 	SEP #PROC_FLAGS::ACCUM8
+<<<<<<< HEAD
 	LDA #1
 	STA REDRAW_ALL_WINDOWS
+=======
+	LDA #$0001
+	STA UNKNOWN_7E9623
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL UNKNOWN_C07C5B
 @UNKNOWN13:
-	END_C_FUNCTION
+	PLD
+	RTS

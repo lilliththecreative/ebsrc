@@ -1,6 +1,6 @@
 
 ;an HDMA table (indirect) for battle backgrounds
-UNKNOWN_C0AE26:
+UNKNOWN_C0AE26: ;$C0AE26
 	.BYTE $E4
 	.WORD .LOWORD(ANIMATED_BACKGROUND_LAYER_1_HDMA_BUFFER)
 	.BYTE $FC

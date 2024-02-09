@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 UNKNOWN_C4FB42:
 	BEGIN_C_FUNCTION
 	STACK_RESERVE_VARS
@@ -9,8 +10,18 @@ UNKNOWN_C4FB42:
 	LDA #.LOWORD(-1)
 	STA SEQUENCE_PACK_MASK
 	LDA @LOCAL00
+=======
+UNKNOWN_C4FB42: ;$C4FB42
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE 16
+	STA $0E
+	LDA #$FFFF
+	STA UNKNOWN_7EB547
+	LDA $0E
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 .IF .DEFINED(JPN)
-	CLC ;mother 2's audio pack addresses are relative to the first bank audio packs are stored in, for some reason
-	ADC #^AUDIO_PACK_108
+	CLC
+	ADC #$00E2
 .ENDIF
-	END_C_FUNCTION
+	PLD
+	RTS

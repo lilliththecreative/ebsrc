@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 UNKNOWN_C43CAA:
 	BEGIN_C_FUNCTION_FAR
 	END_STACK_VARS
 	LDA VWF_TILE
+=======
+UNKNOWN_C43CAA: ;$C43CAA
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	LDA UNKNOWN_7E9E25
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	INC
 	STA VWF_TILE
 	CMP #$0033
@@ -16,7 +22,14 @@ UNKNOWN_C43CAA:
 	ASL
 	STA VWF_X
 @UNKNOWN1:
+<<<<<<< HEAD
 	STZ TEXT_RENDER_STATE + 2
 	LDA VWF_X
 	STA TEXT_RENDER_STATE
 	END_C_FUNCTION
+=======
+	STZ UNKNOWN_7E9652 + 2
+	LDA UNKNOWN_7E9E23
+	STA UNKNOWN_7E9652
+	RTL
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

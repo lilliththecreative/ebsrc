@@ -1,4 +1,4 @@
 
-THETHE:
+THETHE: ;$C20998
 	EBTEXT "The "
 	EBTEXT "the "

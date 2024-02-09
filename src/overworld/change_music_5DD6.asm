@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 CHANGE_MUSIC_5DD6:
 	BEGIN_C_FUNCTION_FAR
 	END_STACK_VARS
 	LDA NEXT_MAP_MUSIC_TRACK
+=======
+CHANGE_MUSIC_5DD6: ;$C069ED
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	LDA UNKNOWN_7E5DD6
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL CHANGE_MUSIC
-	END_C_FUNCTION
+	RTL

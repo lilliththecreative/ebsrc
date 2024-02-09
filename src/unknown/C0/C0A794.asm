@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 UNKNOWN_C0A794:
 	LDY SPRITE_UPDATE_ENTITY_OFFSET
+=======
+UNKNOWN_C0A794: ;$C0A794
+	LDY UNKNOWN_7E2896
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDA ENTITY_TILE_HEIGHTS,Y
 	STA $00
 	LDA ENTITY_BYTE_WIDTHS,Y

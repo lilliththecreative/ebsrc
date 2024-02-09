@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 UNKNOWN_C05FD1:
 	BEGIN_C_FUNCTION
 	STACK_RESERVE_VARS
@@ -7,6 +8,13 @@ UNKNOWN_C05FD1:
 	END_STACK_VARS
 	STA @LOCAL00
 	STZ TEMP_ENTITY_SURFACE_FLAGS
+=======
+UNKNOWN_C05FD1: ;$C05FD1
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
+	RESERVE_STACK_SPACE 16
+	STA $0E
+	STZ UNKNOWN_7E5DA4
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TXA
 	INC
 	INC
@@ -16,10 +24,16 @@ UNKNOWN_C05FD1:
 	LSR
 	LSR
 	TAX
-	LDA @LOCAL00
+	LDA $0E
 	LSR
 	LSR
 	LSR
 	JSR UNKNOWN_C054C9
+<<<<<<< HEAD
 	STA TEMP_ENTITY_SURFACE_FLAGS
 	END_C_FUNCTION
+=======
+	STA UNKNOWN_7E5DA4
+	PLD
+	RTS
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

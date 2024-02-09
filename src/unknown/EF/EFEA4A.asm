@@ -1,32 +1,43 @@
 
-UNKNOWN_EFEA4A:
-	BEGIN_C_FUNCTION_FAR
+UNKNOWN_EFEA4A: ;$EFEA4A
+	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
 	STACK_RESERVE_VARS
 	END_STACK_VARS
 	JSL TEST_SRAM_SIZE
-	CMP #0
+	CMP #$0000
 	BEQ @INSUFFICIENT_SRAM
+<<<<<<< HEAD
 	LDA #1
 	STA REPLAY_MODE_ACTIVE
+=======
+	LDA #$0001
+	STA UNKNOWN_7EB567
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL LOAD_REPLAY_SAVE_SLOT
-	LDA GAME_STATE + game_state::leader_x_coord
+	LDA GAME_STATE+game_state::leader_x_coord
 	STA @VIRTUAL04
-	LDA GAME_STATE + game_state::leader_y_coord
+	LDA GAME_STATE+game_state::leader_y_coord
 	STA @VIRTUAL02
-	LDX #1
+	LDX #$0001
 	TXA
 	JSL FADE_OUT
 	LDX @VIRTUAL02
 	LDA @VIRTUAL04
 	JSL LOAD_MAP_AT_POSITION
-	LDY #0
+	LDY #$0000
 	LDX @VIRTUAL02
 	LDA @VIRTUAL04
 	JSL UNKNOWN_C03FA9
 	JSL UNKNOWN_C09451
+<<<<<<< HEAD
 	LDX #0
 	LDA REPLAY_TRANSITION_STYLE
+=======
+	LDX #$0000
+	LDA UNKNOWN_7EB573
+>>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSL SCREEN_TRANSITION
 	JSL UNKNOWN_C0943C
 @INSUFFICIENT_SRAM:
-	END_C_FUNCTION
+	PLD
+	RTL
