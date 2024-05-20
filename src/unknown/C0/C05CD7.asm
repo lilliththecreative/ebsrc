@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C05CD7:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
@@ -17,129 +16,82 @@ UNKNOWN_C05CD7:
 	LDX @PARAM03
 	STX @LOCAL01
 	STZ TEMP_ENTITY_SURFACE_FLAGS
-=======
-UNKNOWN_C05CD7: ;$C05CD7
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE 20
-	STX $04
-	STA $12
-	LDX $22
-	STX $10
-	STZ UNKNOWN_7E5DA4
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TYA
 	ASL
 	TAX
 	LDA ENTITY_SIZES,X
-	STA $02
+	STA @VIRTUAL02
 	ASL
-	STA $0E
-	LDX $0E
-	LDA $12
+	STA @LOCAL00
+	LDX @LOCAL00
+	LDA @LOCAL02
 	SEC
 	SBC f:UNKNOWN_C42A1F,X
 	TAY
-<<<<<<< HEAD
 	STY CHECKED_COLLISION_LEFT_X
 	LDX @LOCAL00
 	LDA @VIRTUAL04
-=======
-	STY UNKNOWN_7E5DAC
-	LDX $0E
-	LDA $04
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	SEC
 	SBC f:UNKNOWN_C42A41,X
-	LDX $0E
+	LDX @LOCAL00
 	CLC
 	ADC f:UNKNOWN_C42AEB,X
-<<<<<<< HEAD
 	STA @LOCAL00
 	STA CHECKED_COLLISION_TOP_Y
 	LDX @LOCAL01
-=======
-	STA $0E
-	STA UNKNOWN_7E5DAE
-	LDX $10
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TXA
-	CMP #$0001
+	CMP #1
 	BEQ @UNKNOWN0
-	CMP #$0000
+	CMP #0
 	BEQ @UNKNOWN1
-	CMP #$0003
+	CMP #3
 	BEQ @UNKNOWN2
-	CMP #$0002
+	CMP #2
 	BEQ @UNKNOWN3
-	CMP #$0005
+	CMP #5
 	BEQ @UNKNOWN4
-	CMP #$0004
+	CMP #4
 	BEQ @UNKNOWN5
-	CMP #$0007
+	CMP #7
 	BEQ @UNKNOWN6
-	CMP #$0006
+	CMP #6
 	BEQ @UNKNOWN7
 	BRA @UNKNOWN8
 @UNKNOWN0:
-	LDX $02
-	LDA $0E
+	LDX @VIRTUAL02
+	LDA @LOCAL00
 	JSR UNKNOWN_C056D0
 @UNKNOWN1:
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	LDA CHECKED_COLLISION_LEFT_X
-=======
-	LDX $02
-	LDA UNKNOWN_7E5DAC
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSR UNKNOWN_C05503
 	BRA @UNKNOWN8
 @UNKNOWN2:
-	LDX $02
+	LDX @VIRTUAL02
 	TYA
 	JSR UNKNOWN_C0559C
 @UNKNOWN3:
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	LDA CHECKED_COLLISION_TOP_Y
-=======
-	LDX $02
-	LDA UNKNOWN_7E5DAE
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSR UNKNOWN_C056D0
 	BRA @UNKNOWN8
 @UNKNOWN4:
-	LDX $02
-	LDA $0E
+	LDX @VIRTUAL02
+	LDA @LOCAL00
 	JSR UNKNOWN_C05639
 @UNKNOWN5:
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	LDA CHECKED_COLLISION_LEFT_X
-=======
-	LDX $02
-	LDA UNKNOWN_7E5DAC
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JSR UNKNOWN_C0559C
 	BRA @UNKNOWN8
 @UNKNOWN6:
-	LDX $02
+	LDX @VIRTUAL02
 	TYA
 	JSR UNKNOWN_C05503
 @UNKNOWN7:
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	LDA CHECKED_COLLISION_TOP_Y
 	JSR UNKNOWN_C05639
 @UNKNOWN8:
 	LDA TEMP_ENTITY_SURFACE_FLAGS
 	END_C_FUNCTION
-=======
-	LDX $02
-	LDA UNKNOWN_7E5DAE
-	JSR UNKNOWN_C05639
-@UNKNOWN8:
-	LDA UNKNOWN_7E5DA4
-	PLD
-	RTL
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

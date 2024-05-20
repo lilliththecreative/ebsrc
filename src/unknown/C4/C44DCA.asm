@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C44DCA:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
@@ -11,74 +10,59 @@ UNKNOWN_C44DCA:
 	LDA #.LOWORD(TEXT_RENDER_STATE)
 	STA @LOCAL03
 	LDA VWF_X
-=======
-UNKNOWN_C44DCA: ;$C44DCA
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE_CLOBBER 22
-	LDA #.LOWORD(UNKNOWN_7E9652)
-	STA $14
-	LDA UNKNOWN_7E9E23
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LSR
 	LSR
 	LSR
-	STA $12
-	LDA ($14)
+	STA @LOCAL02
+	LDA (@LOCAL03) ;text_renderer_state::pixels_rendered
 	LSR
 	LSR
 	LSR
-	STA $02
-	LDY #$0002
-	LDA ($14),Y
-	STA $10
+	STA @VIRTUAL02
+	LDY #text_renderer_state::upper_vram_position
+	LDA (@LOCAL03),Y
+	STA @LOCAL01
 	BEQ @UNKNOWN0
-	LDY #$0004
-	LDA ($14),Y
+	LDY #text_renderer_state::lower_vram_position
+	LDA (@LOCAL03),Y
 	TAY
-	LDA $10
+	LDA @LOCAL01
 	TAX
-	LDA $02
+	LDA @VIRTUAL02
 	JSR UNKNOWN_C4002F
 	BRA @UNKNOWN3
 @UNKNOWN0:
-	LDA $02
+	LDA @VIRTUAL02
 	DEC
-	STA $02
+	STA @VIRTUAL02
 	BRA @UNKNOWN3
 @UNKNOWN1:
 	JSR UNKNOWN_C40085
-	STA $0E
-	LDY #$0002
-	STA ($14),Y
+	STA @LOCAL00
+	LDY #text_renderer_state::upper_vram_position
+	STA (@LOCAL03),Y
 	JSR UNKNOWN_C40085
-	STA $04
-	LDY #$0004
-	STA ($14),Y
-	LDX $02
+	STA @VIRTUAL04
+	LDY #text_renderer_state::lower_vram_position
+	STA (@LOCAL03),Y
+	LDX @VIRTUAL02
 	INX
-	CPX #$0034
+	CPX #52
 	BNE @UNKNOWN2
-	LDX #$0000
+	LDX #0
 @UNKNOWN2:
-	STX $02
-	LDY $04
-	LDX $0E
-	LDA $02
+	STX @VIRTUAL02
+	LDY @VIRTUAL04
+	LDX @LOCAL00
+	LDA @VIRTUAL02
 	JSR UNKNOWN_C4002F
-	LDX $04
-	LDA $0E
+	LDX @VIRTUAL04
+	LDA @LOCAL00
 	JSR UNKNOWN_C44C8C
 @UNKNOWN3:
-	LDA $02
-	CMP $12
+	LDA @VIRTUAL02
+	CMP @LOCAL02
 	BNE @UNKNOWN1
-<<<<<<< HEAD
 	LDA VWF_X
 	STA (@LOCAL03)
 	END_C_FUNCTION
-=======
-	LDA UNKNOWN_7E9E23
-	STA ($14)
-	PLD
-	RTL
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

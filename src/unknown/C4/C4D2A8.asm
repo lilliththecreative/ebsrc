@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C4D2A8:
 	BEGIN_C_FUNCTION
 	STACK_RESERVE_VARS
@@ -15,42 +14,23 @@ UNKNOWN_C4D2A8:
 	STX @LOCAL01
 	LDA #130
 	STA @LOCAL00
-=======
-UNKNOWN_C4D2A8: ;$C4D2A8
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE_CLOBBER 18
-	LDA UNKNOWN_7EB4B2
-	BNE @UNKNOWN2
-	LDA #$000C
-	STA UNKNOWN_7EB4B2
-	LDX $0302
-	STX $10
-	LDA #$0082
-	STA $0E
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BRA @UNKNOWN1
 @UNKNOWN0:
 	DEC
 	ASL
 	PHA
-	LDA $0E
+	LDA @LOCAL00
 	ASL
 	TAX
 	LDA PALETTES,X
 	PLX
-<<<<<<< HEAD
 	STA PALETTES,X
 	LDA @LOCAL00
-=======
-	STA CUR_TEXT_PAL,X
-	LDA $0E
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	INC
-	STA $0E
+	STA @LOCAL00
 @UNKNOWN1:
-	CMP #$0088
+	CMP #136
 	BCC @UNKNOWN0
-<<<<<<< HEAD
 	LDX @LOCAL01
 	STX PALETTES + BPP4PALETTE_SIZE * 8 + 7 * 2
 	LDA #16
@@ -58,13 +38,3 @@ UNKNOWN_C4D2A8: ;$C4D2A8
 @UNKNOWN2:
 	DEC FRAMES_UNTIL_MAP_ICON_PALETTE_UPDATE
 	END_C_FUNCTION
-=======
-	LDX $10
-	STX $030E
-	LDA #$0010
-	JSL UNKNOWN_C0856B
-@UNKNOWN2:
-	DEC UNKNOWN_7EB4B2
-	PLD
-	RTS
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

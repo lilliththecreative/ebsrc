@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
 UNKNOWN_C09C02:
 	LDA LAST_ALLOCATED_SCRIPT
-=======
-UNKNOWN_C09C02: ;$C09C02
-	LDA UNKNOWN_7E0A54
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BMI @UNKNOWN2
 	LDY #.LOWORD(-1)
 	LDA LAST_ENTITY

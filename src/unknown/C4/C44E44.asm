@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
 UNKNOWN_C44E44:
 	BEGIN_C_FUNCTION_FAR
 	END_STACK_VARS
 	STZ TEXT_RENDER_STATE + 2
 	STZ TEXT_RENDER_STATE
 	END_C_FUNCTION
-=======
-UNKNOWN_C44E44: ;$C44E44
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	STZ UNKNOWN_7E9652 + 2
-	STZ UNKNOWN_7E9652
-	RTL
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

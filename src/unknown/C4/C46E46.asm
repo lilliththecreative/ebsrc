@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
 UNKNOWN_C46E46:
 	BEGIN_C_FUNCTION_FAR
 	END_STACK_VARS
 	LDA #1
 	STA ACTIONSCRIPT_STATE
 	END_C_FUNCTION
-=======
-UNKNOWN_C46E46: ;$C46E46
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	LDA #$0001
-	STA UNKNOWN_7E9641
-	RTL
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

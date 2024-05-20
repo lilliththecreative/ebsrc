@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C06578:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
@@ -17,33 +16,12 @@ UNKNOWN_C06578:
 	LDA @LOCAL00
 	STA ENTITY_CREATION_QUEUE + queued_entity_creation::sprite,X
 	LDX @LOCAL01
-=======
-UNKNOWN_C06578: ;$C06578
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE 18
-	STX $10
-	STA $0E
-	LDA UNKNOWN_7E5E36
-	ASL
-	ASL
-	TAX
-	LDA $0E
-	STA UNKNOWN_7E5E06,X
-	LDX $10
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	PHX
 	LDA ENTITY_CREATION_QUEUE_LENGTH
 	ASL
 	ASL
 	TAX
 	PLA
-<<<<<<< HEAD
 	STA ENTITY_CREATION_QUEUE + queued_entity_creation::script,X
 	INC ENTITY_CREATION_QUEUE_LENGTH
 	END_C_FUNCTION
-=======
-	STA UNKNOWN_7E5E06+2,X
-	INC UNKNOWN_7E5E36
-	PLD
-	RTL
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)

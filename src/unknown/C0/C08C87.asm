@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 UNKNOWN_C08C87:
 	LDX PRIORITY_1_SPRITE_OFFSET
 	STA PRIORITY_1_SPRITEMAPS,X
-=======
-UNKNOWN_C08C87: ;$C08C87
-	LDX UNKNOWN_7E2606
-	STA UNKNOWN_7E2506,X
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	PLA
 	STA PRIORITY_1_SPRITE_X,X
 	TYA

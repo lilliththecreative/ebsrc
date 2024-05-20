@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
 RUN_ACTIONSCRIPT_FRAME:
 	LDA DISABLE_ACTIONSCRIPT
-=======
-RUN_ACTIONSCRIPT_FRAME: ;$C09466
-	LDA UNKNOWN_7E0A60
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	BEQ @UNKNOWN0
 	RTL
 @UNKNOWN0:

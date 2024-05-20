@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 MEMCPY16:
 	STX MEMCPY_WORDS_LEFT
 	LSR MEMCPY_WORDS_LEFT
-=======
-MEMCPY16: ;$C08ED2
-	STX UNKNOWN_7E00A5
-	LSR UNKNOWN_7E00A5
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	TAX
 	LDY #$0000
 	BRA @UNKNOWN1

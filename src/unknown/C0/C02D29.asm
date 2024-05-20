@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C02D29:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
@@ -9,15 +8,6 @@ UNKNOWN_C02D29:
 	STA ENTITY_SIZES+23 * 2
 	LDA #.LOWORD(-1)
 	STA MINI_GHOST_ENTITY_ID
-=======
-UNKNOWN_C02D29: ;$C02D29
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE_CLOBBER 16
-	LDA #$0001
-	STA ENTITY_SIZES+46
-	LDA #$FFFF
-	STA UNKNOWN_7E9F6B
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	STZ GAME_STATE+game_state::unknown88
 	STZ GAME_STATE+game_state::unknownB0
 	STZ GAME_STATE+game_state::unknownB2
@@ -25,10 +15,10 @@ UNKNOWN_C02D29: ;$C02D29
 	SEP #PROC_FLAGS::ACCUM8
 	STZ GAME_STATE+game_state::party_status
 	REP #PROC_FLAGS::ACCUM8
-	LDA #$0018
+	LDA #PARTY_LEADER_ENTITY_INDEX
 	STA GAME_STATE+game_state::current_party_members
-	LDA #$0000
-	STA $0E
+	LDA #0
+	STA @LOCAL00
 	BRA @UNKNOWN1
 @UNKNOWN0:
 .IF .DEFINED(JPN)
@@ -38,7 +28,7 @@ UNKNOWN_C02D29: ;$C02D29
 	SEP #PROC_FLAGS::ACCUM8
 	STZ a:game_state::unknown96,X
 	REP #PROC_FLAGS::ACCUM8
-	LDA $0E
+	LDA @LOCAL00
 .ELSE
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
@@ -47,25 +37,19 @@ UNKNOWN_C02D29: ;$C02D29
 .ENDIF
 	ASL
 	TAX
-<<<<<<< HEAD
 	STZ HP_ALERT_SHOWN,X
 	LDA @LOCAL00
-=======
-	STZ UNKNOWN_7E5D8C,X
-	LDA $0E
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	INC
-	STA $0E
+	STA @LOCAL00
 @UNKNOWN1:
-	CMP #$0006
+	CMP #TOTAL_PARTY_COUNT
 	BCC @UNKNOWN0
 	SEP #PROC_FLAGS::ACCUM8
-	LDA #$0000
+	LDA #0
 	STA GAME_STATE+game_state::player_controlled_party_count
 	STA GAME_STATE+game_state::party_count
 	JSL VELOCITY_STORE
 	LDA f:NESS_PAJAMA_FLAG
 	JSL GET_EVENT_FLAG
 	STA PAJAMA_FLAG
-	PLD
-	RTL
+	END_C_FUNCTION

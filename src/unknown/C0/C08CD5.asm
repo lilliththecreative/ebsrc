@@ -1,5 +1,5 @@
 
-UNKNOWN_C08CD5: ;$C08CD5
+UNKNOWN_C08CD5:
 	PHP
 	PHD
 	PEA __BSS_START__
@@ -49,7 +49,7 @@ UNKNOWN_C08CD5: ;$C08CD5
 	BCS @UNKNOWN6
 	SEP #PROC_FLAGS::ACCUM8
 @UNKNOWN5:
-	LDA a:spritemap::bits,Y
+	LDA a:spritemap::special_flags,Y
 	BPL @UNKNOWN2
 	BRA @UNKNOWN10
 @UNKNOWN6:
@@ -73,13 +73,8 @@ UNKNOWN_C08CD5: ;$C08CD5
 	BNE @UNKNOWN5
 @UNKNOWN8:
 	ROL
-<<<<<<< HEAD
 	ROR <OAM_HIGH_TABLE_BUFFER + 0
 	LDA a:spritemap::special_flags,Y
-=======
-	ROR <UNKNOWN_7E000A + 0
-	LDA a:spritemap::bits,Y
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	ROR
 	ROR <OAM_HIGH_TABLE_BUFFER + 0
 	BCC @UNKNOWN9
@@ -95,7 +90,7 @@ UNKNOWN_C08CD5: ;$C08CD5
 	INX
 	INX
 	INX
-	LDA a:spritemap::bits,Y
+	LDA a:spritemap::special_flags,Y
 	BMI @UNKNOWN10
 	REP #PROC_FLAGS::ACCUM8
 	CPX <OAM_END_ADDR + 0

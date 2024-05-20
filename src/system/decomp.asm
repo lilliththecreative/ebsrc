@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
 DECOMP:
 	MOVE_INT $0E, DECOMP_DATA_SRC
-=======
-DECOMP: ;$C41A9E
-	MOVE_INT $0E, UNKNOWN_7E00CC
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDX $12
 	STX DECOMP_DEST_BUFFER
 	PHB

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 UNKNOWN_C49208:
 	BEGIN_C_FUNCTION_FAR
 	STACK_RESERVE_VARS
@@ -13,21 +12,12 @@ UNKNOWN_C49208:
 	STA @LOCAL04
 	LOADPTR BUFFER + $7800, @VIRTUAL06
 	STZ @LOCAL03
-=======
-UNKNOWN_C49208: ;$C49208
-	REP #PROC_FLAGS::ACCUM8 | PROC_FLAGS::INDEX8 | PROC_FLAGS::CARRY
-	RESERVE_STACK_SPACE 24
-	STA $16
-	LOADPTR UNKNOWN_7F7800, $06
-	STZ $14
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	JMP @UNKNOWN1
 @UNKNOWN0:
-	LDA $14
+	LDA @LOCAL03
 	ASL
-	STA $02
+	STA @VIRTUAL02
 	CLC
-<<<<<<< HEAD
 	ADC #.LOWORD(PALETTES) + BPP4PALETTE_SIZE * 2
 	STA @LOCAL02
 	LDA (@LOCAL02)
@@ -36,32 +26,15 @@ UNKNOWN_C49208: ;$C49208
 	STA @VIRTUAL04
 	LDY @LOCAL04
 	LDA @VIRTUAL04
-=======
-	ADC #.LOWORD(CUR_MAP_PAL)
-	STA $12
-	LDA ($12)
-	STA $10
-	LDA [$06]
-	STA $04
-	LDY $16
-	LDA $04
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	AND #BGR555::RED
 	TAX
-	LDA $10
+	LDA @LOCAL01
 	AND #BGR555::RED
 	JSR UNKNOWN_C491EE
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	STA BUFFER + $7900,X
 	LDY @LOCAL04
 	LDA @VIRTUAL04
-=======
-	LDX $02
-	STA UNKNOWN_7F0000 + $7900,X
-	LDY $16
-	LDA $04
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	AND #BGR555::GREEN
 	LSR
 	LSR
@@ -69,7 +42,7 @@ UNKNOWN_C49208: ;$C49208
 	LSR
 	LSR
 	TAX
-	LDA $10
+	LDA @LOCAL01
 	AND #BGR555::GREEN
 	LSR
 	LSR
@@ -77,29 +50,21 @@ UNKNOWN_C49208: ;$C49208
 	LSR
 	LSR
 	JSR UNKNOWN_C491EE
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	STA BUFFER + $7A00,X
 	LDY @LOCAL04
 	STY @LOCAL00
-=======
-	LDX $02
-	STA UNKNOWN_7F0000 + $7A00,X
-	LDY $16
-	STY $0E
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	LDY #$0400
-	LDA $04
+	LDA @VIRTUAL04
 	AND #BGR555::BLUE
 	JSL DIVISION16S_DIVISOR_POSITIVE
 	TAX
 	LDY #$0400
-	LDA $10
+	LDA @LOCAL01
 	AND #BGR555::BLUE
 	JSL DIVISION16S_DIVISOR_POSITIVE
-	LDY $0E
+	LDY @LOCAL00
 	JSR UNKNOWN_C491EE
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	STA BUFFER + $7B00,X
 	LDA (@LOCAL02)
@@ -109,22 +74,10 @@ UNKNOWN_C49208: ;$C49208
 	LDX @VIRTUAL02
 	STA BUFFER + $7C00,X
 	LDA (@LOCAL02)
-=======
-	LDX $02
-	STA UNKNOWN_7F0000 + $7B00,X
-	LDA ($12)
-	AND #BGR555::RED
-	XBA
-	AND #$FF00
-	LDX $02
-	STA UNKNOWN_7F0000 + $7C00,X
-	LDA ($12)
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 	AND #BGR555::GREEN
 	ASL
 	ASL
 	ASL
-<<<<<<< HEAD
 	LDX @VIRTUAL02
 	STA BUFFER + $7D00,X
 	LDA (@LOCAL02)
@@ -136,22 +89,8 @@ UNKNOWN_C49208: ;$C49208
 	INC @VIRTUAL06
 	INC @VIRTUAL06
 	INC @LOCAL03
-=======
-	LDX $02
-	STA UNKNOWN_7F0000 + $7D00,X
-	LDA ($12)
-	AND #BGR555::BLUE
-	LSR
-	LSR
-	LDX $02
-	STA UNKNOWN_7F0000 + $7E00,X
-	INC $06
-	INC $06
-	INC $14
->>>>>>> parent of e89e3811 (switch to new stack macro, delete old one and replace some magic numbers)
 @UNKNOWN1:
-	LDA $14
-	CMP #$0060
+	LDA @LOCAL03
+	CMP #BPP4PALETTE_SIZE * 3
 	BCCL @UNKNOWN0
-	PLD
-	RTL
+	END_C_FUNCTION
