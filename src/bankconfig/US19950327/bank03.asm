@@ -2080,7 +2080,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "misc/test_item_is_equipped.asm"
 
-.INCLUDE "unknown/C3/C3EAD0.asm"
+.INCLUDE "overworld/initialize_item_transformation.asm"
 
 .INCLUDE "overworld/clear_item_transformation.asm"
 
