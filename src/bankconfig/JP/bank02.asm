@@ -785,4 +785,4 @@
 
 .INCLUDE "unknown/C2/C2FEF9.asm"
 
-.INCLUDE "unknown/C2/C2FF9A.asm"
+.INCLUDE "overworld/actionscript/test_in_big_area.asm"
