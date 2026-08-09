@@ -2058,7 +2058,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "text/close_window.asm"
 
-.INCLUDE "text/reset_active_party_member_hp_pp_window.asm"
+.INCLUDE "text/hp_pp_window/reset_active_party_member_hp_pp_window.asm"
 
 .INCLUDE "text/print_battler_article.asm"
 
