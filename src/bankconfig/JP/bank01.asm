@@ -84,7 +84,7 @@
 
 .INCLUDE "unknown/C1/C107AF-jp.asm"
 
-.INCLUDE "text/reset_active_party_member_hp_pp_window-jp.asm"
+.INCLUDE "text/hp_pp_window/reset_active_party_member_hp_pp_window-jp.asm"
 
 .INCLUDE "misc/swap_raised_hp_pp_window.asm"
 
