@@ -49,7 +49,7 @@
 
 .INCLUDE "data/text/the.asm"
 
-.INCLUDE "unknown/C2/C209A0.asm"
+.INCLUDE "text/remove_window_from_screen_old.asm"
 
 .INCLUDE "unknown/C2/C20A20.asm"
 
