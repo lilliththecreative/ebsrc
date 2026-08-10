@@ -990,7 +990,7 @@
 
 .INCLUDE "overworld/actionscript/spawn_entity_at_self.asm"
 
-.INCLUDE "overworld/actionscript/create_entity_at_v01_plus_bg3_y.asm"
+.INCLUDE "overworld/actionscript/create_entity_at_v01_plus_bg3y.asm"
 
 .INCLUDE "overworld/actionscript/print_cast_name.asm"
 
