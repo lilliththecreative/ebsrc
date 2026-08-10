@@ -914,11 +914,11 @@
 
 .INCLUDE "overworld/actionscript/sleep_until_pixels_moved.asm"
 
-.INCLUDE "unknown/C0/C0A6B8.asm"
+.INCLUDE "overworld/actionscript/test_collision_enabled.as"
 
 .INCLUDE "unknown/C0/C0A6C5.asm"
 
-.INCLUDE "overworld/actionscript/test_collision_enabled.asm"
+.INCLUDE "unknown/C0/C0A6CB.asm"
 
 .INCLUDE "overworld/actionscript/disable_current_entity_collision.asm"
 
