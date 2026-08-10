@@ -996,7 +996,7 @@
 
 .INCLUDE "overworld/actionscript/print_cast_name_party.asm"
 
-.INCLUDE "overworld/actionscript/print_cast_name_entity_var_0.asm"
+.INCLUDE "overworld/actionscript/print_cast_name_entity_var0.asm"
 
 .INCLUDE "overworld/actionscript/fade_out_with_mosaic.asm"
 
