@@ -709,9 +709,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C47501.asm"
 
-.INCLUDE "overworld/actionscript/enable_spotlight_1.asm"
+.INCLUDE "overworld/actionscript/enable_spotlight1.asm"
 
-.INCLUDE "overworld/actionscript/enable_spotlight_2.asm"
+.INCLUDE "overworld/actionscript/enable_spotlight2.asm"
 
 .INCLUDE "unknown/C4/C47765.asm"
 
