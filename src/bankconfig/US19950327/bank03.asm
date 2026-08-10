@@ -2060,7 +2060,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "text/print_battler_article.asm"
 
-.INCLUDE "unknown/C2/C209A0.asm"
+.INCLUDE "text/remove_window_from_screen_old.asm"
 
 .INCLUDE "text/reset_window_menu.asm"
 
