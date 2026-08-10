@@ -986,13 +986,13 @@
 
 .INCLUDE "overworld/actionscript/spawn_entity_at_self.asm"
 
-.INCLUDE "overworld/actionscript/create_entity_at_v01_plus_bg3_y.asm"
+.INCLUDE "overworld/actionscript/create_entity_at_v01_plus_bg3y.asm"
 
 .INCLUDE "overworld/actionscript/print_cast_name.asm"
 
 .INCLUDE "overworld/actionscript/print_cast_name_party.asm"
 
-.INCLUDE "overworld/actionscript/print_cast_name_entity_var_0.asm"
+.INCLUDE "overworld/actionscript/print_cast_name_entity_var0.asm"
 
 .INCLUDE "overworld/actionscript/fade_out_with_mosaic.asm"
 
