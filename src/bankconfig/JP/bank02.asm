@@ -203,7 +203,7 @@
 
 .INCLUDE "battle/instant_win_handler.asm"
 
-.INCLUDE "unknown/C2/C2654C.asm"
+.INCLUDE "overworld/actionscript/magic_butterfly_recovery.asm"
 
 .INCLUDE "battle/instant_win_check.asm"
 
