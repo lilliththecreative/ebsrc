@@ -241,13 +241,13 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/darken_screen_2_window.asm"
 
-.INCLUDE "unknown/C4/C425CC.asm"
+.INCLUDE "overworld/actionscript/enable_spotlight_hdma1.asm"
 
-.INCLUDE "unknown/C4/C425F3.asm"
+.INCLUDE "overworld/actionscript/disable_spotlight_hdma1.asm"
 
-.INCLUDE "unknown/C4/C425FD.asm"
+.INCLUDE "overworld/actionscript/enable_spotlight_hdma2.asm"
 
-.INCLUDE "unknown/C4/C42624.asm"
+.INCLUDE "overworld/actionscript/disable_spotlight_hdma2.asm"
 
 .INCLUDE "unknown/C4/C42631.asm"
 
@@ -571,7 +571,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C46F7C.asm"
 
-.INCLUDE "unknown/C4/C47044.asm"
+.INCLUDE "overworld/actionscript/set_movement_from_angle.asm"
 
 .INCLUDE "unknown/C4/C47143.asm"
 
