@@ -727,9 +727,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C47930.asm"
 
-.INCLUDE "unknown/C4/C479E9.asm"
+.INCLUDE "overworld/actionscript/bunbuun_beam_configure.asm"
 
-.INCLUDE "unknown/C4/C47A27.asm"
+.INCLUDE "overworld/actionscript/elevator_configure.asm"
 
 .INCLUDE "overworld/actionscript/invert_y_position_relative.asm"
 
