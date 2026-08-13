@@ -690,7 +690,7 @@
 
 .INCLUDE "battle/determine_targetting.asm"
 
-.INCLUDE "overworld/use_item.asm"
+.INCLUDE "inventory/overworld_use_item.asm"
 
 .INCLUDE "overworld/overworld_psi_menu-jp.asm"
 
