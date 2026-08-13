@@ -102,13 +102,13 @@
 
 .INCLUDE "text/draw_tall_text_tile_focused_redirect.asm"
 
-.INCLUDE "text/print_letter_redirect.asm"
+.INCLUDE "text/print_letter_vwf_redirect.asm"
 
 .INCLUDE "text/print_string_redirect.asm"
 
 .INCLUDE "text/move_text_up_one_line_redirect.asm"
 
-.INCLUDE "text/print_letter.asm"
+.INCLUDE "text/print_letter_vwf.asm"
 
 .INCLUDE "text/draw_tall_text_tile_focused_redraw.asm"
 
