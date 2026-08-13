@@ -106,7 +106,7 @@
 
 .INCLUDE "text/draw_tall_text_tile_focused_redirect.asm"
 
-.INCLUDE "text/print_letter_redirect.asm"
+.INCLUDE "text/print_letter_vwf_redirect.asm"
 
 .INCLUDE "text/print_string_redirect.asm"
 
@@ -114,7 +114,7 @@
 
 .INCLUDE "text/remove_window_from_screen.asm"
 
-.INCLUDE "text/print_letter.asm"
+.INCLUDE "text/print_letter_vwf.asm"
 
 .INCLUDE "text/draw_tall_text_tile_focused_redraw.asm"
 
