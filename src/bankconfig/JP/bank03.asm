@@ -118,7 +118,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/267.asm"
 
-.INCLUDE "data/events/C30A1F.asm"
+.INCLUDE "data/events/tasks/C30A1F.asm"
 
 .INCLUDE "data/events/scripts/268.asm"
 
@@ -512,7 +512,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/466.asm"
 
-.INCLUDE "data/events/C33DBE.asm"
+.INCLUDE "data/events/tasks/C33DBE.asm"
 
 .INCLUDE "data/events/scripts/479.asm"
 
@@ -850,7 +850,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/596.asm"
 
-.INCLUDE "data/events/C36D18.asm"
+.INCLUDE "data/events/tasks/C36D18.asm"
 
 .INCLUDE "data/events/scripts/597.asm"
 
@@ -1380,9 +1380,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C3A262.asm"
 
-.INCLUDE "data/events/C3A271.asm"
+.INCLUDE "data/events/tasks/null.asm"
 
-.INCLUDE "data/events/C3A272.asm"
+.INCLUDE "data/events/tasks/null2.asm"
 
 .INCLUDE "data/events/scripts/004.asm"
 
