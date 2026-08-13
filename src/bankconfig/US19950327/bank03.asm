@@ -2074,17 +2074,17 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/debug/off_text.asm"
 
-.INCLUDE "misc/get_character_item.asm"
+.INCLUDE "inventory/get_character_item.asm"
 
-.INCLUDE "misc/check_item_equipped.asm"
+.INCLUDE "inventory/check_item_equipped.asm"
 
-.INCLUDE "misc/test_item_is_equipped.asm"
+.INCLUDE "inventory/test_item_is_equipped.asm"
 
-.INCLUDE "overworld/initialize_item_transformation.asm"
+.INCLUDE "inventory/initialize_item_transformation.asm"
 
-.INCLUDE "overworld/clear_item_transformation.asm"
+.INCLUDE "inventory/clear_item_transformation.asm"
 
-.INCLUDE "overworld/reinitialize_item_transformation.asm"
+.INCLUDE "inventory/reinitialize_item_transformation.asm"
 
 .INCLUDE "misc/reduce_party_member_hp.asm"
 
@@ -2094,7 +2094,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "misc/increase_party_member_pp.asm"
 
-.INCLUDE "misc/can_character_equip.asm"
+.INCLUDE "inventory/can_character_equip.asm"
 
 .INCLUDE "misc/full_party_update.asm"
 
@@ -2116,7 +2116,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/psi_target_text.asm"
 
-.INCLUDE "misc/select_fixable_item.asm"
+.INCLUDE "inventory/select_fixable_item.asm"
 
 .INCLUDE "data/unknown/C3F2B1.asm"
 
