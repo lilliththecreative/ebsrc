@@ -754,7 +754,7 @@
 
 .INCLUDE "text/display_text_wait.asm"
 
-.INCLUDE "text/display_in_battle_text.asm"
+.INCLUDE "battle/set_party_level_in_battle.asm"
 
 .INCLUDE "text/show_hppp_windows_redirect.asm"
 
