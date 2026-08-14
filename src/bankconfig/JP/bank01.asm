@@ -692,7 +692,7 @@
 
 .INCLUDE "inventory/overworld_use_item.asm"
 
-.INCLUDE "overworld/overworld_psi_menu-jp.asm"
+.INCLUDE "overworld/psi/overworld_psi_menu-jp.asm"
 
 .INCLUDE "unknown/C1/C1BB06.asm"
 
