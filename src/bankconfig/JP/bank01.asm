@@ -248,11 +248,11 @@
 
 .INCLUDE "overworld/debug/y_button_goods.asm"
 
-.INCLUDE "unknown/C1/C14012.asm"
+.INCLUDE "text/push_peek_text_stack.asm"
 
-.INCLUDE "unknown/C1/C14049.asm"
+.INCLUDE "text/pop_text_stack.asm"
 
-.INCLUDE "unknown/C1/C14070.asm"
+.INCLUDE "text/eb_strcmp.asm"
 
 .INCLUDE "text/ccs/print_stat.asm"
 
@@ -664,7 +664,7 @@
 
 .INCLUDE "unknown/C1/C1AA5D-jp.asm"
 
-.INCLUDE "unknown/C1/C1AAFA.asm"
+.INCLUDE "overworld/teleport/select_psi_teleport_destination.asm"
 
 .INCLUDE "unknown/C1/C1AC00.asm"
 
@@ -684,9 +684,9 @@
 
 .INCLUDE "battle/get_cnum.asm"
 
-.INCLUDE "unknown/C1/C1AD42.asm"
+.INCLUDE "inventory/find_receive_item_npc.asm"
 
-.INCLUDE "unknown/C1/C1AD7D.asm"
+.INCLUDE "inventory/get_sector_usable_item.asm"
 
 .INCLUDE "battle/determine_targetting.asm"
 
@@ -704,21 +704,21 @@
 
 .INCLUDE "overworld/get_off_bicycle_with_text.asm"
 
-.INCLUDE "unknown/C1/C1BEFC.asm"
+.INCLUDE "overworld/trigger_special_event.asm"
 
 .INCLUDE "unknown/C1/C1C046.asm"
 
-.INCLUDE "unknown/C1/C1C165.asm"
+.INCLUDE "overworld/psi/check_can_character_use_psi_status.asm"
 
-.INCLUDE "unknown/C1/C1C1BA.asm"
+.INCLUDE "overworld/psi/character_knows_psi_types.asm"
 
-.INCLUDE "unknown/C1/C1C32A.asm"
+.INCLUDE "overworld/psi/check_character_can_currently_use_psi_types.asm"
 
-.INCLUDE "unknown/C1/C1C367.asm"
+.INCLUDE "overworld/psi/psi_menu_valid_character.asm"
 
-.INCLUDE "unknown/C1/C1C373.asm"
+.INCLUDE "overworld/psi/get_first_party_member_with_psi.asm"
 
-.INCLUDE "unknown/C1/C1C3B6.asm"
+.INCLUDE "overworld/psi/get_party_member_count_with_psi.asm"
 
 .INCLUDE "text/get_psi_name.asm"
 
@@ -732,19 +732,19 @@
 
 .INCLUDE "unknown/C1/C1CA72-jp.asm"
 
-.INCLUDE "unknown/C1/C1CAF5.asm"
+.INCLUDE "battle/prepare_battle_psi_menu_options.asm"
 
-.INCLUDE "unknown/C1/C1CB7F.asm"
+.INCLUDE "battle/character_knows_any_battle_psi_by_type.asm"
 
 .INCLUDE "battle/battle_psi_menu.asm"
 
-.INCLUDE "unknown/C1/C1CE85.asm"
+.INCLUDE "battle/battle_select_item_targetting.asm"
 
 .INCLUDE "battle/battle_select_item-jp.asm"
 
-.INCLUDE "unknown/C1/C1D038.asm"
+.INCLUDE "inventory/get_fixed_version_of_item.asm"
 
-.INCLUDE "unknown/C1/C1D08B.asm"
+.INCLUDE "misc/calculate_stat_gain.asm"
 
 .INCLUDE "misc/level_up_char-jp.asm"
 
@@ -760,7 +760,7 @@
 
 .INCLUDE "text/display_text_wait.asm"
 
-.INCLUDE "unknown/C1/C1DCCB.asm"
+.INCLUDE "text/display_in_battle_text.asm"
 
 .INCLUDE "text/show_hppp_windows_redirect.asm"
 
