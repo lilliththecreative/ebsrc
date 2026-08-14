@@ -986,7 +986,7 @@
 
 .INCLUDE "overworld/actionscript/set_entity_boundaries.asm"
 
-.INCLUDE "battle/load_battlebg_movement.asm"
+.INCLUDE "overworld/actionscript/load_battlebg_movement.asm"
 
 .INCLUDE "overworld/actionscript/spawn_entity_at_self.asm"
 
