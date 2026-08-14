@@ -715,7 +715,7 @@
 
 .INCLUDE "battle/load_enemy_battle_sprites.asm"
 
-.INCLUDE "misc/battlebgs/generate_frame.asm"
+.INCLUDE "battle/backgrounds/generate_frame.asm"
 
 .INCLUDE "battle/backgrounds/load_background_animation_info.asm"
 
