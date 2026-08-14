@@ -212,13 +212,13 @@
 
 .INCLUDE "overworld/handle_bicycle_movement-jp.asm"
 
-.INCLUDE "unknown/C0/C04A7B.asm"
+.INCLUDE "overworld/camera/restore_camera_mode.asm"
 
-.INCLUDE "unknown/C0/C04A88.asm"
+.INCLUDE "overworld/camera/switch_to_camera_mode_3.asm"
 
 .INCLUDE "unknown/C0/C04AAD.asm"
 
-.INCLUDE "unknown/C0/C04B53.asm"
+.INCLUDE "overworld/camera/handle_special_camera.asm"
 
 .INCLUDE "overworld/move_party_leader.asm"
 
