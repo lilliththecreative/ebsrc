@@ -341,7 +341,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C432B1.asm"
 
-.INCLUDE "unknown/C4/C43317.asm"
+.INCLUDE "system/initialize_party_pointers.asm"
 
 .INCLUDE "overworld/set_overworld_status_suppression.asm"
 
