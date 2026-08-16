@@ -135,13 +135,13 @@
 
 .INCLUDE "text/print_stats_with_new_other_gear.asm"
 
-.INCLUDE "unknown/C2/C226C5.asm"
+.INCLUDE "misc/set_gift_box_state.asm"
 
-.INCLUDE "unknown/C2/C226E6.asm"
+.INCLUDE "misc/get_active_npc_flag_state.asm"
 
-.INCLUDE "unknown/C2/C226F0.asm"
+.INCLUDE "misc/get_active_party_character_count.asm"
 
-.INCLUDE "unknown/C2/C2272F.asm"
+.INCLUDE "misc/get_living_party_member_count.asm"
 
 .INCLUDE "unknown/C2/C2277C.asm"
 
@@ -161,9 +161,9 @@
 
 .INCLUDE "battle/init_scripted.asm"
 
-.INCLUDE "unknown/C2/C23008.asm"
+.INCLUDE "misc/backup_clear_party_npcs_money.asm"
 
-.INCLUDE "unknown/C2/C2307B.asm"
+.INCLUDE "misc/restore_party_backup.asm"
 
 .INCLUDE "misc/set_teleport_box_destination.asm"
 
@@ -179,7 +179,7 @@
 
 .INCLUDE "battle/pick_next_target.asm"
 
-.INCLUDE "unknown/C2/C23E8A.asm"
+.INCLUDE "text/prepare_suffixed_attacker_name.asm"
 
 .INCLUDE "battle/find_targettable_npc.asm"
 
@@ -221,7 +221,7 @@
 
 .INCLUDE "system/wait.asm"
 
-.INCLUDE "unknown/C2/C269DE.asm"
+.INCLUDE "system/tick_until_fade_completion.asm"
 
 .INCLUDE "system/math/rand_long.asm"
 
@@ -725,7 +725,7 @@
 
 .INCLUDE "battle/giygas_swap_death_distortion.asm"
 
-.INCLUDE "unknown/C2/C2DB14.asm"
+.INCLUDE "battle/backgrounds/replace_loaded_animated_layer1_palette.asm"
 
 .INCLUDE "battle/draw_battle_frame.asm"
 
