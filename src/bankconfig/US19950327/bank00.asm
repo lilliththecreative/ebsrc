@@ -336,7 +336,11 @@
 
 .INCLUDE "overworld/door_transition.asm"
 
-.INCLUDE "data/unknown/C06E02.asm"
+.INCLUDE "data/map/escalator_entry_offsets_x.asm"
+
+.INCLUDE "data/map/escalator_exit_offsets_x.asm"
+
+.INCLUDE "data/map/stair_input_direction_map.asm"
 
 .INCLUDE "unknown/C0/C06E1A.asm"
 
@@ -864,17 +868,17 @@
 
 .INCLUDE "overworld/party_member_update_screen_position.asm"
 
-.INCLUDE "data/unknown/C0A2AB.asm"
+.INCLUDE "data/party_slot_distance_cardinal.asm"
 
 .INCLUDE "overworld/party_get_distance_adjustment_up_down.asm"
 
 .INCLUDE "overworld/party_get_distance_adjustment_left_right.asm"
 
-.INCLUDE "data/unknown/C0A30B.asm"
+.INCLUDE "data/party_slot_distance_diagonal.asm"
 
 .INCLUDE "overworld/party_get_distance_adjustment_diagonal.asm"
 
-.INCLUDE "data/unknown/C0A350.asm"
+.INCLUDE "data/party_distance_adjustment_pointers.asm"
 
 .INCLUDE "overworld/update_position_callback_pathfinding_enabled.asm"
 
@@ -1054,7 +1058,7 @@
 
 .INCLUDE "unknown/C0/C0AE34.asm"
 
-.INCLUDE "data/unknown/C0AE44.asm"
+.INCLUDE "data/hdma_disable_masks.asm"
 
 .INCLUDE "battle/backgrounds/load_bg_offset_parameters.asm"
 
@@ -1064,7 +1068,7 @@
 
 .INCLUDE "battle/backgrounds/set_layer_config.asm"
 
-.INCLUDE "data/unknown/C0AFF1.asm"
+.INCLUDE "data/layer_config.asm"
 
 .INCLUDE "system/set_coldata.asm"
 
@@ -1072,7 +1076,7 @@
 
 .INCLUDE "system/set_window_mask.asm"
 
-.INCLUDE "data/unknown/C0B0A6.asm"
+.INCLUDE "data/window_mask_setting_presets.asm"
 
 .INCLUDE "unknown/C0/C0B0AA.asm"
 
@@ -1176,7 +1180,7 @@
 
 .INCLUDE "unknown/C0/C0CEBE.asm"
 
-.INCLUDE "data/unknown/C0CF58.asm"
+.INCLUDE "data/clockwise_spiral.asm"
 
 .INCLUDE "overworld/actionscript/search_for_collision.asm"
 
