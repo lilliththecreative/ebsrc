@@ -1276,11 +1276,11 @@
 
 .INCLUDE "misc/teleport_mainloop.asm"
 
-.INCLUDE "unknown/C0/C0EBAA-jp.asm"
+.INCLUDE "unknown/mother2/C0EBAA-jp.asm"
 
 .INCLUDE "intro/load_title_screen_graphics-jp.asm"
 
-.INCLUDE "unknown/C0/C0ED41-jp.asm"
+.INCLUDE "unknown/mother2/C0ED41-jp.asm"
 
 .INCLUDE "unknown/C0/C0EE47.asm"
 
