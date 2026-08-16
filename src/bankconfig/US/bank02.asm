@@ -83,7 +83,7 @@
 
 .INCLUDE "text/set_event_flag.asm"
 
-.INCLUDE "unknown/C2/C216AD.asm"
+.INCLUDE "overworld/set_overworld_music_override.asm"
 
 .INCLUDE "audio/stop_music_redirect.asm"
 
@@ -741,7 +741,9 @@
 
 .INCLUDE "battle/show_psi_animation.asm"
 
-.INCLUDE "unknown/C2/C2E6B3.asm"
+.INCLUDE "data/psi_animation_tile_flags.asm"
+
+.INCLUDE "battle/update_psi_animation_frame.asm"
 
 .INCLUDE "overworld/start_swirl_padded.asm"
 
