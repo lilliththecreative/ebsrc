@@ -478,6 +478,8 @@
 
 .INCLUDE "system/render_first_frame.asm"
 
+.INCLUDE "system/update_screen.asm"
+
 .INCLUDE "system/sprites/render_sprites_to_oam.asm"
 
 .INCLUDE "unknown/C0/C08C53.asm"
