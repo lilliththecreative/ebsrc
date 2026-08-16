@@ -224,9 +224,9 @@
 
 .INCLUDE "overworld/party_member_tick.asm"
 
-.INCLUDE "unknown/C0/C04F47.asm"
+.INCLUDE "overworld/restore_background_layers.asm"
 
-.INCLUDE "unknown/C0/C04F60.asm"
+.INCLUDE "overworld/red_flash.asm"
 
 .INCLUDE "overworld/try_show_hp_alert.asm"
 
@@ -324,9 +324,9 @@
 
 .INCLUDE "overworld/interact_map_switch.asm"
 
-.INCLUDE "unknown/C0/C06A8B.asm"
+.INCLUDE "overworld/interact_object.asm"
 
-.INCLUDE "unknown/C0/C06A8E.asm"
+.INCLUDE "overworld/interact_map_npc.asm"
 
 .INCLUDE "overworld/interact_rope_ladder.asm"
 
@@ -474,7 +474,7 @@
 
 .INCLUDE "system/fade_out.asm"
 
-.INCLUDE "unknown/C0/C0888B.asm"
+.INCLUDE "system/wait_for_fade_to_finish_no_actionscript.asm"
 
 .INCLUDE "system/sprites/set_spritemap_bank.asm"
 
@@ -486,7 +486,7 @@
 
 .INCLUDE "system/sprites/render_sprites_to_oam.asm"
 
-.INCLUDE "unknown/C0/C08C53.asm"
+.INCLUDE "system/debug/render_sprite.asm"
 
 .INCLUDE "system/sprites/draw_sprite_redirect.asm"
 
@@ -808,7 +808,7 @@
 
 .INCLUDE "overworld/test_entity_movement_active.asm"
 
-.INCLUDE "unknown/C0/C09F3B.asm"
+.INCLUDE "overworld/backup_entity_callback_flags_and_disable.asm"
 
 .INCLUDE "overworld/actionscript/restore_entity_callback_flags.asm"
 
@@ -836,11 +836,11 @@
 
 .INCLUDE "unknown/C0/C0A089.asm"
 
-.INCLUDE "unknown/C0/C0A0A0.asm"
+.INCLUDE "system/update_screen_position_bg13d_dupe.asm"
 
 .INCLUDE "overworld/update_entity_position_absolute.asm"
 
-.INCLUDE "unknown/C0/C0A0CA.asm"
+.INCLUDE "overworld/actionscript/draw_entity.asm"
 
 .INCLUDE "unknown/C0/C0A0E3.asm"
 
@@ -1036,11 +1036,11 @@
 
 .INCLUDE "data/stereo_mono_data.asm"
 
-.INCLUDE "unknown/C0/C0AC3A.asm"
+.INCLUDE "audio/set_static.asm"
 
 .INCLUDE "unknown/C0/C0AC43.asm"
 
-.INCLUDE "unknown/C0/C0AD56.asm"
+.INCLUDE "overworld/update_overlay_frame.asm"
 
 .INCLUDE "data/events/scripts/786.asm"
 
@@ -1056,7 +1056,7 @@
 
 .INCLUDE "data/unknown/C0AE2D.asm"
 
-.INCLUDE "unknown/C0/C0AE34.asm"
+.INCLUDE "system/hdma_disable.asm"
 
 .INCLUDE "data/hdma_disable_masks.asm"
 
@@ -1078,9 +1078,9 @@
 
 .INCLUDE "data/window_mask_setting_presets.asm"
 
-.INCLUDE "unknown/C0/C0B0AA.asm"
+.INCLUDE "overworld/reset_windows.asm"
 
-.INCLUDE "unknown/C0/C0B0B8.asm"
+.INCLUDE "overworld/enable_window_hdma.asm"
 
 .INCLUDE "overworld/enable_swirl_window_hdma.asm"
 
@@ -1154,7 +1154,7 @@
 
 .INCLUDE "overworld/actionscript/get_direction_turned_randomly_left_or_right.asm"
 
-.INCLUDE "unknown/C0/C0C6B6.asm"
+.INCLUDE "overworld/is_entity_onscreen.asm"
 
 .INCLUDE "overworld/is_entity_sprite_onscreen.asm"
 
@@ -1190,7 +1190,7 @@
 
 .INCLUDE "overworld/actionscript/test_party_collision.asm"
 
-.INCLUDE "unknown/C0/C0D195.asm"
+.INCLUDE "unused/clear_accumulator.asm"
 
 .INCLUDE "unknown/C0/C0D19B-jp.asm"
 
@@ -1212,7 +1212,7 @@
 
 .INCLUDE "unknown/C0/C0D98F.asm"
 
-.INCLUDE "unknown/C0/C0DA31.asm"
+.INCLUDE "overworld/actionscript/draw_entities_alt.asm"
 
 .INCLUDE "overworld/actionscript/draw_entities.asm"
 
