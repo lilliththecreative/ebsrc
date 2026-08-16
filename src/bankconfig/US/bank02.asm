@@ -391,9 +391,9 @@
 
 .INCLUDE "battle/actions/null11.asm"
 
-.INCLUDE "battle/actions/neutralize.asm"
+.INCLUDE "battle/actions/neutralize_common.asm"
 
-.INCLUDE "unknown/C2/C290C6.asm"
+.INCLUDE "battle/actions/neutralize.asm"
 
 .INCLUDE "battle/actions/level_2_attack_diamondize.asm"
 
