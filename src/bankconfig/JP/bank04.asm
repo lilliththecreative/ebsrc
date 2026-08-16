@@ -939,9 +939,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "ending/load_cast_scene-jp.asm"
 
-.INCLUDE "unknown/C4/C4B721-jp.asm"
+.INCLUDE "unknown/mother2/C4B721-jp.asm"
 
-.INCLUDE "unknown/C4/C4B8E2-jp.asm"
+.INCLUDE "unknown/mother2/C4B8E2-jp.asm"
 
 .INCLUDE "ending/set_cast_scroll_threshold.asm"
 
