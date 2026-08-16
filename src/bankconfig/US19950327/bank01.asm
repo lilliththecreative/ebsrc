@@ -24,7 +24,7 @@
 
 .INCLUDE "text/set_text_sound_mode.asm"
 
-.INCLUDE "unknown/C1/C1004E.asm"
+.INCLUDE "system/finish_frame.asm"
 
 .INCLUDE "text/get_window_focus.asm"
 
@@ -44,7 +44,7 @@
 
 .INCLUDE "text/ccs/halt.asm"
 
-.INCLUDE "unknown/C1/C102D0.asm"
+.INCLUDE "text/wait_for_actionscript.asm"
 
 .INCLUDE "text/get_active_window_address.asm"
 
@@ -92,7 +92,7 @@
 
 .INCLUDE "text/close_all_windows_redirect.asm"
 
-.INCLUDE "unknown/C1/C10BFE.asm"
+.INCLUDE "text/create_new_menu_option_at_position_with_user_data_far.asm"
 
 .INCLUDE "text/get_menu_option_count_redirect.asm"
 
@@ -660,7 +660,7 @@
 
 .INCLUDE "overworld/teleport/select_psi_teleport_destination.asm"
 
-.INCLUDE "unknown/C1/C1AC00.asm"
+.INCLUDE "text/make_phone_call.asm"
 
 .INCLUDE "text/set_battle_attacker_name.asm"
 
