@@ -130,7 +130,7 @@
 
 .INCLUDE "overworld/spawn_vertical.asm"
 
-.INCLUDE "overworld/velocity_store.asm"
+.INCLUDE "overworld/initialize_movement_speeds.asm"
 
 .INCLUDE "overworld/update_mushroomized_walking.asm"
 
