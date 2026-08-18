@@ -37,9 +37,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/map/footstep_sound_table.asm"
 
-.INCLUDE "data/unknown/C40BE8.asm"
+.INCLUDE "data/graphics/blank_tiles.asm"
 
-.INCLUDE "data/text/floating_sprite_table.asm"
+.INCLUDE "data/text/manpu_table.asm"
 
 .INCLUDE "data/events/scripts/785.asm"
 
@@ -189,9 +189,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/angle_to_vector.asm"
 
-.INCLUDE "data/unknown/C4205D.asm"
-
-.INCLUDE "data/unknown/C420BD.asm"
+.INCLUDE "data/angle_to_vector_sine_cosine.asm"
 
 .INCLUDE "system/math/multiply_with_divisor_256.asm"
 
@@ -285,7 +283,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "system/copy_pixel_column.asm"
 
-.INCLUDE "data/unknown/C42955.asm"
+.INCLUDE "data/graphics/pixel_plane_masks.asm"
 
 .INCLUDE "system/copy_pixel.asm"
 
@@ -293,19 +291,19 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "system/enable_letterbox_hdma.asm"
 
-.INCLUDE "data/unknown/C42A1F.asm"
+.INCLUDE "data/collision_widths.asm"
 
-.INCLUDE "data/unknown/C42A41.asm"
+.INCLUDE "data/collision_heights.asm"
 
-.INCLUDE "data/unknown/C42A63.asm"
+.INCLUDE "data/pixel_widths.asm"
 
-.INCLUDE "data/unknown/C42A85.asm"
+.INCLUDE "data/pixel_heights.asm"
 
-.INCLUDE "data/unknown/C42AA7.asm"
+.INCLUDE "data/hitbox_widths.asm"
 
-.INCLUDE "data/unknown/C42AC9.asm"
+.INCLUDE "data/hitbox_heights.asm"
 
-.INCLUDE "data/unknown/C42AEB.asm"
+.INCLUDE "data/collision_heights2.asm"
 
 .INCLUDE "data/unknown/C42B0D.asm"
 
@@ -345,9 +343,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/map/tile_table_chunks_table.asm"
 
-.INCLUDE "data/unknown/C42F8C.asm"
+.INCLUDE "data/graphics/overworld_sprite_vram_offsets.asm"
 
-.INCLUDE "data/unknown/C4303C.asm"
+.INCLUDE "data/graphics/overworld_sprite_oam_tile_numbers.asm"
 
 .INCLUDE "overworld/initialize_movement_speeds.asm"
 
@@ -429,7 +427,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "text/load_window_graphics.asm"
 
-.INCLUDE "data/unknown/C44AD7.asm"
+.INCLUDE "data/graphics/used_bg2_tilemap_masks.asm"
 
 .INCLUDE "text/free_tile.asm"
 
@@ -445,7 +443,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "text/free_tile_safe.asm"
 
-.INCLUDE "text/render_vfw_character_to_window.asm"
+.INCLUDE "text/render_vwf_character_to_window.asm"
 
 .INCLUDE "text/get_text_width.asm"
 
@@ -605,13 +603,13 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/make_sprite_look_at_active_entity.asm"
 
-.INCLUDE "data/unknown/C46A5E.asm"
+.INCLUDE "data/direction_table_urdl.asm"
 
 .INCLUDE "overworld/actionscript/get_urdl_direction.asm"
 
-.INCLUDE "data/unknown/C46A7A.asm"
+.INCLUDE "data/direction_table_4lr.asm"
 
-.INCLUDE "data/unknown/C46A8A.asm"
+.INCLUDE "data/direction_Table_4ud.asm"
 
 .INCLUDE "overworld/actionscript/convert_8_direction_to_4_prefer_left_right.asm"
 
@@ -627,7 +625,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/get_opposite_direction.asm"
 
-.INCLUDE "data/unknown/C46B41.asm"
+.INCLUDE "data/direction_table_rotated_90.asm"
 
 .INCLUDE "overworld/actionscript/get_direction_rotated_angle_90.asm"
 
@@ -705,7 +703,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/set_screen_brightness.asm"
 
-.INCLUDE "data/unknown/C474F6.asm"
+.INCLUDE "data/graphics/spotlight_taper_radii.asm"
 
 .INCLUDE "system/initialize_spotlight_window_hdma_table.asm"
 
@@ -763,7 +761,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/centre_screen_on_entity_callback_offset.asm"
 
-.INCLUDE "data/unknown/C48C59.asm"
+.INCLUDE "data/direction_to_button_map.asm"
 
 .INCLUDE "system/demos/clear_auto_movement_demo.asm"
 
@@ -871,11 +869,11 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "intro/setup_giygas_overlay.asm"
 
-.INCLUDE "data/unknown/C4A591.asm"
+.INCLUDE "data/graphics/vertical_shake_offsets.asm"
 
-.INCLUDE "data/unknown/C4A5CE.asm"
+.INCLUDE "data/graphics/oval_window_swirl.asm"
 
-.INCLUDE "data/unknown/C4A5FA.asm"
+.INCLUDE "data/graphics/evt_pray_oval_window.asm"
 
 .INCLUDE "data/unknown/C4A626.asm"
 
