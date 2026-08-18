@@ -1,6 +1,5 @@
 
-; Unknown bitmasks
-UNKNOWN_C42955:
+PIXEL_PLANE_MASKS:
 	.WORD $8080
 	.WORD $4040
 	.WORD $2020
