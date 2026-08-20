@@ -126,7 +126,7 @@ UNKNOWN_C052D4:
 	STA __BSS_START__+char_struct::position_index,Y
 	LDA #.LOWORD(-1)
 	STA __BSS_START__+char_struct::unknown63 + 2,Y
-	STA __BSS_START__+char_struct::unknown53 + 2,Y
+	STA __BSS_START__+char_struct::character_id + 2,Y
 	LDA @LOCAL03
 	ASL
 	STA @VIRTUAL02
