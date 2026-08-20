@@ -28,7 +28,7 @@ PSI_TELEPORT_ARRIVE:
 	JSL MULT168
 	TAX
 	LDA #.LOWORD(-1)
-	STA PARTY_CHARACTERS + char_struct::unknown55,X
+	STA PARTY_CHARACTERS + char_struct::last_walking_style,X
 	LDA @VIRTUAL02
 	CLC
 	ADC #24
