@@ -116,7 +116,7 @@ UNKNOWN_C0780F:
 	JMP @UNKNOWN28
 @UNKNOWN13:
 	LDX @VIRTUAL04
-	LDA a:char_struct::unknown53,X
+	LDA a:char_struct::character_id,X
 	BNE @UNKNOWN14
 	LDA #6
 	JMP @UNKNOWN28
