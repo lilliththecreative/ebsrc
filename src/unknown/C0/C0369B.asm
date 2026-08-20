@@ -131,7 +131,7 @@ UNKNOWN_C0369B:
 	LDA @LOCAL02
 	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(character_initial_entity_entry)
 	CLC
-	ADC #character_initial_entity_entry::unknown6
+	ADC #character_initial_entity_entry::initial_entity_slot
 	TAX
 	LDA f:CHARACTER_INITIAL_ENTITY_DATA,X
 	STA @LOCAL06
@@ -273,7 +273,7 @@ UNKNOWN_C0369B:
 	DEC
 	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(character_initial_entity_entry)
 	CLC
-	ADC #character_initial_entity_entry::unknown6
+	ADC #character_initial_entity_entry::initial_entity_slot
 	CLC
 	ADC @VIRTUAL06
 	STA @VIRTUAL06
