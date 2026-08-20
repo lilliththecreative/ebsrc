@@ -506,7 +506,7 @@ FILE_MENU_LOOP:
 	STORE_INT1632 @VIRTUAL06
 	MOVE_INT @VIRTUAL06, GAME_STATE+game_state::money_carried
 	MOVE_INT @LOCAL02, @VIRTUAL06
-	LDY #initial_stats::unknown2
+	LDY #initial_stats::start_y
 	LDA [@VIRTUAL06],Y
 	OPTIMIZED_MULT @VIRTUAL04, 8
 	TAX
