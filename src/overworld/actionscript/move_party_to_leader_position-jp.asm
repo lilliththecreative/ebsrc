@@ -40,8 +40,8 @@ MOVE_PARTY_TO_LEADER_POSITION:
 	TAX
 	STZ a:char_struct::position_index,X
 	LDA #$FFFF
-	STA a:char_struct::unknown65,X
-	STA a:char_struct::unknown55,X
+	STA a:char_struct::walking_style,X
+	STA a:char_struct::last_walking_style,X
 	TYA
 	ASL
 	CLC
