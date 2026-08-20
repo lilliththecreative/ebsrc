@@ -39,13 +39,13 @@
 	base_iq .byte ;34
 	items .byte 14 ;35
 	equipment .byte 4 ;49
-	unknown53 .word ;53
-	unknown55 .word ;55
+	character_id .word ;53
+	last_walking_style .word ;55
 	unknown57 .word ;57
-	unknown59 .word ;59
+	entity_slot .word ;59
 	position_index .word ;61
 	unknown63 .word ;63
-	unknown65 .word ;65
+	walking_style .word ;65
 	current_hp_fraction .word ;67
 	current_hp .word ;69
 	current_hp_target .word ;71
@@ -64,9 +64,8 @@
 	boosted_vitality .byte ;89
 	boosted_iq .byte ;90
 	boosted_luck .byte ;91
-	unknown92 .byte ;92
-	unknown93 .byte ;93
-	unknown94 .byte ;94
+	unknown92 .word ;92
+	is_auto_healed .byte ;94
 .ENDSTRUCT
 
 .STRUCT photo_state
@@ -189,8 +188,7 @@
 
 .STRUCT battler
 	id .word ;0
-	sprite .byte ;2
-	unknown03 .byte ;3
+	sprite .word ;2
 	current_action .word ;4
 	action_order_var .byte ;6
 	action_item_slot .byte ;7
@@ -235,13 +233,12 @@
 	vram_sprite_index .byte ;67
 	sprite_x .byte ;68
 	sprite_y .byte ;69
-	initiative .byte ;70
-	unknown71 .byte ;71
-	unknown72 .byte ;72
-	unknown73 .byte ;73
-	unknown74 .byte ;74
+	initiative .word ;70
+	sprite_blink_frames .byte ;72
+	enemy_attack_flash_frames .byte ;73
+	is_flashing .byte ;74
 	use_alt_spritemap .byte ;75
-	unknown76 .byte ;76
+	original_id .byte ;76
 	id2 .byte ;77
 .ENDSTRUCT
 
@@ -267,11 +264,11 @@
 	current_option .word ;43 - 89D4 entry number
 	option_count .word ;45
 	selected_option .word ;47
-	unknown49 .word ;49
+	menu_columns .word ;49
 	menu_page_number .word ;51
 	tilemap_address .word ;53
 	cursor_move_callback .dword ;55
-	unknown59 .byte ;59
+	title_id .byte ;59
 .IFDEF USA
 	title .byte 22 ;60
 .ELSE
@@ -294,7 +291,7 @@
 .ENDSTRUCT
 
 .STRUCT menu_option
-	unknown0 .word ;0
+	type .word ;0
 	next .word ;2
 	previous .word ;4
 	page .word ;6
@@ -329,7 +326,6 @@
 	ep .byte ;2
 	special .byte ;3
 .ENDSTRUCT
-
 
 .STRUCT photographer_config_entry_object
 	tile_x .word ;0
@@ -558,7 +554,7 @@
 .ENDSTRUCT
 
 .STRUCT overworld_tileset_anim
-	unknown0 .word ;0
+	frame_count .word ;0
 	frame_delay .word ;2
 	copy_size .word ;4
 	source_offset .word ;6
@@ -569,7 +565,7 @@
 .ENDSTRUCT
 
 .STRUCT overworld_tileset_anim_entry
-	unknown0 .byte ;0
+	frame_count .byte ;0
 	frame_delay .byte ;1
 	copy_size .word ;2
 	source_offset .word ;4
@@ -603,11 +599,11 @@
 
 .STRUCT pathfinder
 	from_offscreen .word ;0
-	unknown_hitbox .tag pathfinder_coords ;2
+	hitbox .tag pathfinder_coords ;2
 	origin .tag pathfinder_coords ;6
-	unknown10 .word ;10
-	unknown12 .word ;12
-	unknown14 .word ;14
+	points_count .word ;10
+	final_point_count .word ;12
+	initial_point_count .word ;14
 	object_index .word ;16
 .ENDSTRUCT
 
@@ -633,7 +629,7 @@
 	overworld_sprite .word ;0
 	lost_underworld_sprite .word ;2
 	actionscript_id .word ;4
-	unknown6 .word ;6
+	initial_entity_slot .word ;6
 .ENDSTRUCT
 
 .STRUCT pack_table_entry
@@ -650,9 +646,9 @@
 .STRUCT door_data
 	text .dword ;0
 	event_flag .word ;4
-	unknown6 .word ;6
-	unknown8 .word ;8
-	unknown10 .byte ;10
+	destination_y .word ;6 (upper two bits indicate direction)
+	destination_x .word ;8
+	transition_style .byte ;10
 .ENDSTRUCT
 
 .STRUCT active_hotspot
@@ -677,8 +673,7 @@
 	animation_flags .byte ;2
 	fade_style .byte ;3
 	direction .byte ;4
-	unknown5 .byte ;5
-	slide_speed .byte ;6
+	slide_speed .word ;5
 	start_sound_effect .byte ;7
 	secondary_duration .byte ;8
 	secondary_animation_id .byte ;9
@@ -721,7 +716,7 @@
 
 .STRUCT display_text_state
 	textptr .dword ;0
-	unknown4 .word ;4
+	restore_window_attributes .word ;4 (boolean)
 	saved_text_attributes .byte .SIZEOF(window_text_attributes_copy) ;6
 .ENDSTRUCT
 
@@ -750,8 +745,8 @@
 .ENDSTRUCT
 
 .STRUCT initial_stats
-	unknown0 .word ;0
-	unknown2 .word ;2
+	start_x .word ;0
+	start_y .word ;2
 	money .word ;4
 	level .word ;6
 	exp .word ;8
@@ -765,8 +760,8 @@
 
 .STRUCT sound_stone_playback_state
 	state .word ;0
-	unknown2 .word ;2
-	unknown4 .word ;4
+	orbit_adjustment_frames_left .word ;2
+	sprite_frame_number .word ;4
 	orbit_sprite_frame .word ;6
 	orbit_sprite_position_1 .word ;8
 	orbit_sprite_position_2 .word ;10
@@ -783,9 +778,9 @@
 
 .STRUCT manpu
 	sprite .word ;0
-	unknown2 .byte ;2
-	unknown3 .byte ;3
-	unknown4 .byte ;4
+	positioning_style .byte ;2
+	relative_x .byte ;3
+	relative_y .byte ;4
 .ENDSTRUCT
 
 .STRUCT map_tile_event
@@ -813,8 +808,8 @@
 .STRUCT timed_delivery
 	sprite .word ;0
 	event_flag .word ;2
-	unknown4 .word ;4
-	unknown6 .word ;6
+	max_attempts .word ;4
+	seconds_between_delivery_attempts .word ;6
 	delivery_time .word ;8
 	text_pointer_1 .byte 3 ;10
 	text_pointer_2 .byte 3 ;13
