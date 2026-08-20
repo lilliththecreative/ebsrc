@@ -136,7 +136,7 @@ PARTY_MEMBER_TICK:
 	LDY #player_position_buffer_entry::walking_style
 	LDA (@LOCAL03),Y
 	LDX CURRENT_PARTY_MEMBER_TICK
-	STA a:char_struct::unknown65,X
+	STA a:char_struct::walking_style,X
 	LDA GAME_STATE + game_state::unknown96
 	AND #$00FF
 	STA @VIRTUAL02
