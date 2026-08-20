@@ -191,7 +191,7 @@ UNKNOWN_C04FFE:
 	LDX CURRENT_PARTY_MEMBER_TICK
 	STZ a:char_struct::current_hp,X
 	LDX CURRENT_PARTY_MEMBER_TICK
-	LDA a:char_struct::unknown59,X
+	LDA a:char_struct::entity_slot,X
 	ASL
 	TAX
 	LDA #16
