@@ -56,7 +56,7 @@ DO_PARTY_MOVEMENT_FRAME:
 	STA ENTITY_WALKING_STYLES,X
 	LDA CURRENT_PARTY_MEMBER_TICK
 	CLC
-	ADC #char_struct::unknown55
+	ADC #char_struct::last_walking_style
 	TAY
 	LDA __BSS_START__,Y
 	PHA
