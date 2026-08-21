@@ -45,7 +45,7 @@
 
 .INCLUDE "data/sram_signature.asm"
 
-.INCLUDE "data/unknown/EF05A6.asm"
+.INCLUDE "data/sram_slot_bitmasks.asm"
 
 .INCLUDE "system/saves/erase_save_block.asm"
 
@@ -289,7 +289,7 @@ LOCALEINCLUDE "text_data/UNKNOWN7.ebtxt"
 
 .INCLUDE "system/debug/check_position_overlay_background.asm"
 
-.INCLUDE "data/unknown/EFEB1D.asm"
+.INCLUDE "check_position_overlay_background_hdma_table.asm"
 
 .INCLUDE "system/debug/debug_clear_hdma.asm"
 
@@ -298,7 +298,7 @@ LOCALEINCLUDE "text_data/UNKNOWN7.ebtxt"
 DEBUG_MENU_FONT:
 	BINARY "fonts/debug.gfx"
 
-.INCLUDE "data/unknown/EFEF70.asm"
+.INCLUDE "data/unused/EFEF70.asm"
 
 .INCLUDE "data/debug/debug_font_palette.asm"
 
