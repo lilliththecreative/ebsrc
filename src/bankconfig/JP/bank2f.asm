@@ -196,7 +196,7 @@ INSERT_AUDIO_PACK 7
 
 .INCLUDE "system/debug/check_position_overlay_background-jp.asm"
 
-.INCLUDE "data/unknown/EFEB1D.asm"
+.INCLUDE "data/check_position_overlay_background_hdma_table.asm"
 
 .INCLUDE "system/debug/debug_clear_hdma.asm"
 
@@ -205,7 +205,7 @@ INSERT_AUDIO_PACK 7
 DEBUG_MENU_FONT:
 	BINARY "fonts/debug.gfx"
 
-.INCLUDE "data/unknown/EFEF70.asm"
+.INCLUDE "data/unused/EFEF70.asm"
 
 .INCLUDE "data/debug/debug_font_palette.asm"
 
