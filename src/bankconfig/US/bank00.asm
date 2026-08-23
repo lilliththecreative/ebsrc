@@ -1022,13 +1022,13 @@
 
 .INCLUDE "overworld/actionscript/update_sprite_direction.asm"
 
-.INCLUDE "unknown/C0/C0AAAC.asm"
+.INCLUDE "overworld/actionscript/update_entity_sprite_frame_current.asm"
 
 .INCLUDE "overworld/actionscript/perform_palette_fade.asm"
 
-.INCLUDE "unknown/C0/C0AACD.asm"
+.INCLUDE "overworld/actionscript/set_x_register_to_2.asm"
 
-.INCLUDE "unknown/C0/C0AAD1.asm"
+.INCLUDE "overworld/actionscript/set_x_register_to_4.asm"
 
 .INCLUDE "overworld/actionscript/jump_to_label_n_times.asm"
 
@@ -1140,7 +1140,7 @@
 
 .INCLUDE "overworld/actionscript/update_active_gift_box_state.asm"
 
-.INCLUDE "unknown/C0/C0C35D.asm"
+.INCLUDE "overworld/actionscript/test_party_leader_has_moved.asm"
 
 .INCLUDE "overworld/test_party_leader_distance_far.asm"
 
@@ -1200,7 +1200,7 @@
 
 .INCLUDE "overworld/actionscript/find_hiding_tile.asm"
 
-.INCLUDE "unknown/C0/C0D0E6.asm"
+.INCLUDE "overworld/actionscript/enemy_teleport.asm"
 
 .INCLUDE "overworld/actionscript/test_party_collision.asm"
 
