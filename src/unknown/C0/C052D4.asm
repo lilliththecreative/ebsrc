@@ -18,7 +18,7 @@ UNKNOWN_C052D4:
 	STA @LOCAL0A
 	LDA #$00FF
 	STA @LOCAL09
-	STA GAME_STATE + game_state::unknown88
+	STA GAME_STATE + game_state::leader_position_index
 	LDA GAME_STATE+game_state::leader_x_coord
 	STA @LOCAL08
 	LDA GAME_STATE+game_state::leader_y_coord
@@ -35,7 +35,7 @@ UNKNOWN_C052D4:
 	INC
 	AND #$0007
 	STA @VIRTUAL02
-	LDY #.LOWORD(GAME_STATE) + game_state::unknown80
+	LDY #.LOWORD(GAME_STATE) + game_state::leader_x_coord_fraction
 	STY @LOCAL04
 	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
 	MOVE_INT @VIRTUAL06, @LOCAL00
@@ -47,7 +47,7 @@ UNKNOWN_C052D4:
 	SEC
 	SUB_INT_ASSIGN @VIRTUAL06, @VIRTUAL0A
 	MOVE_INT @VIRTUAL06, @LOCAL01
-	LDY #.LOWORD(GAME_STATE) + game_state::unknown84
+	LDY #.LOWORD(GAME_STATE) + game_state::leader_y_coord_fraction
 	STY @LOCAL04
 	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
 	MOVE_INT @VIRTUAL06, @LOCAL00
@@ -134,9 +134,9 @@ UNKNOWN_C052D4:
 .IF .DEFINED(JPN)
 	ADC #.LOWORD(GAME_STATE)
 	CLC
-	ADC #game_state::unknownA2
+	ADC #game_state::party_entities
 .ELSE
-	ADC #.LOWORD(GAME_STATE) + game_state::unknownA2
+	ADC #.LOWORD(GAME_STATE) + game_state::party_entities
 .ENDIF
 	TAY
 	LDA __BSS_START__,Y
