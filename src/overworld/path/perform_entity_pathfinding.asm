@@ -144,18 +144,18 @@ PERFORM_ENTITY_PATHFINDING:
 	ASL
 	STA @LOCAL08
 	LDX @LOCAL08
-	LDA f:UNKNOWN_C42AA7,X
+	LDA f:HITBOX_WIDTHS,X
 	LDX @LOCAL0C
-	STA a:pathfinding::pathfinders + pathfinder::unknown_hitbox + 2,X
+	STA a:pathfinding::pathfinders + pathfinder::hitbox + 2,X
 	LDX @LOCAL08
-	LDA f:UNKNOWN_C42AC9,X
+	LDA f:HITBOX_HEIGHTS,X
 	LDX @LOCAL0C
-	STA a:pathfinding::pathfinders + pathfinder::unknown_hitbox,X
+	STA a:pathfinding::pathfinders + pathfinder::hitbox,X
 	LDX @LOCAL08
 	LDY #.LOWORD(ENTITY_ABS_X_TABLE)
 	LDA (@LOCAL09),Y
 	SEC
-	SBC f:UNKNOWN_C42A1F,X
+	SBC f:COLLISION_WIDTHS,X
 	LSR
 	LSR
 	LSR
@@ -170,10 +170,10 @@ PERFORM_ENTITY_PATHFINDING:
 	LDY #.LOWORD(ENTITY_ABS_Y_TABLE)
 	LDA (@LOCAL09),Y
 	SEC
-	SBC f:UNKNOWN_C42A41,X
+	SBC f:COLLISION_HEIGHTS,X
 	LDX @LOCAL08
 	CLC
-	ADC f:UNKNOWN_C42AEB,X
+	ADC f:COLLISION_HEIGHTS2,X
 	LSR
 	LSR
 	LSR
@@ -266,7 +266,7 @@ PERFORM_ENTITY_PATHFINDING:
 	STA @LOCAL08
 	TXA
 	CLC
-	ADC #pathfinding::pathfinders + pathfinder::unknown10;
+	ADC #pathfinding::pathfinders + pathfinder::points_count;
 	TAY
 	STY @LOCAL0F
 	LDA __BSS_START__,Y
@@ -274,7 +274,7 @@ PERFORM_ENTITY_PATHFINDING:
 	LDA @LOCAL08
 	ASL
 	STA @LOCAL08
-	LDA a:pathfinding::pathfinders + pathfinder::unknown12,X
+	LDA a:pathfinding::pathfinders + pathfinder::final_point_count,X
 	LDY #.LOWORD(ENTITY_PATH_POINTS)
 	STA (@LOCAL08),Y
 	LDY @LOCAL0F
