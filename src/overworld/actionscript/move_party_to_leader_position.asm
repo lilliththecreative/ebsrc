@@ -41,7 +41,7 @@ MOVE_PARTY_TO_LEADER_POSITION:
 	TYA
 	ASL
 	TAX
-	LDA GAME_STATE + game_state::unknownA2,X
+	LDA GAME_STATE + game_state::party_entities,X
 	ASL
 	TAX
 	LDA GAME_STATE+game_state::leader_x_coord
