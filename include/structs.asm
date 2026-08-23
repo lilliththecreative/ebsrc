@@ -100,35 +100,34 @@
 	wallet_backup .dword ;82
 	escargo_express_items .byte 36 ;86
 	party_members .byte 6 ;122
-	unknown80 .word ;128
+	leader_x_coord_fraction .word ;128
 	leader_x_coord .word ;130
-	unknown84 .word ;132
+	leader_y_coord_fraction .word ;132
 	leader_y_coord .word ;134
-	unknown88 .word ;136
+	leader_position_index .word ;136
 	leader_direction .word ;138
 	trodden_tile_type .word ;140
 	walking_style .word ;142
-	unknown90 .word ;144
-	unknown92 .word ;146
+	special_game_state .word ;144
+	first_party_member_entity .word ;146
 	current_party_members .word ;148
-	unknown96 .byte 6 ;150
-	player_controlled_party_members .byte ;156
-	unknown9D .byte 5 ;157
-	unknownA2 .byte 12 ;162
+	party_member_index .byte 6 ;150
+	player_controlled_party_members .byte 6 ;156
+	party_entities .byte 12 ;162
 	party_count .byte ;174
 	player_controlled_party_count .byte ;175
-	unknownB0 .word ;176
-	unknownB2 .word ; 178
-	unknownB4 .byte 2 ;180
-	unknownB6 .byte 3 ;182
-	unknownB8 .byte 3 ;185
+	camera_mode .word ;176
+	auto_scroll_frames .word ; 178
+	auto_scroll_original_walking_style .word ;180
+	delivery_queue_item .byte 3 ;182
+	delivery_queue_character .byte 3 ;185
 	auto_fight_enable .byte ;188
 	exit_mouse_x_coord .word ;189
 	exit_mouse_y_coord .word ;191
 	text_speed .byte ;193
 	sound_setting .byte ;194
 	unknownC3 .byte ;195
-	unknownC4 .byte 4 ;196
+	money_earned_since_last_call .dword ;196
 	active_hotspot_modes .byte 2 ;200
 	active_hotspot_ids .byte 2 ;202
 	active_hotspot_pointers .byte 2 * 4 ;204
