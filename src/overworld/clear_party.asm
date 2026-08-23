@@ -8,10 +8,10 @@ CLEAR_PARTY:
 	STA ENTITY_SIZES+23 * 2
 	LDA #.LOWORD(-1)
 	STA MINI_GHOST_ENTITY_ID
-	STZ GAME_STATE+game_state::unknown88
-	STZ GAME_STATE+game_state::unknownB0
-	STZ GAME_STATE+game_state::unknownB2
-	STZ GAME_STATE+game_state::unknownB4
+	STZ GAME_STATE+game_state::leader_position_index
+	STZ GAME_STATE+game_state::camera_mode
+	STZ GAME_STATE+game_state::auto_scroll_frames
+	STZ GAME_STATE+game_state::auto_scroll_original_walking_style
 	SEP #PROC_FLAGS::ACCUM8
 	STZ GAME_STATE+game_state::party_status
 	REP #PROC_FLAGS::ACCUM8
@@ -26,13 +26,13 @@ CLEAR_PARTY:
 	ADC #.LOWORD(GAME_STATE)
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ a:game_state::unknown96,X
+	STZ a:game_state::party_member_index,X
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL00
 .ELSE
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ GAME_STATE+game_state::unknown96,X
+	STZ GAME_STATE+game_state::party_member_index,X
 	REP #PROC_FLAGS::ACCUM8
 .ENDIF
 	ASL
