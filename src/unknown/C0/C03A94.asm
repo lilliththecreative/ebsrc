@@ -43,7 +43,7 @@ UNKNOWN_C03A94:
 	JSL LOAD_SECTOR_ATTRS
 	AND #$0007
 	STA @LOCAL07
-	STA GAME_STATE+game_state::unknown92
+	STA GAME_STATE+game_state::special_game_state
 	ASL
 	STA FOOTSTEP_SOUND_ID
 	STZ FOOTSTEP_SOUND_ID_OVERRIDE
@@ -68,9 +68,9 @@ UNKNOWN_C03A94:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknown96,X
+	LDA a:game_state::party_member_index,X
 .ELSE
-	LDY #.LOWORD(GAME_STATE) + game_state::unknown96
+	LDY #.LOWORD(GAME_STATE) + game_state::party_member_index
 	LDA (@LOCAL05),Y
 .ENDIF
 	AND #$00FF
@@ -86,10 +86,10 @@ UNKNOWN_C03A94:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknownA2,X
+	LDA a:game_state::party_entities,X
 .ELSE
 	TAY
-	LDA GAME_STATE + game_state::unknownA2,Y
+	LDA GAME_STATE + game_state::party_entities,Y
 .ENDIF
 	STA @VIRTUAL02
 	ASL
@@ -112,7 +112,7 @@ UNKNOWN_C03A94:
 	JSL DELETE_OVERWORLD_ENTITY
 	LDA @VIRTUAL02
 	STA MOVING_PARTY_MEMBER_ENTITY_ID
-	LDA GAME_STATE+game_state::unknown92
+	LDA GAME_STATE+game_state::special_game_state
 	CMP #3
 	BEQ @UNKNOWN6
 	LDA @LOCAL05
