@@ -110,7 +110,7 @@
 	walking_style .word ;142
 	leader_has_moved .word ;144
 	special_game_state .word ;146
-	current_party_members .word ;148
+	first_party_member_entity .word ;148
 	party_member_index .byte 6 ;150
 	player_controlled_party_members .byte 6 ;156
 	party_entities .byte 12 ;162
