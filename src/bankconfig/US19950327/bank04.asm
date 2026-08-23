@@ -989,7 +989,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/blink_invisible.asm"
 
-.INCLUDE "misc/null/C4CC2C.asm"
+.INCLUDE "overworld/actionscript/end_fade.asm"
 
 .INCLUDE "overworld/actionscript/h_stripe.asm"
 
