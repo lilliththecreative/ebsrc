@@ -666,7 +666,7 @@
 
 .INCLUDE "overworld/actionscript/script/39.asm"
 
-.INCLUDE "unknown/C0/C09907.asm"
+.INCLUDE "overworld/reset_entity_delta.asm"
 
 .INCLUDE "overworld/actionscript/script/3A.asm"
 
