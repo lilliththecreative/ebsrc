@@ -25,7 +25,7 @@ FIND_ENTITY_BY_PARTY_MEMBER_ID:
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
 	LDA @VIRTUAL00
-	CMP a:game_state::unknown96,X
+	CMP a:game_state::party_member_index,X
 	BNE @UNKNOWN2
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL00
@@ -33,7 +33,7 @@ FIND_ENTITY_BY_PARTY_MEMBER_ID:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknownA2,X
+	LDA a:game_state::party_entities,X
 	BRA @UNKNOWN4
 @UNKNOWN2:
 	REP #PROC_FLAGS::ACCUM8
