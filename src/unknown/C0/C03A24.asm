@@ -17,7 +17,7 @@ UNKNOWN_C03A24:
 	ADC #.LOWORD(GAME_STATE)
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ __BSS_START__+game_state::unknown96,X
+	STZ __BSS_START__+game_state::party_member_index,X
 	STZ __BSS_START__+game_state::player_controlled_party_members,X
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL00
@@ -26,10 +26,10 @@ UNKNOWN_C03A24:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	STZ a:game_state::unknownA2,X
+	STZ a:game_state::party_entities,X
 .ELSE
 	TAX
-	STZ GAME_STATE + game_state::unknownA2,X
+	STZ GAME_STATE + game_state::party_entities,X
 .ENDIF
 	LDA @LOCAL00
 	INC
