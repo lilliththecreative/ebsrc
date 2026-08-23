@@ -108,8 +108,8 @@
 	leader_direction .word ;138
 	trodden_tile_type .word ;140
 	walking_style .word ;142
-	special_game_state .word ;144
-	first_party_member_entity .word ;146
+	leader_has_moved .word ;144
+	special_game_state .word ;146
 	current_party_members .word ;148
 	party_member_index .byte 6 ;150
 	player_controlled_party_members .byte 6 ;156
