@@ -74,7 +74,7 @@ HANDLE_SPECIAL_CAMERA:
 	STA GAME_STATE+game_state::walking_style
 @UNKNOWN5:
 	LDA #1
-	STA GAME_STATE + game_state::special_game_state
+	STA GAME_STATE + game_state::leader_has_moved
 	BRA @UNKNOWN8
 @UNKNOWN6:
 	JSR MOVE_CAMERA_TO_ENTITY
