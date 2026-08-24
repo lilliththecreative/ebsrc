@@ -216,7 +216,7 @@ UNKNOWN_C04FFE:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA __BSS_START__+game_state::unknown96,X
+	LDA __BSS_START__+game_state::party_member_index,X
 	AND #$00FF
 	BEQ @UNKNOWN25
 	AND #$00FF
