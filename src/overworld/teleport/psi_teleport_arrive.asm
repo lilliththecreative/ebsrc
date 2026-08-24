@@ -40,10 +40,10 @@ PSI_TELEPORT_ARRIVE:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknown96,X
+	LDA a:game_state::party_member_index,X
 .ELSE
 	LDX @VIRTUAL02
-	LDA GAME_STATE + game_state::unknown96,X
+	LDA GAME_STATE + game_state::party_member_index,X
 .ENDIF
 	AND #$00FF
 	DEC
