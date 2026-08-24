@@ -52,7 +52,7 @@ SAVE_PHOTO_STATE:
 	ADC #.LOWORD(GAME_STATE)
 	STA @LOCAL02
 	CLC
-	ADC #game_state::unknown96
+	ADC #game_state::party_member_index
 	TAX
 	STX @LOCAL00
 	LDA __BSS_START__,X
