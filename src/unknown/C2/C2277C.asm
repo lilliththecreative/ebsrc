@@ -15,9 +15,9 @@ UNKNOWN_C2277C:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknown96,X
+	LDA a:game_state::party_member_index,X
 .ELSE
-	LDA GAME_STATE + game_state::unknown96,Y
+	LDA GAME_STATE + game_state::party_member_index,Y
 .ENDIF
 	AND #$00FF
 	STA @LOCAL00
