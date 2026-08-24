@@ -49,10 +49,10 @@ BATTLE_ROUTINE:
 .ENDIF
 	JSL MEMSET16
 .IF .DEFINED(JPN)
-	LDY #.LOWORD(GAME_STATE) + game_state::unknown96
+	LDY #.LOWORD(GAME_STATE) + game_state::party_member_index
 	STY @LOCAL10
 .ELSE
-	LDA #.LOWORD(GAME_STATE) + game_state::unknown96
+	LDA #.LOWORD(GAME_STATE) + game_state::party_member_index
 	STA @VIRTUAL02
 .ENDIF
 	SEP #PROC_FLAGS::ACCUM8
@@ -3059,7 +3059,7 @@ BATTLE_ROUTINE:
 	LDA #1
 	STA LETTERBOX_EFFECT_ENDING
 	STA ENABLE_BACKGROUND_DARKENING
-	LDY #.LOWORD(GAME_STATE) + game_state::unknownC4
+	LDY #.LOWORD(GAME_STATE) + game_state::money_earned_since_last_call
 .IF .DEFINED(JPN)
 	STY @LOCAL0A
 .ELSE
