@@ -27,7 +27,7 @@ MOVE_PARTY_LEADER:
 	AND #$000F
 	BNEL @UNKNOWN10
 @UNKNOWN1:
-	LDA GAME_STATE+game_state::first_party_member_entity
+	LDA GAME_STATE+game_state::current_party_members
 	ASL
 	TAX
 	LDA ENTITY_SCRIPT_VAR1_TABLE,X
@@ -70,7 +70,7 @@ MOVE_PARTY_LEADER:
 	STA @VIRTUAL04
 	LDA #.LOWORD(GAME_STATE) + game_state::leader_y_coord
 	STA @VIRTUAL02
-	LDY GAME_STATE+game_state::first_party_member_entity
+	LDY GAME_STATE+game_state::current_party_members
 	LDX @VIRTUAL02
 	LDA __BSS_START__,X
 	TAX
