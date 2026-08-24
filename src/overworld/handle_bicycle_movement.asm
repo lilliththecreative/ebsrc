@@ -25,7 +25,7 @@ HANDLE_BICYCLE_MOVEMENT:
 	DEX
 	STX BATTLE_SWIRL_COUNTDOWN
 	BEQ @UNKNOWN0
-	LDY GAME_STATE+game_state::first_party_member_entity
+	LDY GAME_STATE+game_state::current_party_members
 	LDX GAME_STATE+game_state::leader_y_coord
 	LDA GAME_STATE+game_state::leader_x_coord
 	JSL NPC_COLLISION_CHECK
@@ -50,7 +50,7 @@ HANDLE_BICYCLE_MOVEMENT:
 	STY @LOCAL06
 	BRA @UNKNOWN4
 @UNKNOWN3:
-	LDY GAME_STATE+game_state::first_party_member_entity
+	LDY GAME_STATE+game_state::current_party_members
 	LDX GAME_STATE+game_state::leader_y_coord
 	LDA GAME_STATE+game_state::leader_x_coord
 	JSL NPC_COLLISION_CHECK
@@ -129,7 +129,7 @@ HANDLE_BICYCLE_MOVEMENT:
 	LDX @LOCAL03
 	JSL GET_MOVEMENT_COLLISION_FLAGS
 	STA @LOCAL04
-	LDY GAME_STATE+game_state::first_party_member_entity
+	LDY GAME_STATE+game_state::current_party_members
 	LDX @VIRTUAL02
 	LDA __BSS_START__,X
 	TAX
