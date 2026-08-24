@@ -11,7 +11,7 @@ HANDLE_NORMAL_MOVEMENT:
 	STACK_RESERVE_INT16
 	STACK_RESERVE_INT16
 	END_STACK_VARS
-	STZ GAME_STATE + game_state::unknown90
+	STZ GAME_STATE + game_state::leader_has_moved
 	LDA MUSHROOMIZED_WALKING_FLAG
 	BEQ @NOT_MUSHROOMIZED
 	JSR MUSHROOMIZATION_MOVEMENT_SWAP
@@ -27,7 +27,7 @@ HANDLE_NORMAL_MOVEMENT:
 	DEX
 	STX BATTLE_SWIRL_COUNTDOWN
 	BEQ @UNKNOWN1
-	LDY GAME_STATE+game_state::current_party_members
+	LDY GAME_STATE+game_state::first_party_member_entity
 	LDX GAME_STATE+game_state::leader_y_coord
 	LDA GAME_STATE+game_state::leader_x_coord
 	JSL NPC_COLLISION_CHECK
@@ -40,7 +40,7 @@ HANDLE_NORMAL_MOVEMENT:
 	LDA @VIRTUAL02
 	CMP #.LOWORD(-1)
 	BNE @UNKNOWN3
-	LDY GAME_STATE+game_state::current_party_members
+	LDY GAME_STATE+game_state::first_party_member_entity
 	LDX GAME_STATE+game_state::leader_y_coord
 	LDA GAME_STATE+game_state::leader_x_coord
 	JSL NPC_COLLISION_CHECK
@@ -98,19 +98,19 @@ HANDLE_NORMAL_MOVEMENT:
 	STA GAME_STATE+game_state::leader_direction
 @UNKNOWN13:
 	INC PLAYER_HAS_MOVED_SINCE_MAP_LOAD
-	LDX #.LOWORD(GAME_STATE) + game_state::unknown90
+	LDX #.LOWORD(GAME_STATE) + game_state::leader_has_movedd
 	LDA __BSS_START__,X
 	INC
 	STA __BSS_START__,X
 	LDA GAME_STATE+game_state::trodden_tile_type
 	STA @LOCAL06
-	LDA #.LOWORD(GAME_STATE) + game_state::unknown80
+	LDA #.LOWORD(GAME_STATE) + game_state::leader_x_coord_fraction
 	STA @LOCAL05
 	LDY @LOCAL05
 	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
 	MOVE_INT @VIRTUAL06, @LOCAL04
 	MOVE_INT @VIRTUAL06, @LOCAL01
-	LDA #.LOWORD(GAME_STATE) + game_state::unknown84
+	LDA #.LOWORD(GAME_STATE) + game_state::leader_y_coord_fraction
 	STA @LOCAL03
 	LDY @LOCAL03
 	MOVE_INT_YPTRSRC __BSS_START__, @VIRTUAL06
@@ -134,7 +134,7 @@ HANDLE_NORMAL_MOVEMENT:
 	BNE @UNKNOWN14
 	LDA @VIRTUAL02
 	STA @LOCAL00
-	LDY GAME_STATE+game_state::current_party_members
+	LDY GAME_STATE+game_state::first_party_member_entity
 	LDX @LOCAL02 + fixed_point::integer
 	LDA @LOCAL01 + fixed_point::integer
 	JSL CHECK_MOVEMENT_MAP_COLLISION
@@ -160,7 +160,7 @@ HANDLE_NORMAL_MOVEMENT:
 @UNKNOWN14:
 	LDA DEMO_FRAMES_LEFT
 	BNE @UNKNOWN15
-	LDY GAME_STATE+game_state::current_party_members
+	LDY GAME_STATE+game_state::first_party_member_entity
 	LDX @LOCAL02 + fixed_point::integer
 	LDA @LOCAL01 + fixed_point::integer
 	JSR UNKNOWN_C05FD1
@@ -175,7 +175,7 @@ HANDLE_NORMAL_MOVEMENT:
 	STA GAME_STATE+game_state::trodden_tile_type
 	LDA #1
 	STA @VIRTUAL02
-	LDY GAME_STATE+game_state::current_party_members
+	LDY GAME_STATE+game_state::first_party_member_entity
 	LDX @LOCAL02 + fixed_point::integer
 	LDA @LOCAL01 + fixed_point::integer
 	JSL NPC_COLLISION_CHECK
@@ -212,17 +212,17 @@ HANDLE_NORMAL_MOVEMENT:
 	BEQ @UNKNOWN22
 	MOVE_INT @LOCAL01, @VIRTUAL06
 	LDA @VIRTUAL06
-	STA GAME_STATE + game_state::unknown80
+	STA GAME_STATE + game_state::leader_x_coord_fraction
 	LDA @VIRTUAL06 + fixed_point::integer
 	STA GAME_STATE+game_state::leader_x_coord
 	MOVE_INT @LOCAL02, @VIRTUAL06
 	LDA @VIRTUAL06
-	STA GAME_STATE + game_state::unknown84
+	STA GAME_STATE + game_state::leader_y_coord_fraction
 	LDA @VIRTUAL06 + fixed_point::integer
 	STA GAME_STATE+game_state::leader_y_coord
 	BRA @UNKNOWN23
 @UNKNOWN22:
-	STZ GAME_STATE + game_state::unknown90
+	STZ GAME_STATE + game_state::leader_has_moved
 @UNKNOWN23:
 	LDA FRAME_COUNTER
 	AND #$00FF
