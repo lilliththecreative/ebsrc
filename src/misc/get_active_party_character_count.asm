@@ -16,10 +16,10 @@ GET_ACTIVE_PARTY_CHARACTER_COUNT:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::unknown96,X
+	LDA a:game_state::party_member_index,X
 .ELSE
 	TAX
-	LDA GAME_STATE + game_state::unknown96,X
+	LDA GAME_STATE + game_state::party_member_index,X
 .ENDIF
 	AND #$00FF
 	DEC
