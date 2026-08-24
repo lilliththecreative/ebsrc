@@ -36,8 +36,8 @@ GET_ON_STAIRS:
 	STA GAME_STATE+game_state::leader_x_coord
 	LDA STAIRS_NEW_Y
 	STA GAME_STATE+game_state::leader_y_coord
-	STZ GAME_STATE + game_state::unknown84
-	STZ GAME_STATE + game_state::unknown80
+	STZ GAME_STATE + game_state::leader_y_coord_fraction
+	STZ GAME_STATE + game_state::leader_x_coord_fraction
 	BRA @UNKNOWN4
 @UNKNOWN3:
 	LOADPTR GET_ON_STAIRS, @LOCAL00
