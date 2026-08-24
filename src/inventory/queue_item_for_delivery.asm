@@ -16,7 +16,7 @@ QUEUE_ITEM_FOR_DELIVERY:
 	ADC #.LOWORD(GAME_STATE)
 	STA @LOCAL00
 	CLC
-	ADC #game_state::unknownB6
+	ADC #game_state::delivery_queue_item
 	TAX
 	LDA __BSS_START__,X
 	AND #$00FF
@@ -29,7 +29,7 @@ QUEUE_ITEM_FOR_DELIVERY:
 	TAX
 	LDA @VIRTUAL02
 	SEP #PROC_FLAGS::ACCUM8
-	STA a:game_state::unknownB8,X
+	STA a:game_state::delivery_queue_character,X
 	BRA @UNKNOWN3
 @UNKNOWN1:
 	INY
