@@ -10,6 +10,6 @@ EXIT_ESCALATOR:
 	STA GAME_STATE+game_state::leader_x_coord
 	LDA ESCALATOR_NEW_Y
 	STA GAME_STATE+game_state::leader_y_coord
-	STZ GAME_STATE + game_state::unknown84
-	STZ GAME_STATE + game_state::unknown80
+	STZ GAME_STATE + game_state::leader_y_coord_fraction
+	STZ GAME_STATE + game_state::leader_x_coord_fraction
 	RTL
