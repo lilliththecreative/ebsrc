@@ -22,9 +22,9 @@ MOVE_CAMERA_TO_ENTITY:
 	CMP GAME_STATE+game_state::leader_y_coord
 	BNE @UNKNOWN0
 	LDA @VIRTUAL02
-	CMP GAME_STATE + game_state::unknown80
+	CMP GAME_STATE + game_state::leader_x_coord_fraction
 	BNE @UNKNOWN0
-	CPX GAME_STATE + game_state::unknown84
+	CPX GAME_STATE + game_state::leader_y_coord_fraction
 	BEQ @UNKNOWN1
 @UNKNOWN0:
 	LDA #1
@@ -34,13 +34,13 @@ MOVE_CAMERA_TO_ENTITY:
 	LDA @LOCAL00
 	STA GAME_STATE+game_state::leader_y_coord
 	LDA @VIRTUAL02
-	STA GAME_STATE + game_state::unknown80
-	STX GAME_STATE + game_state::unknown84
+	STA GAME_STATE + game_state::leader_x_coord_fraction
+	STX GAME_STATE + game_state::leader_y_coord_fraction
 	LDA CAMERA_FOCUS_ENTITY
 	ASL
 	TAX
 	LDA ENTITY_DIRECTIONS,X
 	STA GAME_STATE+game_state::leader_direction
 	LDA @VIRTUAL04
-	STA GAME_STATE + game_state::unknown90
+	STA GAME_STATE + game_state::leader_has_moved
 	END_C_FUNCTION
