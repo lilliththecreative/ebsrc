@@ -1033,7 +1033,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "intro/decomp_nintendo_presentation.asm"
 
-.INCLUDE "data/unknown/C4DE78.asm"
+.INCLUDE "data/map/your_sanctuary_locations.asm"
 
 .INCLUDE "overworld/initialize_your_sanctuary_display.asm"
 
