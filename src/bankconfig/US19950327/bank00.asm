@@ -1098,8 +1098,6 @@
 
 .INCLUDE "data/unknown/C0B2FF.asm"
 
-.INCLUDE "data/unknown/C0B3FF.asm"
-
 .INCLUDE "system/math/cosine_sine.asm"
 
 .INCLUDE "data/sine_table.asm"
