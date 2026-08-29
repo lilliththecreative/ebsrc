@@ -227,7 +227,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/darken_screen.asm"
 
-.INCLUDE "unknown/C4/C42509.asm"
+.INCLUDE "unused/C42509.asm"
 
 .INCLUDE "system/enable_brightness_hdma.asm"
 
@@ -397,7 +397,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C45DDD.asm"
 
-.INCLUDE "unknown/C4/C45E96.asm"
+.INCLUDE "text/reset_vwf_state.asm"
 
 .INCLUDE "misc/check_if_psi_known.asm"
 
@@ -529,7 +529,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/actionscript/set_destination_party_leader.asm"
 
-.INCLUDE "unknown/C4/C46B79.asm"
+.INCLUDE "overworld/actionscript/set_destination_prepared.asm"
 
 .INCLUDE "overworld/find_npc_location_for_active_entity.asm"
 
