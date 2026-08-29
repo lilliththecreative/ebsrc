@@ -92,9 +92,9 @@
 
 .INCLUDE "text/get_menu_option_count_redirect.asm"
 
-.INCLUDE "unknown/C1/C117E2_redirect.asm"
+.INCLUDE "text/determine_string_length_redirect.asm"
 
-.INCLUDE "unknown/C1/C10C55.asm"
+.INCLUDE "text/split_decimal_by_digits_redirect.asm"
 
 .INCLUDE "text/move_current_text_cursor_redirect.asm"
 
@@ -152,7 +152,7 @@
 
 .INCLUDE "text/print_menu_items.asm"
 
-.INCLUDE "unknown/C1/C117E2.asm"
+.INCLUDE "text/determine_string_length.asm"
 
 .INCLUDE "text/print_menu_option_table.asm"
 
@@ -164,9 +164,9 @@
 
 .INCLUDE "text/selection_menu.asm"
 
-.INCLUDE "unknown/C1/C11F5A.asm"
+.INCLUDE "text/set_menu_callback.asm"
 
-.INCLUDE "unknown/C1/C11F8A.asm"
+.INCLUDE "text/reset_menu_callback.asm"
 
 .INCLUDE "battle/get_battler_position_x.asm"
 
@@ -596,7 +596,7 @@
 
 .INCLUDE "inventory/equip_item.asm"
 
-.INCLUDE "unknown/C1/C190E6.asm"
+.INCLUDE "text/get_party_member_index.asm"
 
 .INCLUDE "unknown/C1/C190F1.asm"
 
@@ -768,7 +768,7 @@
 
 .INCLUDE "battle/set_citem_redirect.asm"
 
-.INCLUDE "unknown/C1/C1DD82.asm"
+.INCLUDE "battle/set_cnum_redirect.asm"
 
 .INCLUDE "unknown/C1/C1DD9F.asm"
 
