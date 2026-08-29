@@ -1144,7 +1144,7 @@
 
 .INCLUDE "overworld/actionscript/test_party_leader_distance_close_intangibility.asm"
 
-.INCLUDE "data/unknown/C0C4CF.asm"
+.INCLUDE "data/map/unused_direction_table.asm"
 
 .INCLUDE "data/map/opposite_directions.asm"
 
