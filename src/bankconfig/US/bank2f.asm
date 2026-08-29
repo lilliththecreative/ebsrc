@@ -305,9 +305,9 @@ DEBUG_MENU_FONT:
 DEBUG_CURSOR_GRAPHICS:
 	BINARY "debug_cursor.gfx"
 
-.INCLUDE "data/unknown/EFF0D7.asm"
+.INCLUDE "data/unused/EFF0D7.asm"
 
-.INCLUDE "data/unknown/EFF1BB.asm"
+.INCLUDE "data/graphics/debug_menu_palettes.asm"
 
 .INCLUDE "data/unknown_version_string.asm"
 
