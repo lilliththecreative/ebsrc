@@ -166,7 +166,7 @@
 
 .INCLUDE "text/print_menu_items-jp.asm"
 
-.INCLUDE "unknown/C1/C117E2.asm"
+.INCLUDE "text/determine_string_length.asm"
 
 .INCLUDE "text/create_menu_option_table-jp.asm"
 
@@ -180,9 +180,9 @@
 
 .INCLUDE "text/selection_menu-jp.asm"
 
-.INCLUDE "unknown/C1/C11F5A.asm"
+.INCLUDE "text/set_menu_callback.asm"
 
-.INCLUDE "unknown/C1/C11F8A.asm"
+.INCLUDE "text/reset_menu_callback.asm"
 
 .INCLUDE "battle/get_battler_position_x.asm"
 
@@ -610,7 +610,7 @@
 
 .INCLUDE "inventory/equip_item.asm"
 
-.INCLUDE "unknown/C1/C190E6.asm"
+.INCLUDE "text/get_party_member_index.asm"
 
 .INCLUDE "unknown/C1/C190F1-jp.asm"
 
@@ -782,7 +782,7 @@
 
 .INCLUDE "battle/set_citem_redirect.asm"
 
-.INCLUDE "unknown/C1/C1DD82.asm"
+.INCLUDE "battle/set_cnum_redirect.asm"
 
 .INCLUDE "unknown/C1/C1DD9F.asm"
 
