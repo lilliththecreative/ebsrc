@@ -2132,7 +2132,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "system/tilemap_update_upload_rows.asm"
 
-.INCLUDE "unknown/C3/C3F67D.asm"
+.INCLUDE "unused/C3F67D.asm"
 
 .INCLUDE "system/tilemap_update_upload_tilemap.asm"
 
