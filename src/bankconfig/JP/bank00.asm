@@ -112,7 +112,7 @@
 
 .INCLUDE "overworld/delete_overworld_entity.asm"
 
-.INCLUDE "unknown/C0/C02194.asm"
+.INCLUDE "overworld/clear_entities.asm"
 
 .INCLUDE "unknown/C0/C021E6.asm"
 
@@ -144,7 +144,7 @@
 
 .INCLUDE "overworld/adjust_position_vertical.asm"
 
-.INCLUDE "unknown/C0/C0329F.asm"
+.INCLUDE "unused/reset_character_afflictions.asm"
 
 .INCLUDE "overworld/update_party_npcs-jp.asm"
 
@@ -190,17 +190,17 @@
 
 .INCLUDE "overworld/map_input_to_direction.asm"
 
-.INCLUDE "unknown/C0/C04116.asm"
+.INCLUDE "overworld/find_checkable_npc.asm"
 
-.INCLUDE "unknown/C0/C041E3.asm"
+.INCLUDE "overworld/test_nearby_checkable_npc.asm"
 
 .INCLUDE "overworld/find_nearby_checkable_tpt_entry.asm"
 
 .INCLUDE "overworld/face_opposite_leader.asm"
 
-.INCLUDE "unknown/C0/C042EF.asm"
+.INCLUDE "overworld/find_talkable_npc.asm"
 
-.INCLUDE "unknown/C0/C043BC.asm"
+.INCLUDE "overworld/test_nearby_talkable_npc.asm"
 
 .INCLUDE "overworld/find_nearby_talkable_tpt_entry.asm"
 
@@ -294,7 +294,7 @@
 
 .INCLUDE "overworld/actionscript/set_entity_to_entity_collision_prospective_npc.asm"
 
-.INCLUDE "unknown/C0/C064D4.asm"
+.INCLUDE "overworld/unqueue_interaction.asm"
 
 .INCLUDE "overworld/queue_interaction.asm"
 
@@ -318,7 +318,7 @@
 
 .INCLUDE "overworld/change_map_music_immediately.asm"
 
-.INCLUDE "unknown/C0/C069F7.asm"
+.INCLUDE "overworld/get_default_music.asm"
 
 .INCLUDE "overworld/reload_map_music.asm"
 
@@ -344,7 +344,7 @@
 
 .INCLUDE "data/map/stair_input_direction_map.asm"
 
-.INCLUDE "unknown/C0/C06E1A.asm"
+.INCLUDE "overworld/end_stair_movement.asm"
 
 .INCLUDE "overworld/enter_escalator.asm"
 
@@ -370,7 +370,7 @@
 
 .INCLUDE "overworld/get_map_object_at.asm"
 
-.INCLUDE "unknown/C0/C07526.asm"
+.INCLUDE "overworld/interact_map_object.asm"
 
 .INCLUDE "overworld/process_queued_interactions.asm"
 
@@ -778,9 +778,9 @@
 
 .INCLUDE "unknown/C0/C09D3E.asm"
 
-.INCLUDE "unknown/C0/C09D60.asm"
+.INCLUDE "unused/find_entity_script.asm"
 
-.INCLUDE "unknown/C0/C09D78.asm"
+.INCLUDE "unused/C09D78.asm"
 
 .INCLUDE "overworld/actionscript/script/read8.asm"
 
@@ -844,7 +844,7 @@
 
 .INCLUDE "overworld/actionscript/move_relative_to_bg3.asm"
 
-.INCLUDE "unknown/C0/C0A089.asm"
+.INCLUDE "unused/move_relative_to_bg3.asm"
 
 .INCLUDE "system/update_screen_position_bg13d_dupe.asm"
 
@@ -1156,7 +1156,7 @@
 
 .INCLUDE "overworld/get_opposite_direction_from_player_to_entity.asm"
 
-.INCLUDE "unknown/C0/C0C615.asm"
+.INCLUDE "overworld/actionscript/get_entity_direction_from_fear.asm"
 
 .INCLUDE "overworld/actionscript/get_angle_towards_destination_unless_weak.asm"
 
@@ -1174,7 +1174,7 @@
 
 .INCLUDE "overworld/update_entity_surface_flags.asm"
 
-.INCLUDE "unknown/C0/C0C808.asm"
+.INCLUDE "overworld/get_entity_surface_flags.asm"
 
 .INCLUDE "overworld/actionscript/move_direction.asm"
 
