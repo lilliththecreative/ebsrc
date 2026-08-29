@@ -1208,7 +1208,7 @@
 
 .INCLUDE "overworld/actionscript/try_battle_start.asm"
 
-.INCLUDE "unknown/C0/C0D77F.asm"
+.INCLUDE "unknown/actionscript/freeze_other_entities_except_party_leader.asm"
 
 .INCLUDE "overworld/actionscript/backup_position.asm"
 
