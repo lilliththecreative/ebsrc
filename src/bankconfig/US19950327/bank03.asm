@@ -2016,7 +2016,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/map/transition_directions.asm"
 
-.INCLUDE "data/unknown/C3E1E0.asm"
+.INCLUDE "data/unused/C3E1E0.asm"
 
 .INCLUDE "data/map/staircase_entry_directions.asm"
 
@@ -2048,7 +2048,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/unknown/C3E41C_pointer_table.asm"
 
-.INCLUDE "data/unknown/C3E44C.asm"
+.INCLUDE "data/text/menu_next_label.asm"
 
 .INCLUDE "text/update_flash_text_palette.asm"
 
