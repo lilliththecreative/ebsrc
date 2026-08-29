@@ -191,7 +191,7 @@
 
 .INCLUDE "battle/remove_used_item.asm"
 
-.INCLUDE "unknown/C2/C24434.asm"
+.INCLUDE "battle/get_random_target.asm"
 
 .INCLUDE "battle/choose_target.asm"
 
