@@ -205,7 +205,7 @@ STAFF_CREDITS_FONT_PALETTE:
 
 .INCLUDE "data/unknown/E1E924.asm"
 
-.INCLUDE "data/unknown/E1E94A.asm"
+.INCLUDE "data/binary/credits_photographer_border_tilemap.asm"
 
 TOWN_MAP_LABEL_GFX:
 	LOCALEBINARY "town_maps/label.gfx.lzhal"
