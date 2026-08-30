@@ -73,7 +73,7 @@
 
 .INCLUDE "data/sprite_grouping_data.asm"
 
-.INCLUDE "data/unknown/EF4A40.asm"
+.INCLUDE "data/sound_stone_orbit_sprite_distances.asm"
 
 LOCALEINCLUDE "text_data/EBATTLE6.ebtxt"
 
