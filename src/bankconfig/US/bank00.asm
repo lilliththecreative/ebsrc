@@ -494,7 +494,7 @@
 
 .INCLUDE "system/sprites/draw_sprite.asm"
 
-.INCLUDE "data/C08C58_jumps.asm"
+.INCLUDE "data/draw_sprite_pointers.asm"
 
 .INCLUDE "system/sprites/add_priority_0_sprite.asm"
 
@@ -872,7 +872,7 @@
 
 .INCLUDE "system/copy_map_palette_fade.asm"
 
-.INCLUDE "data/unknown/C0A20C.asm"
+.INCLUDE "data/animated_map_palette_buffers.asm"
 
 .INCLUDE "overworld/find_npc_entity.asm"
 
@@ -1066,9 +1066,9 @@
 
 .INCLUDE "data/dma_target_registers.asm"
 
-.INCLUDE "data/unknown/C0AE26.asm"
+.INCLUDE "data/hdma_indirect_table_bg1.asm"
 
-.INCLUDE "data/unknown/C0AE2D.asm"
+.INCLUDE "data/hdma_indirect_table_bg2.asm"
 
 .INCLUDE "system/hdma_disable.asm"
 
