@@ -303,39 +303,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/collision_heights2.asm"
 
-.INCLUDE "data/unknown/C42B0D.asm"
+.INCLUDE "data/overworld_sprite_template_pointers.asm"
 
-.INCLUDE "data/unknown/C42B51.asm"
-
-.INCLUDE "data/unknown/C42B5D.asm"
-
-.INCLUDE "data/unknown/C42B73.asm"
-
-.INCLUDE "data/unknown/C42B89.asm"
-
-.INCLUDE "data/unknown/C42BA9.asm"
-
-.INCLUDE "data/unknown/C42BBF.asm"
-
-.INCLUDE "data/unknown/C42BE9.asm"
-
-.INCLUDE "data/unknown/C42BFF.asm"
-
-.INCLUDE "data/unknown/C42C29.asm"
-
-.INCLUDE "data/unknown/C42C67.asm"
-
-.INCLUDE "data/unknown/C42CA5.asm"
-
-.INCLUDE "data/unknown/C42CC5.asm"
-
-.INCLUDE "data/unknown/C42D03.asm"
-
-.INCLUDE "data/unknown/C42D5F.asm"
-
-.INCLUDE "data/unknown/C42DD9.asm"
-
-.INCLUDE "data/unknown/C42E7B.asm"
+.INCLUDE "data/graphics/overworld_sprite_templates.asm"
 
 .INCLUDE "overworld/set_party_tick_callbacks.asm"
 
@@ -889,7 +859,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/update_swirl_frame.asm"
 
-.INCLUDE "data/unknown/C4AC57.asm"
+.INCLUDE "data/sound_stone_orbit_pointers.asm"
 
 .INCLUDE "data/sound_stone_unknown1.asm"
 
