@@ -2152,12 +2152,10 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/playable_character_graphics_table.asm"
 
-.IF .DEFINED(USA)
-	.IF .DEFINED(PROTOTYPE19950327)
-		.INCLUDE "intro/show_title_screen-proto.asm"
-	.ELSE
-		.INCLUDE "intro/show_title_screen.asm"
-	.ENDIF
+.IF .DEFINED(PROTOTYPE19950327)
+	.INCLUDE "intro/show_title_screen-proto.asm"
+.ELSEIF .DEFINED(USA)
+	.INCLUDE "intro/show_title_screen.asm"
 .ENDIF
 
 .INCLUDE "system/tilemap_update_upload_rows.asm"
