@@ -179,7 +179,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/get_screen_angle.asm"
 
-.INCLUDE "data/unknown/C41FC5.asm"
+.INCLUDE "data/cardinal_angles.asm"
 
 .INCLUDE "data/unknown/C41FDF.asm"
 
