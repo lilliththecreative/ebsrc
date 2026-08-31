@@ -2038,7 +2038,7 @@ SPRITE_GROUP_PALETTES:
 
 .IF .DEFINED(PROTOTYPE19950327)
 	.INCLUDE "data/text/window_configuration_table-proto.asm"
-.ELSE
+.ELSEIF .DEFINED(USA)
 	.INCLUDE "data/text/window_configuration_table.asm"
 .ENDIF
 
