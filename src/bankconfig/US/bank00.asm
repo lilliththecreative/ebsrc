@@ -168,7 +168,7 @@
 
 .INCLUDE "overworld/actionscript/initialize_party_member.asm"
 
-.INCLUDE "unknown/C0/C03E25.asm"
+.INCLUDE "unused/C03E25.asm"
 
 .INCLUDE "overworld/get_character_position_index.asm"
 
@@ -434,11 +434,11 @@
 
 .INCLUDE "system/reset_irq_callback.asm"
 
-.INCLUDE "unknown/C0/C08529.asm"
+.INCLUDE "unused/C08529.asm"
 
 .INCLUDE "system/prepare_palette_upload.asm"
 
-.INCLUDE "unknown/C0/C08573.asm"
+.INCLUDE "unused/C08573.asm"
 
 .INCLUDE "system/transfer_to_vram.asm"
 
@@ -816,9 +816,9 @@
 
 .INCLUDE "unused/C09E98.asm"
 
-.INCLUDE "unknown/C0/C09EAC.asm"
+.INCLUDE "unused/C09EAC.asm"
 
-.INCLUDE "unknown/C0/C09ECE.asm"
+.INCLUDE "unused/C09ECE.asm"
 
 .INCLUDE "overworld/test_entity_movement_active.asm"
 
@@ -876,7 +876,7 @@
 
 .INCLUDE "overworld/find_npc_entity.asm"
 
-.INCLUDE "unknown/C0/C0A230.asm"
+.INCLUDE "unused/C0A230.asm"
 
 .INCLUDE "overworld/recalculate_entity_screen_position.asm"
 
@@ -1170,9 +1170,9 @@
 
 .INCLUDE "overworld/is_entity_sprite_onscreen.asm"
 
-.INCLUDE "unknown/C0/C0C760.asm"
+.INCLUDE "unused/C0C760.asm"
 
-.INCLUDE "unknown/C0/C0C7AC.asm"
+.INCLUDE "unused/C0C7AC.asm"
 
 .INCLUDE "overworld/update_entity_surface_flags.asm"
 
@@ -1286,11 +1286,11 @@
 
 .INCLUDE "overworld/teleport/psi_teleport_fail.asm"
 
-.INCLUDE "misc/teleport_freezeobjects.asm"
+.INCLUDE "overworld/teleport/psi_teleport_freeze_objects.asm"
 
-.INCLUDE "misc/teleport_freezeobjects2.asm"
+.INCLUDE "overworld/teleport/psi_teleport_freeze_objects2.asm"
 
-.INCLUDE "misc/teleport_mainloop.asm"
+.INCLUDE "overworld/teleport/teleport_mainloop.asm"
 
 .INCLUDE "intro/load_title_screen_graphics.asm"
 
