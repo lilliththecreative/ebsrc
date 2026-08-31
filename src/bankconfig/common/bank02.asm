@@ -47,13 +47,19 @@
 
 .INCLUDE "text/test_if_cursor_position.asm"
 
-.INCLUDE "data/text/name_entry_grid_character_offset_table.asm"
+.IF .DEFINED(USA)
+  .IF !.DEFINED(PROTOTYPE19950327)
+    .INCLUDE "data/text/name_entry_grid_character_offset_table.asm"
+    
+    .INCLUDE "data/map/reserved_bg2_tilemap.asm"
+  .ENDIF
 
-.INCLUDE "data/map/reserved_bg2_tilemap.asm"
-
-.INCLUDE "data/text/the.asm"
-
-.INCLUDE "text/remove_window_from_screen_old.asm"
+  .INCLUDE "data/text/the.asm"
+  
+  .IF !.DEFINED(PROTOTYPE19950327)
+    .INCLUDE "text/remove_window_from_screen_old.asm"
+  .ENDIF
+.ENDIF
 
 .INCLUDE "text/backup_current_window_text_attributes.asm"
 
@@ -127,9 +133,15 @@
 
 .INCLUDE "text/get_status_name_palette.asm"
 
-.INCLUDE "inventory/get_item_subtype.asm"
-
-.INCLUDE "inventory/get_item_subtype2.asm"
+.IF .DEFINED(JP)
+  .INCLUDE "inventory/get_item_subtype-jp.asm"
+  
+  .INCLUDE "inventory/get_item_subtype2-jp.asm"
+.ELSE
+  .INCLUDE "inventory/get_item_subtype.asm"
+  
+  .INCLUDE "inventory/get_item_subtype2.asm"
+.ENDIF
 
 .INCLUDE "text/print_stats_with_new_weapon.asm"
 
@@ -155,9 +167,15 @@
 
 .INCLUDE "misc/atm_withdraw.asm"
 
-.INCLUDE "misc/party_add_char.asm"
-
-.INCLUDE "misc/party_remove_char.asm"
+.IF .DEFINED(JP)
+  .INCLUDE "misc/party_add_char-jp.asm"
+  
+  .INCLUDE "misc/party_remove_char-jp.asm"
+.ELSE
+  .INCLUDE "misc/party_add_char.asm"
+  
+  .INCLUDE "misc/party_remove_char.asm"
+.ENDIF
 
 .INCLUDE "misc/save_game.asm"
 
@@ -173,7 +191,11 @@
 
 .INCLUDE "data/battle/consolation_item_table.asm"
 
-.INCLUDE "battle/menu_handler.asm"
+.IF .DEFINED(JP)
+  .INCLUDE "battle/menu_handler-jp.asm"
+.ELSE
+  .INCLUDE "battle/menu_handler.asm"
+.ENDIF
 
 .INCLUDE "text/copy_enemy_name.asm"
 
@@ -743,7 +765,11 @@
 
 .INCLUDE "battle/clear_battle_effects.asm"
 
-.INCLUDE "battle/show_psi_animation.asm"
+.IF .DEFINED(JP)
+  .INCLUDE "battle/show_psi_animation-jp.asm"
+.ELSE
+ .INCLUDE "battle/show_psi_animation.asm"
+.ENDIF
 
 .INCLUDE "data/psi_animation_tile_flags.asm"
 
@@ -801,4 +827,6 @@
 
 .INCLUDE "overworld/actionscript/test_in_big_area.asm"
 
-.INCLUDE "data/events/scripts/000.asm"
+.IF .DEFINED(USA)
+  .INCLUDE "data/events/scripts/000.asm"
+.ENDIF
