@@ -159,7 +159,7 @@
 
 .INCLUDE "misc/get_living_party_member_count.asm"
 
-.INCLUDE "unknown/C2/C2277C.asm"
+.INCLUDE "text/display_party_description.asm"
 
 .INCLUDE "misc/learn_special_psi.asm"
 
@@ -819,7 +819,7 @@
 
 .INCLUDE "battle/initialize_battle_sprite_palette_effect.asm"
 
-.INCLUDE "unknown/C2/C2FCA6.asm"
+.INCLUDE "unused/C2FCA6.asm"
 
 .INCLUDE "battle/single_battle_sprite_palette_effect_frame.asm"
 
