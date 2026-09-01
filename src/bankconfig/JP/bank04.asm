@@ -665,7 +665,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "system/prepare_loaded_palette_fade_tables.asm"
 
-.INCLUDE "unknown/C4/C496F0.asm"
+.INCLUDE "unused/prepare_backup_palette_fade_tables.asm"
 
 .INCLUDE "system/prepare_loaded_palette_for_fade.asm"
 
@@ -787,9 +787,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "overworld/manpu/delete_manpu_by_sprite.asm"
 
-.INCLUDE "unknown/C4/C4B570.asm"
+.INCLUDE "unused/create_manpu_by_constant.asm"
 
-.INCLUDE "unknown/C4/C4B57D.asm"
+.INCLUDE "unused/delete_manpu_by_constant.asm"
 
 .INCLUDE "overworld/path/sbrk.asm"
 
