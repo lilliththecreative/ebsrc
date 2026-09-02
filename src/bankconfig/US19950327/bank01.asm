@@ -128,7 +128,7 @@
 
 .INCLUDE "text/print_string.asm"
 
-.INCLUDE "unknown/C1/C10F40.asm"
+.INCLUDE "text/clear_window.asm"
 
 .INCLUDE "text/clear_focus_window.asm"
 
@@ -208,7 +208,7 @@
 
 .INCLUDE "audio/resume_music.asm"
 
-.INCLUDE "unknown/C1/C12D17.asm"
+.INCLUDE "text/hp_pp_window/flipout.asm"
 
 .INCLUDE "text/window_tick.asm"
 
@@ -220,9 +220,9 @@
 
 .INCLUDE "overworld/check.asm"
 
-.INCLUDE "unknown/C1/C1339E.asm"
+.INCLUDE "text/create_inventory_window.asm"
 
-.INCLUDE "unknown/C1/C133A7.asm"
+.INCLUDE "text/create_item_targetting_window.asm"
 
 .INCLUDE "overworld/open_menu-proto.asm"
 
@@ -620,9 +620,9 @@
 
 .INCLUDE "text/print_item_name.asm"
 
-.INCLUDE "unknown/C1/C19249.asm"
+.INCLUDE "text/display_stat.asm"
 
-.INCLUDE "unknown/C1/C1931B.asm"
+.INCLUDE "text/display_character_name.asm"
 
 .INCLUDE "text/open_equip_select_menu.asm"
 
@@ -636,7 +636,7 @@
 
 .INCLUDE "unknown/C1/C19A11.asm"
 
-.INCLUDE "unknown/C1/C19A43-proto.asm"
+.INCLUDE "text/display_escargo_express_items-proto.asm"
 
 .INCLUDE "text/set_hppp_window_mode_item.asm"
 
