@@ -226,6 +226,8 @@
 
 .INCLUDE "overworld/open_menu-proto.asm"
 
+.INCLUDE "overworld/open_menu_check_talk.asm"
+
 .INCLUDE "text/open_hppp_display.asm"
 
 .INCLUDE "overworld/show_town_map.asm"
