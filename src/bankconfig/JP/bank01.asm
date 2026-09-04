@@ -126,7 +126,7 @@
 
 .INCLUDE "text/print_number-jp.asm"
 
-.INCLUDE "unknown/mother2/C11404.asm"
+.INCLUDE "unknown/mother2/C11404-jp.asm"
 
 .INCLUDE "text/set_current_window_padding.asm"
 
