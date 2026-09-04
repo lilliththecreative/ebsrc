@@ -150,9 +150,9 @@
 
 .INCLUDE "overworld/update_party-jp.asm"
 
-.INCLUDE "unknown/C0/C0369B-jp.asm"
+.INCLUDE "misc/increment_party_member_indices-jp.asm"
 
-.INCLUDE "unknown/C0/C03903.asm"
+.INCLUDE "misc/decrement_party_member_indices.asm"
 
 .INCLUDE "overworld/set_follower_entity_to_leader_position.asm"
 
@@ -216,7 +216,7 @@
 
 .INCLUDE "overworld/camera/switch_to_camera_mode_3.asm"
 
-.INCLUDE "unknown/C0/C04AAD.asm"
+.INCLUDE "overworld/camera/handle_camera_mode_3.asm"
 
 .INCLUDE "overworld/camera/handle_special_camera.asm"
 
@@ -356,7 +356,7 @@
 
 .INCLUDE "overworld/get_off_stairs.asm"
 
-.INCLUDE "unknown/C0/C0705F.asm"
+.INCLUDE "overworld/determine_stair_movement_direction.asm"
 
 .INCLUDE "overworld/interact_stairs.asm"
 
@@ -1034,7 +1034,7 @@
 
 .INCLUDE "audio/wait_for_spc700.asm"
 
-.INCLUDE "unknown/C0/C0ABBD.asm"
+.INCLUDE "audio/set_apuio0.asm"
 
 .INCLUDE "audio/stop_music.asm"
 
@@ -1042,7 +1042,7 @@
 
 .INCLUDE "audio/music_effect.asm"
 
-.INCLUDE "unknown/C0/C0AC20.asm"
+.INCLUDE "audio/get_apuio0.asm"
 
 .INCLUDE "data/stereo_mono_data.asm"
 
