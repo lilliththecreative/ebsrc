@@ -313,8 +313,6 @@ DEBUG_CURSOR_GRAPHICS:
 
 .INCLUDE "data/unused/EFF3DB.asm"
 
-.INCLUDE "data/unused/EFF511.asm"
-
 .INCLUDE "data/unused/EFF53B.asm"
 
 .INCLUDE "data/debug/debug_cursor_spritemap.asm"
