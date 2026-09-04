@@ -192,7 +192,7 @@
 
 .INCLUDE "overworld/test_nearby_checkable_npc.asm"
 
-.INCLUDE "overworld/find_nearby_checkable_tpt_entry.asm"
+.INCLUDE "overworld/find_nearby_checkable_npc.asm"
 
 .INCLUDE "overworld/face_opposite_leader.asm"
 
@@ -200,7 +200,7 @@
 
 .INCLUDE "overworld/test_nearby_talkable_npc.asm"
 
-.INCLUDE "overworld/find_nearby_talkable_tpt_entry.asm"
+.INCLUDE "overworld/find_nearby_talkable_npc.asm"
 
 .INCLUDE "overworld/handle_normal_movement.asm"
 
