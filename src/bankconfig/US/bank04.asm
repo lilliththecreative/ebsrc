@@ -45,7 +45,9 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/events/entity_overlays.asm"
 
-.INCLUDE "data/events/C40F18.asm"
+.INCLUDE "data/events/tasks/C40F18.asm"
+
+.INCLUDE "data/events/C40F45.asm"
 
 .INCLUDE "data/events/C40F4A.asm"
 
@@ -197,11 +199,13 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/events/scripts/860.asm"
 
-.INCLUDE "data/events/C4220E.asm"
+.INCLUDE "data/events/title_screen_common_init.asm"
+
+.INCLUDE "data/events/tasks/title_screen_flash.asm"
 
 .INCLUDE "data/events/scripts/789.asm"
 
-.INCLUDE "data/events/C42235.asm"
+.INCLUDE "data/events/animate_completed_title_screen.asm"
 
 .INCLUDE "data/events/scripts/788.asm"
 
@@ -267,13 +271,13 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "data/events/scripts/859.asm"
 
-.INCLUDE "data/events/C427E0.asm"
+.INCLUDE "data/events/tasks/run_blink_effect.asm"
 
-.INCLUDE "data/events/C42802.asm"
+.INCLUDE "data/events/tasks/run_h_stripe_effect.asm"
 
-.INCLUDE "data/events/C42815.asm"
+.INCLUDE "data/events/tasks/run_v_stripe_effect.asm"
 
-.INCLUDE "data/events/C42828.asm"
+.INCLUDE "data/events/tasks/run_dots_effect.asm"
 
 .INCLUDE "system/init_entity_fade_buffer8.asm"
 
