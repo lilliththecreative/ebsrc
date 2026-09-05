@@ -112,8 +112,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/265.asm"
 
-.INCLUDE "data/events/C3098B.asm"
-
 .INCLUDE "data/events/scripts/266.asm"
 
 .INCLUDE "data/events/scripts/267.asm"
@@ -156,6 +154,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/285.asm"
 
+.INCLUDE "data/events/scripts/284+285_common.asm"
+
 .INCLUDE "data/events/scripts/286.asm"
 
 .INCLUDE "data/events/scripts/287.asm"
@@ -173,6 +173,8 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/293.asm"
 
 .INCLUDE "data/events/scripts/294.asm"
+
+.INCLUDE "data/events/tasks/C31055.asm"
 
 .INCLUDE "data/events/scripts/295.asm"
 
