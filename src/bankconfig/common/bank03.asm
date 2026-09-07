@@ -296,7 +296,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/354.asm"
 
-.INCLUDE "data/events/C31D2D.asm"
+.INCLUDE "data/events/tasks/var4_animation.asm"
 
 .INCLUDE "data/events/C31D4F.asm"
 
@@ -310,7 +310,11 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C31DF4.asm"
 
+.INCLUDE "data/events/tasks/fade_out.asm"
+
 .INCLUDE "data/events/C31E2D.asm"
+
+.INCLUDE "data/events/tasks/fade_in.asm"
 
 .INCLUDE "data/events/scripts/360.asm"
 
@@ -398,7 +402,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/396.asm"
 
-.INCLUDE "data/events/C32CD2.asm"
+.INCLUDE "data/events/tasks/C32CD2.asm"
 
 .INCLUDE "data/events/scripts/399.asm"
 
@@ -474,7 +478,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/439.asm"
 
-.INCLUDE "data/events/C33549.asm"
+.INCLUDE "data/events/tasks/C33549.asm"
 
 .INCLUDE "data/events/scripts/440.asm"
 
@@ -493,6 +497,8 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/447.asm"
 
 .INCLUDE "data/events/scripts/448.asm"
+
+.INCLUDE "data/events/tasks/C33B77.asm"
 
 .INCLUDE "data/events/scripts/449.asm"
 
@@ -520,7 +526,11 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/481.asm"
 
+.INCLUDE "data/events/tasks/C33EB6.asm"
+
 .INCLUDE "data/events/scripts/482.asm"
+
+.INCLUDE "data/events/tasks/C33EFF.asm"
 
 .INCLUDE "data/events/scripts/480.asm"
 
@@ -550,6 +560,10 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/495.asm"
 
+.INCLUDE "data/events/actionscript_leaves.asm"
+
+.INCLUDE "data/events/tasks/C34233.asm"
+
 .INCLUDE "data/events/scripts/496.asm"
 
 .INCLUDE "data/events/scripts/497.asm"
@@ -561,6 +575,8 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/531.asm"
 
 .INCLUDE "data/events/scripts/501+531_common.asm"
+
+.INCLUDE "data/events/tasks/C3436D.asm"
 
 .INCLUDE "data/events/scripts/532.asm"
 
@@ -576,7 +592,15 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/499.asm"
 
-.INCLUDE "data/events/scripts/499+500_common.asm"
+.INCLUDE "data/events/actionscript_delivery.asm"
+
+.INCLUDE "data/events/tasks/C3447A.asm"
+
+.INCLUDE "data/events/C34488.asm"
+
+.INCLUDE "data/events/C344A8.asm"
+
+.INCLUDE "data/events/C344DE.asm"
 
 .INCLUDE "data/events/scripts/547.asm"
 
