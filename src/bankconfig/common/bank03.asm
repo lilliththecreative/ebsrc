@@ -706,6 +706,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/541.asm"
 
+.INCLUDE "data/events/tasks/C3504A.asm"
+
 .INCLUDE "data/events/scripts/542.asm"
 
 .INCLUDE "data/events/scripts/543.asm"
@@ -720,11 +722,13 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/800.asm"
 
+.INCLUDE "data/events/wait_credits_tiles.asm"
+
 .INCLUDE "data/events/scripts/801.asm"
 
-.INCLUDE "data/events/C35F8B.asm"
+.INCLUDE "data/events/tasks/animate_cast_sprite.asm"
 
-.INCLUDE "data/events/C35FB6.asm"
+.INCLUDE "data/events/cast_scene_stand_in_place.asm"
 
 .INCLUDE "data/events/C35FCD.asm"
 
@@ -816,7 +820,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/844.asm"
 
-.INCLUDE "data/events/C36834.asm"
+.INCLUDE "data/events/scripts/845+846+847+848+849_common.asm"
 
 .INCLUDE "data/events/scripts/845.asm"
 
@@ -864,6 +868,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/590.asm"
 
+.INCLUDE "data/events/C36B60.asm"
+
 .INCLUDE "data/events/C36BB4.asm"
 
 .INCLUDE "data/events/scripts/591.asm"
@@ -880,7 +886,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/596.asm"
 
-.INCLUDE "data/events/tasks/C36D18.asm"
+.INCLUDE "data/events/tasks/trigger_talk_text_on_collision.asm"
 
 .INCLUDE "data/events/scripts/597.asm"
 
@@ -902,7 +908,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/606.asm"
 
-.INCLUDE "data/events/C36E41.asm"
+.INCLUDE "data/events/tasks/C36E41.asm"
 
 .INCLUDE "data/events/scripts/607.asm"
 
@@ -934,6 +940,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/621.asm"
 
+.INCLUDE "data/events/C370A2.asm"
+
 .INCLUDE "data/events/scripts/622.asm"
 
 .INCLUDE "data/events/scripts/623.asm"
@@ -949,6 +957,10 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/628.asm"
 
 .INCLUDE "data/events/scripts/629.asm"
+
+.INCLUDE "data/events/C37377.asm"
+
+.INCLUDE "data/events/C373A8.asm"
 
 .INCLUDE "data/events/scripts/630.asm"
 
