@@ -1052,6 +1052,10 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/670.asm"
 
+.INCLUDE "data/events/tasks/C37CD8.asm"
+
+.INCLUDE "data/events/tasks/C37CEA.asm"
+
 .INCLUDE "data/events/scripts/671.asm"
 
 .INCLUDE "data/events/scripts/672.asm"
@@ -1060,7 +1064,15 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/674.asm"
 
+.INCLUDE "data/events/C37E50.asm"
+
+.INCLUDE "data/events/C37E66.asm"
+
+.INCLUDE "data/events/tasks/C37EAE.asm"
+
 .INCLUDE "data/events/scripts/675.asm"
+
+.INCLUDE "data/events/tasks/C37F1F.asm"
 
 .INCLUDE "data/events/scripts/676.asm"
 
