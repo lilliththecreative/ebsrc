@@ -1842,6 +1842,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/126.asm"
 
+.INCLUDE "data/events/C3C2EF.asm"
+
 .INCLUDE "data/events/scripts/127.asm"
 
 .INCLUDE "data/events/scripts/128.asm"
@@ -1892,9 +1894,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C3C81A.asm"
 
-.INCLUDE "data/events/C3C824.asm"
+.INCLUDE "data/events/tasks/C3C824.asm"
 
-.INCLUDE "data/events/C3C871.asm"
+.INCLUDE "data/events/tasks/C3C871.asm"
 
 .INCLUDE "data/events/scripts/147.asm"
 
@@ -1934,17 +1936,17 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C3CC5C.asm"
 
-.INCLUDE "data/events/C3CC94.asm"
+.INCLUDE "data/events/tasks/C3CC94.asm"
 
-.INCLUDE "data/events/C3CCA8.asm"
+.INCLUDE "data/events/tasks/C3CCA8.asm"
 
 .INCLUDE "data/events/scripts/161.asm"
 
 .INCLUDE "data/events/scripts/164.asm"
 
-.INCLUDE "data/events/C3CEA2.asm"
+.INCLUDE "data/events/tasks/C3CEA2.asm"
 
-.INCLUDE "data/events/C3CEB9.asm"
+.INCLUDE "data/events/tasks/C3CEB9.asm"
 
 .INCLUDE "data/events/scripts/163.asm"
 
@@ -2090,13 +2092,19 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/032.asm"
 
+.INCLUDE "data/events/tasks/magic_butterfly_1.asm"
+
+.INCLUDE "data/events/tasks/magic_butterfly_2.asm"
+
+.INCLUDE "data/events/tasks/butterfly_touch.asm"
+
 .INCLUDE "data/events/scripts/034.asm"
 
 .INCLUDE "data/events/scripts/033.asm"
 
 .INCLUDE "data/events/C3DF90.asm"
 
-.INCLUDE "data/events/C3DFB5.asm"
+.INCLUDE "data/events/tasks/C3DFB5.asm"
 
 .INCLUDE "data/events/C3DFD4.asm"
 
