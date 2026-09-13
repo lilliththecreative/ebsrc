@@ -1182,6 +1182,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/719.asm"
 
+.INCLUDE "data/events/tasks/C38B29.asm"
+
 .INCLUDE "data/events/scripts/720.asm"
 
 .INCLUDE "data/events/scripts/721.asm"
