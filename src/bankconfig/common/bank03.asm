@@ -510,8 +510,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C33BFB.asm"
 
-.INCLUDE "data/events/C33C18.asm"
-
 .INCLUDE "data/events/C33C1D.asm"
 
 .INCLUDE "data/events/scripts/467.asm"
@@ -868,8 +866,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/590.asm"
 
-.INCLUDE "data/events/C36B60.asm"
-
 .INCLUDE "data/events/C36BB4.asm"
 
 .INCLUDE "data/events/scripts/591.asm"
@@ -940,8 +936,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/621.asm"
 
-.INCLUDE "data/events/C370A2.asm"
-
 .INCLUDE "data/events/scripts/622.asm"
 
 .INCLUDE "data/events/scripts/623.asm"
@@ -957,8 +951,6 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/628.asm"
 
 .INCLUDE "data/events/scripts/629.asm"
-
-.INCLUDE "data/events/C37377.asm"
 
 .INCLUDE "data/events/C373A8.asm"
 
@@ -1391,14 +1383,6 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/781.asm"
 
 .INCLUDE "data/events/scripts/782.asm"
-
-.INCLUDE "data/events/C39F3F.asm"
-
-.INCLUDE "data/events/C39F67.asm"
-
-.INCLUDE "data/events/C39F7A.asm"
-
-.INCLUDE "data/events/C39F8D.asm"
 
 .INCLUDE "data/events/scripts/783.asm"
 
@@ -2042,8 +2026,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/210.asm"
 
-.INCLUDE "data/events/C3D913.asm"
-
 .INCLUDE "data/events/scripts/211.asm"
 
 .INCLUDE "data/events/scripts/220.asm"
@@ -2107,8 +2089,6 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/C3DF90.asm"
 
 .INCLUDE "data/events/tasks/C3DFB5.asm"
-
-.INCLUDE "data/events/C3DFD4.asm"
 
 .INCLUDE "data/map/legal_delivery_area_types.asm"
 
