@@ -146,9 +146,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/283.asm"
 
-.INCLUDE "data/events/C30C55.asm"
+.INCLUDE "data/events/scripts/279+280+281+282+283_common.asm.asm"
 
-.INCLUDE "data/events/C30C67.asm"
+.INCLUDE "data/events/actionscript_cultist_circle.asm"
 
 .INCLUDE "data/events/scripts/284.asm"
 
@@ -656,7 +656,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/569.asm"
 
-.INCLUDE "data/events/C34D39.asm"
+.INCLUDE "data/events/actionscript_presentbox_fall.asm"
 
 .INCLUDE "data/events/scripts/570.asm"
 
@@ -1106,7 +1106,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C3835D.asm"
 
-.INCLUDE "data/events/C383BC.asm"
+.INCLUDE "data/events/slotbro_determine_rotations.asm"
 
 .INCLUDE "data/events/scripts/693.asm"
 
@@ -1428,9 +1428,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/tasks/animate_dvar4f2.asm"
 
-.INCLUDE "data/events/tasks/C3A15E.asm"
+.INCLUDE "data/events/tasks/animate_d8f2_toggle_destroy_if_far.asm"
 
-.INCLUDE "data/events/tasks/C3A17B.asm"
+.INCLUDE "data/events/tasks/animate_d24d48.asm"
 
 .INCLUDE "data/events/tasks/set_walking_speed_slow_animation.asm"
 
@@ -1538,19 +1538,19 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/C3AA2B.asm"
 
-.INCLUDE "data/events/C3AA38.asm"
+.INCLUDE "data/events/actionscript_anim8.asm"
 
-.INCLUDE "data/events/C3AA46.asm"
+.INCLUDE "data/events/actionscript_anim24.asm"
 
-.INCLUDE "data/events/C3AA5A.asm"
+.INCLUDE "data/events/actionscript_anim12.asm"
 
-.INCLUDE "data/events/C3AA6E.asm"
+.INCLUDE "data/events/actionscript_anim9.asm"
 
-.INCLUDE "data/events/C3AA82.asm"
+.INCLUDE "data/events/actionscript_anim6.asm"
 
-.INCLUDE "data/events/C3AA96.asm"
+.INCLUDE "data/events/actionscript_anim2.asm"
 
-.INCLUDE "data/events/C3AAAA.asm"
+.INCLUDE "data/events/actionscript_anim_var4.asm"
 
 .INCLUDE "data/events/C3AAB8.asm"
 
@@ -1750,7 +1750,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/106.asm"
 
-.INCLUDE "data/events/C3BD03.asm"
+.INCLUDE "data/events/scripts/103+104+105+106_common.asm"
 
 .INCLUDE "data/events/scripts/102.asm"
 
