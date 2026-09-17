@@ -1268,7 +1268,7 @@
 
 .INCLUDE "overworld/teleport/psi_teleport_success_depart_leader_tick.asm"
 
-.INCLUDE "unknown/C0/C0E6FE.asm"
+.INCLUDE "unused/C0E6FE.asm"
 
 .INCLUDE "overworld/teleport/psi_teleport_success_arrive_leader_tick.asm"
 
