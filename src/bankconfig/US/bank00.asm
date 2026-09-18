@@ -114,7 +114,7 @@
 
 .INCLUDE "overworld/clear_entities.asm"
 
-.INCLUDE "unknown/C0/C021E6.asm"
+.INCLUDE "overworld/clear_entities_including_party.asm"
 
 .INCLUDE "overworld/try_spawn_npcs.asm"
 
@@ -230,7 +230,7 @@
 
 .INCLUDE "overworld/try_show_hp_alert.asm"
 
-.INCLUDE "unknown/C0/C04FFE.asm"
+.INCLUDE "overworld/deal_overworld_damage.asm"
 
 .INCLUDE "overworld/party_leader_tick.asm"
 
