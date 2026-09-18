@@ -384,7 +384,7 @@
 
 .INCLUDE "overworld/update_mini_ghost_position.asm"
 
-.INCLUDE "unknown/C0/C0780F.asm"
+.INCLUDE "overworld/determine_party_member_sprite.asm"
 
 .INCLUDE "ending/get_credits_photograph_party_sprite.asm"
 
@@ -591,6 +591,8 @@
 .INCLUDE "overworld/init_entity_subsystem.asm"
 
 .INCLUDE "overworld/init_entity.asm"
+
+.INCLUDE "unknown/C0/C09403.asm"
 
 .INCLUDE "overworld/freeze_entities.asm"
 
@@ -834,7 +836,7 @@
 
 .INCLUDE "overworld/actionscript/fade_out.asm"
 
-.INCLUDE "unknown/C0/C09FAE.asm"
+.INCLUDE "overworld/actionscript/update_entity_position_2d.asm"
 
 .INCLUDE "overworld/update_entity_position_3d.asm"
 
@@ -928,7 +930,7 @@
 
 .INCLUDE "overworld/actionscript/get_movement_speed.asm"
 
-.INCLUDE "unknown/C0/C0A697.asm"
+.INCLUDE "unused/C0A697.asm"
 
 .INCLUDE "overworld/actionscript/sleep_until_cardinal_pixels_moved.asm"
 
@@ -1058,7 +1060,7 @@
 
 .INCLUDE "data/events/scripts/786.asm"
 
-.INCLUDE "unknown/C0/C0AD9F.asm"
+.INCLUDE "battle/backgrounds/scroll_bg3.asm"
 
 .INCLUDE "battle/backgrounds/do_battlebg_dma.asm"
 
