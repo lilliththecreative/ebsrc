@@ -217,7 +217,7 @@ INCREMENT_PARTY_MEMBER_INDICES:
 	LDA PLAYER_POSITION_BUFFER + player_position_buffer_entry::y_coord,X
 	STA @VIRTUAL02
 	LDA GAME_STATE + game_state::special_game_state
-	CMP #3
+	CMP #SPECIAL_GAME_STATE::USE_MINI_SPRITES
 	BEQ @UNKNOWN16
 	LDA @LOCAL02
 	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(character_initial_entity_entry)
