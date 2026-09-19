@@ -644,7 +644,7 @@
 
 .INCLUDE "text/print_equipment_stats.asm"
 
-.INCLUDE "unknown/C1/C1A778.asm"
+.INCLUDE "text/print_equipment_and_stats.asm"
 
 .INCLUDE "text/handle_equip_menu.asm"
 
