@@ -42,7 +42,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/224.asm"
 
-.INCLUDE "data/events/C30295.asm"
+.INCLUDE "data/events/scripts/222+223+224_common.asm"
 
 .INCLUDE "data/events/scripts/225+226+227.asm"
 
@@ -308,7 +308,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/369.asm"
 
-.INCLUDE "data/events/C31DF4.asm"
+.INCLUDE "data/events/unused/C31DF4.asm"
 
 .INCLUDE "data/events/tasks/fade_out.asm"
 
@@ -338,7 +338,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/368.asm"
 
-.INCLUDE "data/events/C32138.asm"
+.INCLUDE "data/events/dance_chaos_theater.asm"
 
 .INCLUDE "data/events/scripts/365.asm"
 
@@ -460,15 +460,15 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/431+432+433+434.asm"
 
-.INCLUDE "data/events/C33399.asm"
+.INCLUDE "data/events/dance_facing_down.asm"
 
-.INCLUDE "data/events/C333AA.asm"
+.INCLUDE "data/events/dance_facing_up.asm"
 
-.INCLUDE "data/events/C333BB.asm"
+.INCLUDE "data/events/dance_facing_left.asm"
 
-.INCLUDE "data/events/C333CC.asm"
+.INCLUDE "data/events/dance_facing_right.asm"
 
-.INCLUDE "data/events/C333DD.asm"
+.INCLUDE "data/events/runaway_five_spin_venus.asm"
 
 .INCLUDE "data/events/scripts/435.asm"
 
@@ -508,7 +508,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/452.asm"
 
-.INCLUDE "data/events/C33BFB.asm"
+.INCLUDE "data/events/unused/C33BFB.asm"
 
 .INCLUDE "data/events/C33C1D.asm"
 
@@ -628,7 +628,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/556.asm"
 
-.INCLUDE "data/events/C348C4.asm"
+.INCLUDE "data/events/actionscript_return_from_past.asm"
 
 .INCLUDE "data/events/scripts/563.asm"
 
@@ -848,8 +848,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/858.asm"
 
-.INCLUDE "data/events/C36A3E.asm"
-
 .INCLUDE "data/events/C36A41.asm"
 
 .INCLUDE "data/events/scripts/584.asm"
@@ -866,11 +864,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/590.asm"
 
-.INCLUDE "data/events/C36BB4.asm"
+.INCLUDE "data/events/tasks/unused/C36BB4.asm"
 
 .INCLUDE "data/events/scripts/591.asm"
-
-.INCLUDE "data/events/C36BEA.asm"
 
 .INCLUDE "data/events/scripts/592.asm"
 
@@ -952,7 +948,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/629.asm"
 
-.INCLUDE "data/events/C373A8.asm"
+.INCLUDE "data/events/tasks/unused/C373A8.asm"
 
 .INCLUDE "data/events/scripts/630.asm"
 
@@ -960,7 +956,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/632.asm"
 
-.INCLUDE "data/events/C37439.asm"
+.INCLUDE "data/events/scripts/631+632_common2.asm"
 
 .INCLUDE "data/events/scripts/633.asm"
 
@@ -972,9 +968,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/637.asm"
 
-.INCLUDE "data/events/C37545.asm"
+.INCLUDE "data/events/prayer_scene_turn_right_left.asm"
 
-.INCLUDE "data/events/C37559.asm"
+.INCLUDE "data/events/prayer_scene_turn_left_right.asm"
 
 .INCLUDE "data/events/scripts/638.asm"
 
@@ -1104,7 +1100,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/692.asm"
 
-.INCLUDE "data/events/C3835D.asm"
+.INCLUDE "data/events/slotbro_stop.asm"
 
 .INCLUDE "data/events/slotbro_determine_rotations.asm"
 
@@ -1404,8 +1400,6 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/002.asm"
 
-.INCLUDE "data/events/null2.asm"
-
 .INCLUDE "data/events/scripts/003.asm"
 
 .IF .DEFINED(USA)
@@ -1442,7 +1436,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/tasks/set_walking_speed_extremely_fast_animation.asm"
 
-.INCLUDE "data/events/tasks/C3A1F3.asm"
+.INCLUDE "data/events/tasks/animate_d16f2.asm"
 
 .INCLUDE "data/events/scripts/035.asm"
 
@@ -1453,8 +1447,6 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/tasks/check_collision.asm"
 
 .INCLUDE "data/events/tasks/null.asm"
-
-.INCLUDE "data/events/tasks/null2.asm"
 
 .INCLUDE "data/events/scripts/004.asm"
 
@@ -1552,7 +1544,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/actionscript_anim_var4.asm"
 
-.INCLUDE "data/events/C3AAB8.asm"
+.INCLUDE "data/events/actionscript_anim16.asm"
 
 .INCLUDE "data/events/actionscript_set_walking_speed_slow.asm"
 
@@ -1564,7 +1556,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/actionscript_set_walking_speed_extremely_fast.asm"
 
-.INCLUDE "data/events/C3AB26.asm"
+.INCLUDE "data/events/actionscript_anim8_toggle.asm"
 
 .INCLUDE "data/events/actionscript_make_intangible.asm"
 
@@ -1876,9 +1868,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/165.asm"
 
-.INCLUDE "data/events/C3C810.asm"
+.INCLUDE "data/events/tasks/unused/C3C810.asm"
 
-.INCLUDE "data/events/C3C81A.asm"
+.INCLUDE "data/events/tasks/unused/C3C81A.asm"
 
 .INCLUDE "data/events/tasks/C3C824.asm"
 
@@ -1896,11 +1888,11 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/152.asm"
 
-.INCLUDE "data/events/C3C8FD.asm"
+.INCLUDE "data/events/unused/skywalker_script.asm"
 
-.INCLUDE "data/events/C3C90C.asm"
+.INCLUDE "data/events/actionscript_move_left_in_sky.asm"
 
-.INCLUDE "data/events/C3C94E.asm"
+.INCLUDE "data/events/actionscript_move_right_in_sky.asm"
 
 .INCLUDE "data/events/scripts/153.asm"
 
