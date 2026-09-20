@@ -402,7 +402,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/396.asm"
 
-.INCLUDE "data/events/tasks/C32CD2.asm"
+.INCLUDE "data/events/tasks/spotlight.asm"
 
 .INCLUDE "data/events/scripts/399.asm"
 
@@ -498,7 +498,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/448.asm"
 
-.INCLUDE "data/events/tasks/C33B77.asm"
+.INCLUDE "data/events/tasks/rotate_photographer.asm"
 
 .INCLUDE "data/events/scripts/449.asm"
 
@@ -518,7 +518,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/466.asm"
 
-.INCLUDE "data/events/tasks/C33DBE.asm"
+.INCLUDE "data/events/tasks/speed_up.asm"
 
 .INCLUDE "data/events/scripts/479.asm"
 
@@ -1060,7 +1060,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/675.asm"
 
-.INCLUDE "data/events/tasks/C37F1F.asm"
+.INCLUDE "data/events/tasks/quake.asm"
 
 .INCLUDE "data/events/scripts/676.asm"
 
@@ -1922,7 +1922,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/164.asm"
 
-.INCLUDE "data/events/tasks/C3CEA2.asm"
+.INCLUDE "data/events/tasks/skywalker_electricity.asm"
 
 .INCLUDE "data/events/tasks/C3CEB9.asm"
 
