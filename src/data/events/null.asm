@@ -1,3 +1,0 @@
-
-EVENT_NULL:
-	EVENT_END
