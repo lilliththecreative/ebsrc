@@ -282,6 +282,8 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/346.asm"
 
+.INCLUDE "data/events/tasks/C31BD9.asm"
+
 .INCLUDE "data/events/scripts/347.asm"
 
 .INCLUDE "data/events/scripts/348+349.asm"
@@ -289,6 +291,8 @@ SPRITE_GROUP_PALETTES:
 .INCLUDE "data/events/scripts/350.asm"
 
 .INCLUDE "data/events/scripts/351.asm"
+
+.INCLUDE "data/events/tasks/C31C90.asm"
 
 .INCLUDE "data/events/scripts/352.asm"
 
@@ -850,7 +854,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/858.asm"
 
-.INCLUDE "data/events/C36A41.asm"
+.INCLUDE "data/events/actionscript_car.asm"
 
 .INCLUDE "data/events/scripts/584.asm"
 
@@ -1054,9 +1058,9 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/674.asm"
 
-.INCLUDE "data/events/C37E50.asm"
+.INCLUDE "data/events/scripts/672+673+674_common.asm"
 
-.INCLUDE "data/events/C37E66.asm"
+.INCLUDE "data/events/actionscript_geyser.asm"
 
 .INCLUDE "data/events/tasks/C37EAE.asm"
 
@@ -1340,7 +1344,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/tasks/C39ABB.asm"
 
-.INCLUDE "data/events/C39AC7.asm"
+.INCLUDE "data/events/actionscript_photo_spot.asm"
 
 .INCLUDE "data/events/scripts/765.asm"
 
@@ -1666,7 +1670,7 @@ SPRITE_GROUP_PALETTES:
 
 .INCLUDE "data/events/scripts/072.asm"
 
-.INCLUDE "data/events/C3B70C.asm"
+.INCLUDE "data/events/enter_vehicle.asm"
 
 .INCLUDE "data/events/scripts/073.asm"
 
