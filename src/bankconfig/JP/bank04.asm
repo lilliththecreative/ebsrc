@@ -255,7 +255,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C426C7.asm"
 
-.INCLUDE "unknown/C4/C426ED.asm"
+.INCLUDE "system/update_palette_fade.asm"
 
 .INCLUDE "data/events/scripts/859.asm"
 
@@ -721,7 +721,7 @@ LOCALEINCLUDE "flyovers.symbols.asm"
 
 .INCLUDE "unknown/C4/C49CA8-jp.asm"
 
-.INCLUDE "unknown/C4/C49CC3-jp.asm"
+.INCLUDE "text/render_flyover_party_member_name-jp.asm"
 
 .INCLUDE "unknown/C4/C49D16-jp.asm"
 
