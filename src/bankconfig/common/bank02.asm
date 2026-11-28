@@ -17,7 +17,11 @@
 
 .INCLUDE "overworld/inflict_sunstroke_check.asm"
 
-.INCLUDE "data/unknown/C200B9.asm"
+.INCLUDE "data/map/collision_test_coord_diffs_x.asm"
+
+.INCLUDE "data/map/collision_test_coord_diffs_y.asm"
+
+.INCLUDE "data/map/diagonal_collision_masks.asm"
 
 .INCLUDE "text/initialize_text_system.asm"
 
@@ -46,11 +50,11 @@
 .IF .DEFINED(USA) && (!.DEFINED(PROTOTYPE19950327))
     .INCLUDE "data/text/name_entry_grid_character_offset_table.asm"
   
-    .INCLUDE "data/unknown/C20958.asm"
+    .INCLUDE "data/reserved_bg2_tilemap.asm"
   
     .INCLUDE "data/text/the.asm"
   
-    .INCLUDE "unknown/C2/C209A0.asm"
+    .INCLUDE "text/remove_window_from_screen_old.asm"
 .ELSEIF .DEFINED(PROTOTYPE19950327)
     .INCLUDE "data/text/the.asm"
 .ENDIF
@@ -59,7 +63,7 @@
 
 .INCLUDE "text/restore_current_window_text_attributes.asm"
 
-.INCLUDE "unknown/C2/C20B65.asm"
+.INCLUDE "text/move_cursor.asm"
 
 .INCLUDE "text/hp_pp_window/separate_decimal_digits.asm"
 
@@ -87,7 +91,7 @@
 
 .INCLUDE "text/set_event_flag.asm"
 
-.INCLUDE "unknown/C2/C216AD.asm"
+.INCLUDE "overworld/set_overworld_music_override.asm"
 
 .INCLUDE "audio/stop_music_redirect.asm"
 
@@ -121,11 +125,11 @@
 
 .INCLUDE "inventory/get_inventory_count.asm"
 
-.INCLUDE "unknown/C2/C2239D.asm"
+.INCLUDE "misc/test_if_party_member_present.asm"
 
-.INCLUDE "unknown/C2/C223D9.asm"
+.INCLUDE "text/get_status_icon.asm"
 
-.INCLUDE "unknown/C2/C22474.asm"
+.INCLUDE "text/get_status_name_palette.asm"
 
 .IF .DEFINED(USA)
   .INCLUDE "inventory/get_item_subtype.asm"
@@ -145,13 +149,13 @@
 
 .INCLUDE "text/print_stats_with_new_other_gear.asm"
 
-.INCLUDE "unknown/C2/C226C5.asm"
+.INCLUDE "misc/set_gift_box_state.asm"
 
-.INCLUDE "unknown/C2/C226E6.asm"
+.INCLUDE "misc/get_active_npc_flag_state.asm"
 
-.INCLUDE "unknown/C2/C226F0.asm"
+.INCLUDE "misc/get_active_party_character_count.asm"
 
-.INCLUDE "unknown/C2/C2272F.asm"
+.INCLUDE "misc/get_living_party_member_count.asm"
 
 .INCLUDE "unknown/C2/C2277C.asm"
 
@@ -177,9 +181,9 @@
 
 .INCLUDE "battle/init_scripted.asm"
 
-.INCLUDE "unknown/C2/C23008.asm"
+.INCLUDE "misc/backup_clear_party_npcs_money.asm"
 
-.INCLUDE "unknown/C2/C2307B.asm"
+.INCLUDE "misc/restore_party_backup.asm"
 
 .INCLUDE "misc/set_teleport_box_destination.asm"
 
@@ -199,7 +203,7 @@
 
 .INCLUDE "battle/pick_next_target.asm"
 
-.INCLUDE "unknown/C2/C23E8A.asm"
+.INCLUDE "text/prepare_suffixed_attacker_name.asm"
 
 .INCLUDE "battle/find_targettable_npc.asm"
 
@@ -217,7 +221,7 @@
 
 .INCLUDE "battle/test_item_theft_candidate.asm"
 
-.INCLUDE "unknown/C2/C2437E.asm"
+.INCLUDE "battle/remove_used_item.asm"
 
 .INCLUDE "unknown/C2/C24434.asm"
 
@@ -227,7 +231,7 @@
 
 .INCLUDE "battle/main_battle_routine.asm"
 
-.INCLUDE "unknown/C2/C26189.asm"
+.INCLUDE "battle/fullscreen_colour_flags.asm"
 
 .INCLUDE "battle/instant_win_handler.asm"
 
@@ -241,7 +245,7 @@
 
 .INCLUDE "system/wait.asm"
 
-.INCLUDE "unknown/C2/C269DE.asm"
+.INCLUDE "system/tick_until_fade_completion.asm"
 
 .INCLUDE "system/math/rand_long.asm"
 
@@ -411,9 +415,9 @@
 
 .INCLUDE "battle/actions/null11.asm"
 
-.INCLUDE "battle/actions/neutralize.asm"
+.INCLUDE "battle/actions/neutralize_common.asm"
 
-.INCLUDE "unknown/C2/C290C6.asm"
+.INCLUDE "battle/actions/neutralize.asm"
 
 .INCLUDE "battle/actions/level_2_attack_diamondize.asm"
 
@@ -703,11 +707,11 @@
 
 .INCLUDE "battle/giygas_transform_battler_8.asm"
 
-.INCLUDE "unknown/C2/C2C37A.asm"
+.INCLUDE "battle/giygas_text_new_phase.asm"
 
 .INCLUDE "battle/giygas_hurt_prayer.asm"
 
-.INCLUDE "unknown/C2/C2C41F.asm"
+.INCLUDE "battle/giygas_weak_text.asm"
 
 .INCLUDE "battle/actions/pokey_speech_1.asm"
 
@@ -735,21 +739,21 @@
 
 .INCLUDE "battle/load_enemy_battle_sprites.asm"
 
-.INCLUDE "misc/battlebgs/generate_frame.asm"
+.INCLUDE "battle/backgrounds/generate_frame.asm"
 
-.INCLUDE "unknown/C2/C2CFE5.asm"
+.INCLUDE "battle/backgrounds/load_background_animation_info.asm"
 
-.INCLUDE "unknown/C2/C2D0AC.asm"
+.INCLUDE "battle/backgrounds/update_letterbox_hdma_table.asm"
 
 .IF .DEFINED(USA)
-  .INCLUDE "battle/load_battlebg.asm"
+  .INCLUDE "battle/backgrounds/load_battlebg.asm"
 .ELSE
-  .INCLUDE "battle/load_battlebg-jp.asm"
+  .INCLUDE "battle/backgrounds/load_battlebg-jp.asm"
 .ENDIF
 
 .INCLUDE "battle/giygas_swap_death_distortion.asm"
 
-.INCLUDE "unknown/C2/C2DB14.asm"
+.INCLUDE "battle/backgrounds/replace_loaded_animated_layer1_palette.asm"
 
 .INCLUDE "battle/draw_battle_frame.asm"
 
@@ -769,21 +773,23 @@
   .INCLUDE "battle/show_psi_animation-jp.asm"
 .ENDIF
 
-.INCLUDE "unknown/C2/C2E6B3.asm"
+.INCLUDE "data/psi_animation_tile_flags.asm"
 
-.INCLUDE "unknown/C2/C2E8C4.asm"
+.INCLUDE "battle/update_psi_animation_frame.asm"
+
+.INCLUDE "overworld/start_swirl_padded.asm"
 
 .INCLUDE "overworld/battle_swirl_sequence.asm"
 
-.INCLUDE "unknown/C2/C2E9C8.asm"
+.INCLUDE "overworld/oval_window_has_frames_left.asm"
 
-.INCLUDE "unknown/C2/C2E9ED.asm"
+.INCLUDE "overworld/reset_oval_window.asm"
 
-.INCLUDE "unknown/C2/C2EA15.asm"
+.INCLUDE "overworld/open_oval_window.asm"
 
-.INCLUDE "unknown/C2/C2EA74.asm"
+.INCLUDE "overworld/close_oval_window.asm"
 
-.INCLUDE "unknown/C2/C2EAAA.asm"
+.INCLUDE "overworld/disable_oval_window.asm"
 
 .INCLUDE "battle/is_battle_animation_playing.asm"
 

@@ -180,13 +180,13 @@ INSERT_AUDIO_PACK 7
 
 .INCLUDE "system/debug/save_replay_save_slot.asm"
 
-.INCLUDE "unknown/EF/EFE873.asm"
+.INCLUDE "system/debug/restore_rng_and_frame_counter.asm"
 
 .INCLUDE "system/debug/store_persistent_replay_state.asm"
 
 .INCLUDE "system/debug/load_replay_save_slot-jp.asm"
 
-.INCLUDE "unknown/EF/EFEA23.asm"
+.INCLUDE "system/debug/backup_leader_position.asm"
 
 .INCLUDE "system/debug/start_replay.asm"
 
@@ -196,7 +196,7 @@ INSERT_AUDIO_PACK 7
 
 .INCLUDE "system/debug/check_position_overlay_background-jp.asm"
 
-.INCLUDE "data/unknown/EFEB1D.asm"
+.INCLUDE "data/check_position_overlay_background_hdma_table.asm"
 
 .INCLUDE "system/debug/debug_clear_hdma.asm"
 
@@ -214,7 +214,7 @@ DEBUG_CURSOR_GRAPHICS:
 
 .INCLUDE "data/unknown/EFF0D7.asm"
 
-.INCLUDE "data/unknown/EFF1BB.asm"
+.INCLUDE "data/debug_menu_palettes.asm"
 
 .INCLUDE "data/unknown_version_string.asm"
 
