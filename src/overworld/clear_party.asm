@@ -8,15 +8,15 @@ CLEAR_PARTY:
 	STA ENTITY_SIZES+23 * 2
 	LDA #.LOWORD(-1)
 	STA MINI_GHOST_ENTITY_ID
-	STZ GAME_STATE+game_state::leader_position_index
-	STZ GAME_STATE+game_state::camera_mode
-	STZ GAME_STATE+game_state::auto_scroll_frames
-	STZ GAME_STATE+game_state::auto_scroll_original_walking_style
+	STZ GAME_STATE+game_state::unknown88
+	STZ GAME_STATE+game_state::unknownB0
+	STZ GAME_STATE+game_state::unknownB2
+	STZ GAME_STATE+game_state::unknownB4
 	SEP #PROC_FLAGS::ACCUM8
 	STZ GAME_STATE+game_state::party_status
 	REP #PROC_FLAGS::ACCUM8
 	LDA #PARTY_LEADER_ENTITY_INDEX
-	STA GAME_STATE+game_state::first_party_member_entity
+	STA GAME_STATE+game_state::current_party_members
 	LDA #0
 	STA @LOCAL00
 	BRA @UNKNOWN1
@@ -26,13 +26,13 @@ CLEAR_PARTY:
 	ADC #.LOWORD(GAME_STATE)
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ a:game_state::party_member_index,X
+	STZ a:game_state::unknown96,X
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL00
 .ELSE
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ GAME_STATE+game_state::party_member_index,X
+	STZ GAME_STATE+game_state::unknown96,X
 	REP #PROC_FLAGS::ACCUM8
 .ENDIF
 	ASL
@@ -46,7 +46,7 @@ CLEAR_PARTY:
 	BCC @UNKNOWN0
 	SEP #PROC_FLAGS::ACCUM8
 	LDA #0
-	STA GAME_STATE+game_state::player_controlled_party_member_count
+	STA GAME_STATE+game_state::player_controlled_party_count
 	STA GAME_STATE+game_state::party_count
 	JSL VELOCITY_STORE
 	LDA f:NESS_PAJAMA_FLAG

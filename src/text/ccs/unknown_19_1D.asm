@@ -38,7 +38,7 @@ CC_19_1D:
 	ADC #.LOWORD(GAME_STATE)
 	STA @LOCAL02
 	CLC
-	ADC #game_state::delivery_queue_character
+	ADC #game_state::unknownB8
 	TAY
 	STY @LOCAL01
 	SEP #PROC_FLAGS::ACCUM8
@@ -49,7 +49,7 @@ CC_19_1D:
 	JSR SET_WORKING_MEMORY
 	LDA @LOCAL02
 	CLC
-	ADC #game_state::delivery_queue_item
+	ADC #game_state::unknownB6
 	TAX
 	STX @LOCAL02
 	SEP #PROC_FLAGS::ACCUM8

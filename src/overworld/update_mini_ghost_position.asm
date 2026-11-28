@@ -4,7 +4,7 @@ UPDATE_MINI_GHOST_POSITION:
 	STACK_RESERVE_VARS
 	STACK_RESERVE_INT32
 	END_STACK_VARS
-	LDA GAME_STATE+game_state::first_party_member_entity
+	LDA GAME_STATE+game_state::current_party_members
 	ASL
 	TAX
 	LDA ENTITY_TICK_CALLBACK_HIGH,X

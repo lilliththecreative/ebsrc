@@ -29,7 +29,7 @@ BATTLE_ROUTINE:
 	STA @LOCAL12
 	STA @LOCAL11
 	SEP #PROC_FLAGS::ACCUM8
-	STA GAME_STATE+game_state::player_controlled_party_member_count
+	STA GAME_STATE+game_state::player_controlled_party_count
 .IF .DEFINED(JPN)
 	REP #PROC_FLAGS::ACCUM8
 	LDA #.LOWORD(GAME_STATE) + game_state::party_members
@@ -49,10 +49,10 @@ BATTLE_ROUTINE:
 .ENDIF
 	JSL MEMSET16
 .IF .DEFINED(JPN)
-	LDY #.LOWORD(GAME_STATE) + game_state::party_member_index
+	LDY #.LOWORD(GAME_STATE) + game_state::unknown96
 	STY @LOCAL10
 .ELSE
-	LDA #.LOWORD(GAME_STATE) + game_state::party_member_index
+	LDA #.LOWORD(GAME_STATE) + game_state::unknown96
 	STA @VIRTUAL02
 .ENDIF
 	SEP #PROC_FLAGS::ACCUM8
@@ -710,7 +710,7 @@ BATTLE_ROUTINE:
 	TXA
 .ENDIF
 	SEP #PROC_FLAGS::ACCUM8
-	STA GAME_STATE+game_state::player_controlled_party_member_count
+	STA GAME_STATE+game_state::player_controlled_party_count
 	BRA @UNKNOWN38
 @UNKNOWN37:
 	.A16
@@ -1129,7 +1129,7 @@ BATTLE_ROUTINE:
 	BEQ @UNKNOWN73
 	TYA
 	CLC
-	ADC #battler::turn_speed
+	ADC #battler::initiative
 	STA @VIRTUAL02
 	LDA a:battler::speed,Y
 	JSR FIFTY_PERCENT_VARIANCE
@@ -1161,7 +1161,7 @@ BATTLE_ROUTINE:
 	JSL MULT168
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ PARTY_CHARACTERS + char_struct::is_auto_healed,X
+	STZ PARTY_CHARACTERS + char_struct::unknown94,X
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL10
 	INC
@@ -1858,7 +1858,7 @@ BATTLE_ROUTINE:
 	LDX @VIRTUAL02
 .ENDIF
 	REP #PROC_FLAGS::ACCUM8
-	STZ a:battler::turn_speed,X
+	STZ a:battler::initiative,X
 @UNKNOWN128:
 .IF .DEFINED(JPN)
 	LDY #battler::current_action
@@ -2744,7 +2744,7 @@ BATTLE_ROUTINE:
 	SEP #PROC_FLAGS::ACCUM8
 	LDA #12
 	LDX CURRENT_ATTACKER
-	STA a:battler::enemy_attack_flash_frames,X
+	STA a:battler::unknown73,X
 	LDX #0
 	STX @LOCAL07
 	BRA @UNKNOWN193
@@ -3059,7 +3059,7 @@ BATTLE_ROUTINE:
 	LDA #1
 	STA LETTERBOX_EFFECT_ENDING
 	STA ENABLE_BACKGROUND_DARKENING
-	LDY #.LOWORD(GAME_STATE) + game_state::money_earned_since_last_call
+	LDY #.LOWORD(GAME_STATE) + game_state::unknownC4
 .IF .DEFINED(JPN)
 	STY @LOCAL0A
 .ELSE

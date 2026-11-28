@@ -15,7 +15,7 @@ GET_TOTAL_PARTY_LEVEL:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA __BSS_START__ + game_state::party_member_index,X
+	LDA __BSS_START__ + game_state::unknown96,X
 	AND #$00FF
 	CLC
 	SBC #4

@@ -20,7 +20,7 @@ INFLICT_SUNSTROKE_CHECK:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAY
-	LDA __BSS_START__ + game_state::party_member_index,Y
+	LDA __BSS_START__ + game_state::unknown96,Y
 	AND #$00FF
 	BEQL @UNKNOWN11
 	AND #$00FF

@@ -4,7 +4,7 @@ PREPARE_PARTY_FOR_TESSIE_TRIP:
 	STACK_RESERVE_VARS
 	STACK_RESERVE_INT16
 	END_STACK_VARS
-	LDA GAME_STATE + game_state::party_entities
+	LDA GAME_STATE + game_state::unknownA2
 	ASL
 	CLC
 	ADC #.LOWORD(ENTITY_TICK_CALLBACK_HIGH)
@@ -21,10 +21,10 @@ PREPARE_PARTY_FOR_TESSIE_TRIP:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_entities,X
+	LDA a:game_state::unknownA2,X
 .ELSE
 	TAX
-	LDA GAME_STATE + game_state::party_entities,X
+	LDA GAME_STATE + game_state::unknownA2,X
 .ENDIF
 	ASL
 	CLC

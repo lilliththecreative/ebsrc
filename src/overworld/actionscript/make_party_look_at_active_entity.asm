@@ -22,9 +22,9 @@ MAKE_PARTY_LOOK_AT_ACTIVE_ENTITY:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_member_index,X
+	LDA a:game_state::unknown96,X
 .ELSE
-	LDY #.LOWORD(GAME_STATE) + game_state::party_member_index
+	LDY #.LOWORD(GAME_STATE) + game_state::unknown96
 	LDA (@LOCAL03),Y
 .ENDIF
 	AND #$00FF
@@ -39,10 +39,10 @@ MAKE_PARTY_LOOK_AT_ACTIVE_ENTITY:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_entities,X
+	LDA a:game_state::unknownA2,X
 .ELSE
 	TAX
-	LDA GAME_STATE + game_state::party_entities,X
+	LDA GAME_STATE + game_state::unknownA2,X
 .ENDIF
 	STA @VIRTUAL04
 	ASL

@@ -17,9 +17,9 @@ UNKNOWN_C03903:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_member_index,X
+	LDA a:game_state::unknown96,X
 .ELSE
-	LDA GAME_STATE + game_state::party_member_index,Y
+	LDA GAME_STATE + game_state::unknown96,Y
 .ENDIF
 	AND #$00FF
 	CMP @VIRTUAL02
@@ -35,10 +35,10 @@ UNKNOWN_C03903:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_entities,X
+	LDA a:game_state::unknownA2,X
 .ELSE
 	TAX
-	LDA GAME_STATE + game_state::party_entities,X
+	LDA GAME_STATE + game_state::unknownA2,X
 .ENDIF
 	STA @VIRTUAL02
 	TYA
@@ -52,9 +52,9 @@ UNKNOWN_C03903:
 	LDA @LOCAL01
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	LDA GAME_STATE + game_state::party_member_index + 1,X
+	LDA GAME_STATE + game_state::unknown96 + 1,X
 	LDX @LOCAL00
-	STA __BSS_START__ + game_state::party_member_index,X
+	STA __BSS_START__ + game_state::unknown96,X
 	REP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL01
 	ASL
@@ -64,19 +64,19 @@ UNKNOWN_C03903:
 	ADC #.LOWORD(GAME_STATE)
 	PHA
 	LDX @VIRTUAL04
-	LDA GAME_STATE + game_state::party_entities + 2,X
+	LDA GAME_STATE + game_state::unknownA2 + 2,X
 	PLX
-	STA a:game_state::party_entities,X
+	STA a:game_state::unknownA2,X
 .ELSE
 	LDX @VIRTUAL04
-	LDA GAME_STATE + game_state::party_entities + 2,X
+	LDA GAME_STATE + game_state::unknownA2 + 2,X
 	LDX @VIRTUAL04
-	STA GAME_STATE + game_state::party_entities,X
+	STA GAME_STATE + game_state::unknownA2,X
 .ENDIF
 	LDA @LOCAL01
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	LDA GAME_STATE + game_state::player_controlled_party_members + 1,X
+	LDA GAME_STATE + game_state::unknown9D,X
 	LDX @LOCAL00
 	STA __BSS_START__ + game_state::player_controlled_party_members,X
 	REP #PROC_FLAGS::ACCUM8
@@ -116,11 +116,11 @@ UNKNOWN_C03903:
 	ADC #.LOWORD(GAME_STATE)
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ a:game_state::party_member_index,X
+	STZ a:game_state::unknown96,X
 .ELSE
 	TAX
 	SEP #PROC_FLAGS::ACCUM8
-	STZ GAME_STATE + game_state::party_member_index,X
+	STZ GAME_STATE + game_state::unknown96,X
 .ENDIF
 	LDX #.LOWORD(GAME_STATE)+game_state::party_count
 	LDA __BSS_START__,X

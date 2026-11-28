@@ -49,33 +49,33 @@ LOAD_TILESET_ANIM:
 	BRA @UNKNOWN2
 @UNKNOWN1:
 	TYA
-	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(loaded_animated_tiles)
+	OPTIMIZED_MULT @VIRTUAL04, .SIZEOF(overworld_tileset_anim)
 	CLC
-	ADC #.LOWORD(loaded_animated_tiles)
+	ADC #.LOWORD(OVERWORLD_TILESET_ANIM)
 	TAX
 	MOVE_INT @VIRTUAL06, @VIRTUAL0A
-	LDA [@VIRTUAL0A] ;animated_tiles::frame_count
+	LDA [@VIRTUAL0A] ;overworld_tileset_anim_entry::unknown0
 	AND #$00FF
-	STA a:loaded_animated_tiles::frame_count,X
+	STA a:overworld_tileset_anim::unknown0,X
 	SEP #PROC_FLAGS::ACCUM8
-	LDY #animated_tiles::frame_delay
+	LDY #overworld_tileset_anim_entry::frame_delay
 	LDA [@VIRTUAL06],Y
 	REP #PROC_FLAGS::ACCUM8
 	AND #$00FF
-	STA a:loaded_animated_tiles::frames_until_update,X
-	STA a:loaded_animated_tiles::frame_delay,X
-	LDY #animated_tiles::copy_size
+	STA a:overworld_tileset_anim::frames_until_update,X
+	STA a:overworld_tileset_anim::frame_delay,X
+	LDY #overworld_tileset_anim_entry::copy_size
 	LDA [@VIRTUAL06],Y
-	STA a:loaded_animated_tiles::copy_size,X
-	LDY #animated_tiles::source_offset
+	STA a:overworld_tileset_anim::copy_size,X
+	LDY #overworld_tileset_anim_entry::source_offset
 	LDA [@VIRTUAL06],Y
-	STA a:loaded_animated_tiles::source_offset2,X
-	STA a:loaded_animated_tiles::source_offset,X
-	LDY #animated_tiles::destination_address
+	STA a:overworld_tileset_anim::source_offset2,X
+	STA a:overworld_tileset_anim::source_offset,X
+	LDY #overworld_tileset_anim_entry::destination_address
 	LDA [@VIRTUAL06],Y
-	STA a:loaded_animated_tiles::destination_address,X
-	STZ a:loaded_animated_tiles::destination_address2,X
-	LDA #.SIZEOF(animated_tiles)
+	STA a:overworld_tileset_anim::destination_address,X
+	STZ a:overworld_tileset_anim::destination_address2,X
+	LDA #.SIZEOF(overworld_tileset_anim_entry)
 	CLC
 	ADC @VIRTUAL06
 	STA @VIRTUAL06

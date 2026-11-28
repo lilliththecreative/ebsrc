@@ -34,10 +34,10 @@ HIDE_CHARACTER_OR_PARTY:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_entities,X
+	LDA a:game_state::unknownA2,X
 .ELSE
 	TAX
-	LDA GAME_STATE + game_state::party_entities,X
+	LDA GAME_STATE + game_state::unknownA2,X
 .ENDIF
 	ASL
 	CLC

@@ -12,7 +12,7 @@ FIND_ENTITY_BY_PARTY_MEMBER_ID:
 	AND #$00FF
 	CMP #$00FF
 	BNE @UNKNOWN0
-	LDA GAME_STATE+game_state::first_party_member_entity
+	LDA GAME_STATE+game_state::current_party_members
 	BRA @UNKNOWN4
 @UNKNOWN0:
 	LDX #0
@@ -20,13 +20,13 @@ FIND_ENTITY_BY_PARTY_MEMBER_ID:
 @UNKNOWN1:
 	SEP #PROC_FLAGS::ACCUM8
 	LDA @LOCAL00
-	CMP GAME_STATE + game_state::party_member_index,X
+	CMP GAME_STATE + game_state::unknown96,X
 	BNE @UNKNOWN2
 	REP #PROC_FLAGS::ACCUM8
 	TXA
 	ASL
 	TAX
-	LDA GAME_STATE + game_state::party_entities,X
+	LDA GAME_STATE + game_state::unknownA2,X
 	BRA @UNKNOWN4
 @UNKNOWN2:
 	INX

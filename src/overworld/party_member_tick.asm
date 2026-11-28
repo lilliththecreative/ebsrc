@@ -11,7 +11,7 @@ PARTY_MEMBER_TICK:
 	STACK_RESERVE_INT16
 	STACK_RESERVE_INT16
 	END_STACK_VARS
-	LDA GAME_STATE + game_state::camera_mode
+	LDA GAME_STATE + game_state::unknownB0
 	CMP #3
 	BEQL @UNKNOWN14
 	LDA BATTLE_SWIRL_COUNTDOWN
@@ -57,7 +57,7 @@ PARTY_MEMBER_TICK:
 	TAX
 	LDA @LOCAL05
 	JSL DO_PARTY_MOVEMENT_FRAME
-	LDA GAME_STATE + game_state::leader_has_moved
+	LDA GAME_STATE + game_state::unknown90
 	BNE @UNKNOWN4
 	LDX @VIRTUAL02
 	LDA __BSS_START__,X
@@ -75,7 +75,7 @@ PARTY_MEMBER_TICK:
 	STA ENTITY_ABS_Y_TABLE,X
 	LDX #0
 	STX @LOCAL07
-	LDA GAME_STATE + game_state::party_member_index
+	LDA GAME_STATE + game_state::unknown96
 	AND #$00FF
 	STA @VIRTUAL02
 	LDA @LOCAL05
@@ -113,7 +113,7 @@ PARTY_MEMBER_TICK:
 	STA @LOCAL02
 	BRA @UNKNOWN11
 @UNKNOWN9:
-	LDA GAME_STATE + game_state::special_game_state
+	LDA GAME_STATE + game_state::unknown92
 	CMP #3
 	BNE @UNKNOWN10
 	LDA #8
@@ -136,8 +136,8 @@ PARTY_MEMBER_TICK:
 	LDY #player_position_buffer_entry::walking_style
 	LDA (@LOCAL03),Y
 	LDX CURRENT_PARTY_MEMBER_TICK
-	STA a:char_struct::walking_style,X
-	LDA GAME_STATE + game_state::party_member_index
+	STA a:char_struct::unknown65,X
+	LDA GAME_STATE + game_state::unknown96
 	AND #$00FF
 	STA @VIRTUAL02
 	LDA @LOCAL05

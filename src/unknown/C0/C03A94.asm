@@ -43,7 +43,7 @@ UNKNOWN_C03A94:
 	JSL LOAD_SECTOR_ATTRS
 	AND #$0007
 	STA @LOCAL07
-	STA GAME_STATE+game_state::special_game_state
+	STA GAME_STATE+game_state::unknown92
 	ASL
 	STA FOOTSTEP_SOUND_ID
 	STZ FOOTSTEP_SOUND_ID_OVERRIDE
@@ -68,9 +68,9 @@ UNKNOWN_C03A94:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_member_index,X
+	LDA a:game_state::unknown96,X
 .ELSE
-	LDY #.LOWORD(GAME_STATE) + game_state::party_member_index
+	LDY #.LOWORD(GAME_STATE) + game_state::unknown96
 	LDA (@LOCAL05),Y
 .ENDIF
 	AND #$00FF
@@ -86,10 +86,10 @@ UNKNOWN_C03A94:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_entities,X
+	LDA a:game_state::unknownA2,X
 .ELSE
 	TAY
-	LDA GAME_STATE + game_state::party_entities,Y
+	LDA GAME_STATE + game_state::unknownA2,Y
 .ENDIF
 	STA @VIRTUAL02
 	ASL
@@ -112,7 +112,7 @@ UNKNOWN_C03A94:
 	JSL DELETE_OVERWORLD_ENTITY
 	LDA @VIRTUAL02
 	STA MOVING_PARTY_MEMBER_ENTITY_ID
-	LDA GAME_STATE+game_state::special_game_state
+	LDA GAME_STATE+game_state::unknown92
 	CMP #3
 	BEQ @UNKNOWN6
 	LDA @LOCAL05
@@ -137,7 +137,7 @@ UNKNOWN_C03A94:
 	INX
 	INX
 	INX
-	LDA f:CHARACTER_INITIAL_ENTITY_DATA,X ;character_initial_entity_entry::actionscript
+	LDA f:CHARACTER_INITIAL_ENTITY_DATA,X ;character_initial_entity_entry::actionscript_id
 	TAX
 	LDA @LOCAL08ALT
 	JSL CREATE_ENTITY
@@ -166,7 +166,7 @@ UNKNOWN_C03A94:
 	INX
 	INX
 	INX
-	LDA f:CHARACTER_INITIAL_ENTITY_DATA,X ;character_initial_entity_entry::actionscript
+	LDA f:CHARACTER_INITIAL_ENTITY_DATA,X ;character_initial_entity_entry::actionscript_id
 	TAX
 	LDA @LOCAL08ALT
 	JSL CREATE_ENTITY
@@ -199,7 +199,7 @@ UNKNOWN_C03A94:
 	STZ PENDING_INTERACTIONS
 	LDA #4
 	STA @LOCAL00
-	LDY GAME_STATE+game_state::first_party_member_entity
+	LDY GAME_STATE+game_state::current_party_members
 	LDX GAME_STATE+game_state::leader_y_coord
 	LDA GAME_STATE+game_state::leader_x_coord
 	JSL CHECK_MOVEMENT_MAP_COLLISION

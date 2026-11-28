@@ -23,9 +23,9 @@ UNKNOWN_C2272F:
 	CLC
 	ADC #.LOWORD(GAME_STATE)
 	TAX
-	LDA a:game_state::party_member_index,X
+	LDA a:game_state::unknown96,X
 .ELSE
-	LDA GAME_STATE + game_state::party_member_index,Y
+	LDA GAME_STATE + game_state::unknown96,Y
 .ENDIF
 	AND #$00FF
 	DEC
@@ -59,7 +59,7 @@ UNKNOWN_C2272F:
 	STY @LOCAL00
 .ENDIF
 @UNKNOWN2:
-	LDA GAME_STATE+game_state::player_controlled_party_member_count
+	LDA GAME_STATE+game_state::player_controlled_party_count
 	AND #$00FF
 	STA @VIRTUAL02
 .IF .DEFINED(JPN)

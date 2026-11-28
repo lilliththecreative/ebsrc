@@ -39,7 +39,7 @@ BATTLE_INIT_ENEMY_STATS:
 	STA a:battler::id,X
 	TYA
 	LDX @VIRTUAL02
-	STA a:battler::original_id,X
+	STA a:battler::unknown76,X
 	LDY #enemy_data::battle_sprite
 	LDA [@VIRTUAL06],Y
 	LDX @VIRTUAL02
