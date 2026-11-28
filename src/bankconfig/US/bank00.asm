@@ -668,7 +668,7 @@
 
 .INCLUDE "overworld/actionscript/script/39.asm"
 
-.INCLUDE "unknown/C0/C09907.asm"
+.INCLUDE "overworld/reset_entity_delta.asm"
 
 .INCLUDE "overworld/actionscript/script/3A.asm"
 
@@ -1020,13 +1020,13 @@
 
 .INCLUDE "overworld/actionscript/update_sprite_direction.asm"
 
-.INCLUDE "unknown/C0/C0AAAC.asm"
+.INCLUDE "overworld/actionscript/update_entity_sprite_frame_current.asm"
 
 .INCLUDE "overworld/actionscript/perform_palette_fade.asm"
 
-.INCLUDE "unknown/C0/C0AACD.asm"
+.INCLUDE "overworld/actionscript/set_x_register_to_2.asm"
 
-.INCLUDE "unknown/C0/C0AAD1.asm"
+.INCLUDE "overworld/actionscript/set_x_register_to_4.asm"
 
 .INCLUDE "overworld/actionscript/jump_to_label_n_times.asm"
 
